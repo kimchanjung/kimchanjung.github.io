@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:22:16+09:00</updated>
-  <id>http://localhost:4000/tag/etc/feed.xml</id>
+  <link href="https://kimchajung.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-07-28T20:52:58+09:00</updated>
+  <id>https://kimchajung.github.io/tag/etc/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">JAVA - 자료구조, Collection 별 특징 정리</title>
-      <link href="http://localhost:4000/etc/2020/01/15/java-collection/" rel="alternate" type="text/html" title="JAVA - 자료구조, Collection 별 특징 정리" />
+      <link href="https://kimchajung.github.io/etc/2020/01/15/java-collection/" rel="alternate" type="text/html" title="JAVA - 자료구조, Collection 별 특징 정리" />
       <published>2020-01-15T00:00:00+09:00</published>
       <updated>2020-01-15T00:00:00+09:00</updated>
-      <id>http://localhost:4000/etc/2020/01/15/java-collection</id>
-      <content type="html" xml:base="http://localhost:4000/etc/2020/01/15/java-collection/">&lt;p&gt;JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.&lt;/p&gt;
+      <id>https://kimchajung.github.io/etc/2020/01/15/java-collection</id>
+      <content type="html" xml:base="https://kimchajung.github.io/etc/2020/01/15/java-collection/">&lt;p&gt;JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;java---자료구조-collection-별-특징-정리&quot;&gt;JAVA - 자료구조, Collection 별 특징 정리&lt;/h2&gt;
 

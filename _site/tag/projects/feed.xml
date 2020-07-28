@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:22:16+09:00</updated>
-  <id>http://localhost:4000/tag/projects/feed.xml</id>
+  <link href="https://kimchajung.github.io/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-07-28T20:52:58+09:00</updated>
+  <id>https://kimchajung.github.io/tag/projects/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">실시간 메시징 서버(socket.io)</title>
-      <link href="http://localhost:4000/projects/2020/01/04/socket-io-server/" rel="alternate" type="text/html" title="실시간 메시징 서버(socket.io)" />
+      <link href="https://kimchajung.github.io/projects/2020/01/04/socket-io-server/" rel="alternate" type="text/html" title="실시간 메시징 서버(socket.io)" />
       <published>2020-01-04T11:00:00+09:00</published>
       <updated>2020-01-04T11:00:00+09:00</updated>
-      <id>http://localhost:4000/projects/2020/01/04/socket-io-server</id>
-      <content type="html" xml:base="http://localhost:4000/projects/2020/01/04/socket-io-server/">&lt;p&gt;배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다.&lt;/p&gt;
+      <id>https://kimchajung.github.io/projects/2020/01/04/socket-io-server</id>
+      <content type="html" xml:base="https://kimchajung.github.io/projects/2020/01/04/socket-io-server/">&lt;p&gt;배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;실시간-메시징-서버socketio&quot;&gt;실시간 메시징 서버(socket.io)&lt;/h1&gt;
 
@@ -143,11 +143,11 @@
   
     <entry>
       <title type="html">배민라이더스운영시스템(BROS 1.0)</title>
-      <link href="http://localhost:4000/projects/2020/01/03/bros-v1/" rel="alternate" type="text/html" title="배민라이더스운영시스템(BROS 1.0)" />
+      <link href="https://kimchajung.github.io/projects/2020/01/03/bros-v1/" rel="alternate" type="text/html" title="배민라이더스운영시스템(BROS 1.0)" />
       <published>2020-01-03T10:00:00+09:00</published>
       <updated>2020-01-03T10:00:00+09:00</updated>
-      <id>http://localhost:4000/projects/2020/01/03/bros-v1</id>
-      <content type="html" xml:base="http://localhost:4000/projects/2020/01/03/bros-v1/">&lt;p&gt;배달의민족 배민라이더의 배민라이더스운영시스템(BROS 1.0) 프로젝트 소개입니다.&lt;/p&gt;
+      <id>https://kimchajung.github.io/projects/2020/01/03/bros-v1</id>
+      <content type="html" xml:base="https://kimchajung.github.io/projects/2020/01/03/bros-v1/">&lt;p&gt;배달의민족 배민라이더의 배민라이더스운영시스템(BROS 1.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템bros-10&quot;&gt;배민라이더스운영시스템(BROS 1.0)&lt;/h1&gt;
 
@@ -265,11 +265,11 @@
   
     <entry>
       <title type="html">라이더운영시스템</title>
-      <link href="http://localhost:4000/projects/2020/01/02/brms/" rel="alternate" type="text/html" title="라이더운영시스템" />
+      <link href="https://kimchajung.github.io/projects/2020/01/02/brms/" rel="alternate" type="text/html" title="라이더운영시스템" />
       <published>2020-01-02T09:00:00+09:00</published>
       <updated>2020-01-02T09:00:00+09:00</updated>
-      <id>http://localhost:4000/projects/2020/01/02/brms</id>
-      <content type="html" xml:base="http://localhost:4000/projects/2020/01/02/brms/">&lt;p&gt;배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개&lt;/p&gt;
+      <id>https://kimchajung.github.io/projects/2020/01/02/brms</id>
+      <content type="html" xml:base="https://kimchajung.github.io/projects/2020/01/02/brms/">&lt;p&gt;배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개&lt;/p&gt;
 
 &lt;h1 id=&quot;라이더운영시스템&quot;&gt;라이더운영시스템&lt;/h1&gt;
 
@@ -385,11 +385,11 @@
   
     <entry>
       <title type="html">배민라이더스운영시스템(BROS 2.0)</title>
-      <link href="http://localhost:4000/projects/2020/01/01/bros-v2/" rel="alternate" type="text/html" title="배민라이더스운영시스템(BROS 2.0)" />
+      <link href="https://kimchajung.github.io/projects/2020/01/01/bros-v2/" rel="alternate" type="text/html" title="배민라이더스운영시스템(BROS 2.0)" />
       <published>2020-01-01T08:00:00+09:00</published>
       <updated>2020-01-01T08:00:00+09:00</updated>
-      <id>http://localhost:4000/projects/2020/01/01/bros-v2</id>
-      <content type="html" xml:base="http://localhost:4000/projects/2020/01/01/bros-v2/">&lt;p&gt;배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다.&lt;/p&gt;
+      <id>https://kimchajung.github.io/projects/2020/01/01/bros-v2</id>
+      <content type="html" xml:base="https://kimchajung.github.io/projects/2020/01/01/bros-v2/">&lt;p&gt;배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템bros-20&quot;&gt;배민라이더스운영시스템(BROS 2.0)&lt;/h1&gt;
 &lt;blockquote&gt;
