@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/abstract-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/abstract-pattern-class-diagram.png
 navigation: True
 title: "추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-14 09:00:00 +0900
@@ -66,7 +66,7 @@ published: true
   정규직, 파트타임 전부 생필품배달 메소드를 추가해야함 
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/abstract-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/abstract-pattern-class-diagram.png)
 ## 예제 코드
 
 ### 업무가 가능한 라이더 생성에 필요한 라이더, 헬멧, 이동수단 클래스들을 추상화 한다.

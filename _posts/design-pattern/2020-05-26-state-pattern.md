@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/adapter-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/adapter-pattern-class-diagram.png
 navigation: True
 title: "상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-26 18:00:00 +0900
@@ -53,7 +53,7 @@ published: true
  
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/state-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/state-pattern-class-diagram.png)
 
 
 ## 예제코드

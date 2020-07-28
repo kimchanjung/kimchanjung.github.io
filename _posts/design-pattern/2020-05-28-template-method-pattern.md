@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/adapter-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/adapter-pattern-class-diagram.png
 title: "템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-28 16:00:00 +0900
 tags: design-pattern
@@ -39,7 +39,7 @@ published: true
 
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/template-method-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/template-method-pattern-class-diagram.png)
 
 
 ## 예제코드

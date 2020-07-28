@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kimchajung.github.io/tag/programming/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:58:38+09:00</updated>
+  <updated>2020-07-29T00:20:55+09:00</updated>
   <id>https://kimchajung.github.io/tag/programming/feed.xml</id>
 
   
@@ -730,7 +730,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 
 &lt;p&gt;그 중 &lt;strong&gt;UsernamePasswordAuthenticationFilter&lt;/strong&gt;가 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증처리를 담당&lt;/code&gt;하고 있습니다.&lt;/p&gt;
 &lt;h4 id=&quot;spring-security-flow-communication-diagram&quot;&gt;Spring Security Flow Communication Diagram&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-security/spring-security-flow-diagram.png&quot; alt=&quot;spring-security-flow-diagram&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-security/spring-security-flow-diagram.png&quot; alt=&quot;spring-security-flow-diagram&quot; /&gt;
 [그림1] 스프링시큐리티 동작구조&lt;/p&gt;
 
 &lt;h4 id=&quot;1-로그인정보를-담아-서버에-인증을-요청한다&quot;&gt;1. 로그인정보를 담아 서버에 인증을 요청한다.&lt;/h4&gt;
@@ -1017,7 +1017,6 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       <id>https://kimchajung.github.io/programming/2020/06/26/react-spinner</id>
       <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/26/react-spinner/">&lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
 
-&lt;h1 id=&quot;react에서-로딩처리용-spinner를-효과적이고-깔끔하게-적용하는-방법&quot;&gt;React에서 로딩처리용 spinner를 효과적이고 깔끔하게 적용하는 방법&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;API호출&lt;/strong&gt;시 보통 &lt;strong&gt;로딩을 처리하는 동안 Spinner를 표시&lt;/strong&gt;해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. 
 &lt;strong&gt;NPM에서 React용 Spinner&lt;/strong&gt;를 찾아보면 &lt;strong&gt;수많은 종류&lt;/strong&gt;의 로딩처리 Spinner 모듈들이 존재합니다. &lt;strong&gt;기능이나 디자인도 수없이 다양&lt;/strong&gt;합니다. NPM &lt;strong&gt;대부분의 Spinner 모듈이 다양한 방식&lt;/strong&gt;으로 사용하고자 할때 &lt;strong&gt;몇가지 문제점&lt;/strong&gt;이 있었습니다.
 이번 포스팅은 &lt;strong&gt;Spinner 모듈을 가져와 사용할 때 발생하는 문제점을 해결&lt;/strong&gt;하고 &lt;strong&gt;깔끔한 방식으로 사용&lt;/strong&gt;할 수 있는 방법을 알아봅니다.&lt;/p&gt;

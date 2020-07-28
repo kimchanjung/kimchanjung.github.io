@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/observer-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/observer-pattern-class-diagram.png
 navigation: True
 title: "옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-23 18:00:00 +0900 
@@ -29,7 +29,7 @@ published: true
 - 옵저버의 실행 순서를 알 수 없다.
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/observer-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/observer-pattern-class-diagram.png)
 
 
 ## 예제코드

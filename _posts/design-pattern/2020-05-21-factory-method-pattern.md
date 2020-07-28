@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/factory-method-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/factory-method-pattern-class-diagram.png
 navigation: True
 title: "팩토리 메소드 패턴 - Factory Method Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-21 09:00:00 +0900
@@ -58,7 +58,7 @@ published: true
 - 객체가 늘어날 때마다 하위 클래스 재정의로 인한 불필요한 많은 클래스 생성 가능성이 있음
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/factory-method-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/factory-method-pattern-class-diagram.png)
 
 ## 예제코드
 ### 클래스를 추상화

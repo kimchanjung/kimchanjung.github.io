@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/spring-security/spring-security-flow-diagram.png
+cover: assets/post-img/spring-security/spring-security-flow-diagram.png
 navigation: True
 title: "[Spring Security] 스프링시큐리티 동작구조의 이해(1)"
 date: 2020-07-01 01:00:00 +0900
@@ -36,7 +36,7 @@ published: true
 
 그 중 **UsernamePasswordAuthenticationFilter**가 `인증처리를 담당`하고 있습니다.  
 #### Spring Security Flow Communication Diagram
-![spring-security-flow-diagram](/post-img/spring-security/spring-security-flow-diagram.png)
+![spring-security-flow-diagram](/assets/post-img/spring-security/spring-security-flow-diagram.png)
 [그림1] 스프링시큐리티 동작구조
 
 #### 1. 로그인정보를 담아 서버에 인증을 요청한다.

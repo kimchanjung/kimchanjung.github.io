@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/decorator-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/decorator-pattern-class-diagram.png
 navigation: True
 title: "데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-19 09:00:00 +0900
@@ -57,7 +57,7 @@ published: true
 - 코드복잡도가 증가하여 가독성이 떨어진다
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/decorator-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/decorator-pattern-class-diagram.png)
 
 ## 예제코드  
 

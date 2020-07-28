@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/flyweight-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/flyweight-pattern-class-diagram.png
 navigation: True
 title: "플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-22 09:00:00 +0900
@@ -35,7 +35,7 @@ published: true
 - 특정 인스턴스를 다르게 처리하는 것은 불가능 함
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/flyweight-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/flyweight-pattern-class-diagram.png)
 
 ## 예제코드 - 생성 클래스가 1개 일때
 

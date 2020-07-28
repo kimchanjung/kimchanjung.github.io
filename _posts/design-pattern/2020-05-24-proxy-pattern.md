@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/proxy-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/proxy-pattern-class-diagram.png
 navigation: True
 title: "프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-24 09:00:00 +0900
@@ -31,7 +31,7 @@ published: true
 - 인터페이스를 구현하므로 프록시 객체에서 구지 필요없는 메소드도 구현해야하며 코드 중복될 수 있다.
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/proxy-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/proxy-pattern-class-diagram.png)
 
 ## 예제코드
 ### 인터페이스 정의

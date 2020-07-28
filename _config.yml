@@ -29,7 +29,8 @@ email: mogomezwai@gmail.com
 
 # Disqus
 disqus: false
-disqus_shortname: https-theneooasis-github-io # replace with your disqus username
+disqus_shortname: # replace with your disqus username
+utteranc: true # use github conment
 
 # Google Analytics
 google_analytics: UA-165866221-1 # replace with your GA tracking identifier

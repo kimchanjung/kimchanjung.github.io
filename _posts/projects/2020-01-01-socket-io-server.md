@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/projects/websocket-server/socket-server-monitor.png
+cover: assets/post-img/projects/websocket-server/socket-server-monitor.png
 navigation: True
 title: "실시간 메시징 서버(socket.io)"
 date: 2020-01-04 11:00:00 +0900
@@ -18,7 +18,7 @@ published: true
 
 > 멀티플랫폼(web/ios/android)을 지원하는 실시간 메시징 서버
 
-![websocket-server-main](/post-img/projects/websocket-server/socket-server-monitor.png)
+![websocket-server-main](/assets/post-img/projects/websocket-server/socket-server-monitor.png)
 [그림 1] 메인화면
 
 ## 관련 기술블로그
@@ -47,7 +47,7 @@ published: true
 
 ## 간략한 시스템 구성도
 
-![websocket-server-architecture](/post-img/projects/websocket-server/socket-server-architecture.png)  
+![websocket-server-architecture](/assets/post-img/projects/websocket-server/socket-server-architecture.png)  
 [그림 2] 구성도 
 
 ### 시스템 구성 설명

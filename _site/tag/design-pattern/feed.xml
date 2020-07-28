@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kimchajung.github.io/tag/design-pattern/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:58:38+09:00</updated>
+  <updated>2020-07-29T00:20:55+09:00</updated>
   <id>https://kimchajung.github.io/tag/design-pattern/feed.xml</id>
 
   
@@ -96,7 +96,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/visitor-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/visitor-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 
@@ -241,7 +241,7 @@
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/template-method-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/template-method-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 
@@ -391,7 +391,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/strategy-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/strategy-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 
@@ -552,7 +552,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/state-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/state-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 &lt;h3 id=&quot;배달상태를-변경하는-인터페이스-정의&quot;&gt;배달상태를 변경하는 인터페이스 정의&lt;/h3&gt;
@@ -779,7 +779,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/proxy-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/proxy-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 &lt;h3 id=&quot;인터페이스-정의&quot;&gt;인터페이스 정의&lt;/h3&gt;
@@ -894,7 +894,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/observer-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/observer-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1024,7 +1024,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/flyweight-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/flyweight-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드---생성-클래스가-1개-일때&quot;&gt;예제코드 - 생성 클래스가 1개 일때&lt;/h2&gt;
 
@@ -1184,7 +1184,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/factory-method-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/factory-method-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 &lt;h3 id=&quot;클래스를-추상화&quot;&gt;클래스를 추상화&lt;/h3&gt;
@@ -1358,7 +1358,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;클래스-다이어그램&quot;&gt;클래스 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/design-pattern/facade-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/design-pattern/facade-pattern-class-diagram.png&quot; alt=&quot;class-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;예제코드&quot;&gt;예제코드&lt;/h2&gt;
 

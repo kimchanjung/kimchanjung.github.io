@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/react-mobx/brms-dashboard-dark.png
+cover: assets/post-img/react-mobx/brms-dashboard-dark.png
 navigation: True
 title: "[Mobx] React 에서 Mobx 사용기"
 date: 2020-05-08 00:00:00 +0900
@@ -1448,22 +1448,22 @@ rest-api method - X**
 
 주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.
 
-[1]: /post-img/react-mobx/redux-diagram.jpg
+[1]: /assets/post-img/react-mobx/redux-diagram.jpg
 [2]: https://repo.yona.io/doortts/blog/post/297
-[3]: /post-img/react-mobx/mobx-data-flow.jpg
-[4]: /post-img/react-mobx/mobx-spring-layer.png
-[5]: /post-img/react-mobx/mobx-redux-layer.png
-[6]: /post-img/react-mobx/brms-dashboard.png
-[7]: /post-img/react-mobx/brms-search-rider.png
+[3]: /assets/post-img/react-mobx/mobx-data-flow.jpg
+[4]: /assets/post-img/react-mobx/mobx-spring-layer.png
+[5]: /assets/post-img/react-mobx/mobx-redux-layer.png
+[6]: /assets/post-img/react-mobx/brms-dashboard.png
+[7]: /assets/post-img/react-mobx/brms-search-rider.png
 [8]: https://brunch.co.kr/@ultra0034/63
-[9]: /post-img/react-mobx/atomic-design.png
-[10]: /post-img/react-mobx/atomic-design-folder.png
+[9]: /assets/post-img/react-mobx/atomic-design.png
+[10]: /assets/post-img/react-mobx/atomic-design-folder.png
 [11]: https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
-[12]: /post-img/react-mobx/component-type.png
-[13]: /post-img/react-mobx/npm-trend-ui-lib.png
-[14]: /post-img/react-mobx/brms-dashboard-dark.png
+[12]: /assets/post-img/react-mobx/component-type.png
+[13]: /assets/post-img/react-mobx/npm-trend-ui-lib.png
+[14]: /assets/post-img/react-mobx/brms-dashboard-dark.png
 [15]: https://medium.com/@oleg008/jss-is-css-d7d41400b635
-[16]: /post-img/react-mobx/redux-with-libs.png
+[16]: /assets/post-img/react-mobx/redux-with-libs.png
 [17]: https://redux-form.com/8.1.0/
 [18]: https://davidkpiano.github.io/react-redux-form/docs.html
 [19]: https://github.com/jaredpalmer/formik

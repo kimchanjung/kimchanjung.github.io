@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kimchajung.github.io/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:58:38+09:00</updated>
+  <updated>2020-07-29T00:20:55+09:00</updated>
   <id>https://kimchajung.github.io/tag/projects/feed.xml</id>
 
   
@@ -45,7 +45,7 @@
   &lt;p&gt;멀티플랫폼(web/ios/android)을 지원하는 실시간 메시징 서버&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/websocket-server/socket-server-monitor.png&quot; alt=&quot;websocket-server-main&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/websocket-server/socket-server-monitor.png&quot; alt=&quot;websocket-server-main&quot; /&gt;
 [그림 1] 메인화면&lt;/p&gt;
 
 &lt;h2 id=&quot;관련-기술블로그&quot;&gt;관련 기술블로그&lt;/h2&gt;
@@ -84,7 +84,7 @@
 
 &lt;h2 id=&quot;간략한-시스템-구성도&quot;&gt;간략한 시스템 구성도&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/websocket-server/socket-server-architecture.png&quot; alt=&quot;websocket-server-architecture&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/websocket-server/socket-server-architecture.png&quot; alt=&quot;websocket-server-architecture&quot; /&gt;&lt;br /&gt;
 [그림 2] 구성도&lt;/p&gt;
 
 &lt;h3 id=&quot;시스템-구성-설명&quot;&gt;시스템 구성 설명&lt;/h3&gt;
@@ -155,7 +155,7 @@
   &lt;p&gt;배달접수와 실시간 배달처리 현황 및 라이더 관제기능을 지원하는 종합 운영 시스템&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/bros1.0/bros-chatting.jpg&quot; alt=&quot;bros-main&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/bros1.0/bros-chatting.jpg&quot; alt=&quot;bros-main&quot; /&gt;
 [그림 1] 메인화면&lt;/p&gt;
 
 &lt;h2 id=&quot;관련-기술블로그&quot;&gt;관련 기술블로그&lt;/h2&gt;
@@ -210,7 +210,7 @@
 
 &lt;h2 id=&quot;간략한-시스템-구성도&quot;&gt;간략한 시스템 구성도&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/bros1.0/bros-v1.png&quot; alt=&quot;bros-architecture&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/bros1.0/bros-v1.png&quot; alt=&quot;bros-architecture&quot; /&gt;
 [그림 2] 구성도&lt;/p&gt;
 
 &lt;h3 id=&quot;시스템-구성-설명&quot;&gt;시스템 구성 설명&lt;/h3&gt;
@@ -277,7 +277,7 @@
   &lt;p&gt;기존 배민라이더운영시스템에서 라이더관련 부분을 분리하여 MSA로 구성한 라이더관리 전용 시스템&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/brms/rider-management-list.jpg&quot; alt=&quot;bros-main&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/brms/rider-management-list.jpg&quot; alt=&quot;bros-main&quot; /&gt;
 [그림 1] 메인화면&lt;/p&gt;
 
 &lt;h2 id=&quot;관련-기술블로그&quot;&gt;관련 기술블로그&lt;/h2&gt;
@@ -330,7 +330,7 @@
 
 &lt;h2 id=&quot;간략한-시스템-구성도&quot;&gt;간략한 시스템 구성도&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/brms/brms-architecture.png&quot; alt=&quot;bros-architecture&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/brms/brms-architecture.png&quot; alt=&quot;bros-architecture&quot; /&gt;
 [그림 2] 구성도&lt;/p&gt;
 
 &lt;h3 id=&quot;시스템-구성-설명&quot;&gt;시스템 구성 설명&lt;/h3&gt;
@@ -397,7 +397,7 @@
 대부분 배민라이더스운영시스템을 운영 하고 신규 기능을 개발한는 것이 주 업무&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/bros2.0/brms-dashboard.png&quot; alt=&quot;bros-main&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/bros2.0/brms-dashboard.png&quot; alt=&quot;bros-main&quot; /&gt;
 [그림 1] 메인화면&lt;/p&gt;
 
 &lt;h2 id=&quot;프로젝트-기간&quot;&gt;프로젝트 기간&lt;/h2&gt;
@@ -444,7 +444,7 @@
 
 &lt;h2 id=&quot;간략한-시스템-구성도&quot;&gt;간략한 시스템 구성도&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/projects/bros2.0/bros-architecture.png&quot; alt=&quot;bros-architecture&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/projects/bros2.0/bros-architecture.png&quot; alt=&quot;bros-architecture&quot; /&gt;
 [그림 2] 구성도&lt;/p&gt;
 
 &lt;h3 id=&quot;시스템-구성-설명&quot;&gt;시스템 구성 설명&lt;/h3&gt;

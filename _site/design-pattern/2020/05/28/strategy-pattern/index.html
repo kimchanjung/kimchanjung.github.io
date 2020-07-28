@@ -15,8 +15,8 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     
     <!-- highlight.js -->
@@ -46,7 +46,7 @@
     <meta property="og:title" content="전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]" />
     <meta property="og:description" content="전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴 전략 패턴 - Strategy Pattern 전략 패턴 이란 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴. 명령패턴과 차이점 명령패턴 저장() { 실행() // 실행위치, 파일명, 객체생성 등의 일련의" />
     <meta property="og:url" content="https://kimchajung.github.io/design-pattern/2020/05/28/strategy-pattern/" />
-    <meta property="og:image" content="https://kimchajung.github.io/post-img/design-pattern/adapter-pattern-class-diagram.png" />
+    <meta property="og:image" content="https://kimchajung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png" />
     <meta property="article:publisher" content="https://www.facebook.com/mogomezwai" />
     <meta property="article:author" content="https://www.facebook.com/mogomezwai" />
     <meta property="article:published_time" content="2020-05-28T04:00:00+09:00" />
@@ -56,7 +56,7 @@
     <meta name="twitter:title" content="전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]" />
     <meta name="twitter:description" content="전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴 전략 패턴 - Strategy Pattern 전략 패턴 이란 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴. 명령패턴과 차이점 명령패턴 저장() { 실행() // 실행위치, 파일명, 객체생성 등의 일련의" />
     <meta name="twitter:url" content="https://kimchajung.github.io/" />
-    <meta name="twitter:image" content="https://kimchajung.github.io/post-img/design-pattern/adapter-pattern-class-diagram.png" />
+    <meta name="twitter:image" content="https://kimchajung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="kimchajung" />
     <meta name="twitter:label2" content="Filed under" />
@@ -78,7 +78,7 @@
     "url": "https://kimchajung.github.io/design-pattern/2020/05/28/strategy-pattern/",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kimchajung.github.io/post-img/design-pattern/adapter-pattern-class-diagram.png",
+        "url": "https://kimchajung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png",
         "width": 2000,
         "height": 666
     },
@@ -125,6 +125,7 @@ into the {body} of the default.hbs template -->
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-resume" role="menuitem"><a href="/resume/">Resume</a></li>
     <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
     <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
     <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
@@ -175,7 +176,7 @@ into the {body} of the default.hbs template -->
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/post-img/design-pattern/adapter-pattern-class-diagram.png)">
             </figure>
             
 
@@ -226,7 +227,7 @@ into the {body} of the default.hbs template -->
 </ul>
 
 <h2 id="클래스-다이어그램">클래스 다이어그램</h2>
-<p><img src="/post-img/design-pattern/strategy-pattern-class-diagram.png" alt="class-diagram" /></p>
+<p><img src="/assets/post-img/design-pattern/strategy-pattern-class-diagram.png" alt="class-diagram" /></p>
 
 <h2 id="예제코드">예제코드</h2>
 
@@ -322,7 +323,7 @@ into the {body} of the default.hbs template -->
                     
                         <section class="author-card">
                             
-                                <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="kimchanjung" />
+                                <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="kimchanjung" />
                             
                             <section class="author-card-content">
                                 <h4 class="author-card-name"><a href="/author/kimchanjung">김찬정</a></h4>
@@ -343,7 +344,18 @@ into the {body} of the default.hbs template -->
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
             
+            
+                <section class="post-full-comments">
+<script src="https://utteranc.es/client.js"
+        repo="kimchanjung/utterance-comments"
+        issue-term="전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>                           
 
+            
         </article>
 
     </div>
@@ -574,7 +586,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/design-pattern/2020/05/28/template-method-pattern/">
-                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
             </a>
         
         <div class="post-card-content">
@@ -600,7 +612,7 @@ into the {body} of the default.hbs template -->
                 
                     
                         
-                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
                         
                         <span class="post-card-author">
                             <a href="/author/kimchanjung/">김찬정</a>
@@ -626,7 +638,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/design-pattern/2020/05/26/state-pattern/">
-                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
             </a>
         
         <div class="post-card-content">
@@ -652,7 +664,7 @@ into the {body} of the default.hbs template -->
                 
                     
                         
-                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
                         
                         <span class="post-card-author">
                             <a href="/author/kimchanjung/">김찬정</a>

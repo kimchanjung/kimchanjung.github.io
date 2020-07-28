@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/facade-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/facade-pattern-class-diagram.png
 navigation: True
 title: "퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-20 09:00:00 +0900
@@ -94,7 +94,7 @@ published: true
 - Client가 서브시스템 내부의 클래스를 직접 사용하는 것을 막을 수 없다. Namespace를 선언하는 것이 대한이 될 수 있다. (<= 무슨말인지 솔직히 이해는 안됨)
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/facade-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/facade-pattern-class-diagram.png)
 
 
 ## 예제코드

@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/adapter-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/adapter-pattern-class-diagram.png
 navigation: True
 title: "방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-29 18:00:00 +0900 
@@ -62,7 +62,7 @@ published: true
 - 관련 클래스들이 늘어남에 따라 구조가 복잡해 진다.
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/visitor-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/visitor-pattern-class-diagram.png)
 
 ## 예제코드
 

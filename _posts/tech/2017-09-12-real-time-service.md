@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/real-time-service/order-delivery-activity.png
+cover: assets/post-img/real-time-service/order-delivery-activity.png
 navigation: True
 title: "[Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)"
 date: 2020-05-08 00:00:00 +0900
@@ -59,7 +59,7 @@ AngularJS에서 모델 변화를 감지하는 역할을 하여 양방향 데이�
 
 배민라이더스의 음식 주문은 평균 1시간 내외로 주문의 접수, 처리 및 배송이 완료 되어야 합니다. 즉 주문이 발생한 경우 **콜센터직원은 바로 주문의 발생을 알아야** 하며, 주문접수가 처리 되면 **라이더는 즉시 배달건의 존재를 알아야** 합니다. 또한 **배달의 상태(대기 - 배차 - 픽업 - 전달)와 라이더의 실시간 위치가 업데이트** 되어야 관제자와 라이더들은 원할한 관제 및 배달업무를 수행 할 수 있습니다. 또한 기존 polling 방식의 배민 콜센터 주문접수(현재는 fade out)는 주문건이 증가함에 따라 DB Select가 급증하여 서비스가 위험했던 적이 있었기  때문에 BROS개발 당시 실시간성을 유지하면서 DB Select를 줄이기 위해서 필수로 실시간 이벤트 서버 도입을 해야 했습니다.
 
-![order-activity-diagram](/post-img/real-time-service/order-delivery-activity.png)
+![order-activity-diagram](/assets/post-img/real-time-service/order-delivery-activity.png)
 
 그림 1. 주문 처리 activity 다이어그램
 
@@ -67,7 +67,7 @@ AngularJS에서 모델 변화를 감지하는 역할을 하여 양방향 데이�
 
 주문과 배달의 생성 상태변경이 있을 때 마다 socket.io 실시간 이벤트를 전송하고 수신 시 api를 호출하여 배달리스트를 갱신하는 방식은 데이터의 변경이 있는 경우만 database를 select하지만 피크시간대에는 이벤트가 증가하므로 database select가 급증하게 됩니다. **angularjs model** 변경은 angularjs가 알아서 뷰에 반영하기 때문에 실시간 이벤트를 송수신 할 때 마다 배달리스트를 호출 하지 않고 배달데이터를 **생성 삭제 수정 한 후 실시간 이벤트 메시지로 angularjs model에 반영** 하도록 하면 뷰는 **자동으로 실시간 반영** 됩니다. 또한 개발자는 뷰를 업데이트하는 비즈니스로직을 신경쓸 필요가 없고 데이터를 뷰에 나타나는 로직만 구성해 놓으면 됩니다.
 
-![angularjs-model](/post-img/real-time-service/angularjs-model.png)
+![angularjs-model](/assets/post-img/real-time-service/angularjs-model.png)
 
 그림 2. AngularJs 모델 데이터 반영
 
@@ -143,12 +143,12 @@ angular.module('bros').service('bros.dlvrymgmt.common.Delivery', ['$filter',
 
 ### 배달현황 화면
 
-![bros-delivery-list](/post-img/real-time-service/bros-delivery-list.png)
+![bros-delivery-list](/assets/post-img/real-time-service/bros-delivery-list.png)
 그림 3. BORS 실시간 배달현황 화면
 
 ### 라이더 관제 및 배차 화면
 
-![bros-gps](/post-img/real-time-service/bros-gps.png)
+![bros-gps](/assets/post-img/real-time-service/bros-gps.png)
 그림 3. BORS 실시간 라이더 배차 화면
 
 ## 맞닥뜨려야했던 이슈들
@@ -239,7 +239,7 @@ socket.io를 사용하여 websocket 서버를 개발 했지만 비즈니스로�
 
 cron job을 사용하여 2분에 1번씩 batch proccess 한곳에서 만 배달 데이터를 select 하여 database  부하를 줄이면서socket.io 실시간 이벤트로 브로드캐스팅을 하도록 하고 client는 수신받은 데이터로 유실이 발생한 배달 리스트를 fetch 하는 것으로 이벤트 누락에 대한 데이터 미변경을 보완 하였고 적용 이후에는 사용성에 대한 문제가 보고 되지 않았습니다.(더 좋은 방법도 분명 있을 겁니다.)
 
-![namespace-room-id](/post-img/real-time-service/websocket-broadcasting.png)
+![namespace-room-id](/assets/post-img/real-time-service/websocket-broadcasting.png)
 
 그림 4. 이벤트 유실을 보완하기 위한 Broadcasting
 
@@ -259,7 +259,7 @@ cron job을 사용하여 2분에 1번씩 batch proccess 한곳에서 만 배달 
 
 socket.io에서 트래픽을 격리하여 구분하는 단위로 사용됩니다 event는 명칭 그대로 송/수신하는 이벤트의 이름입니다. 트래픽격리 구분없이 이벤트를 송/수신하면 이벤트 리스너를 등록하여 이벤트를 처리하는 코드가 없더라도 접속한 모든 client에 전송 및 수신을 하게 됩니다. 불필요한 트래픽이 발생하게 되고 서버 자체의 성능도 저하되기 때문에 적절한 설계로 구분해아합니다.
 
-![namespace-room-id](/post-img/real-time-service/namespace-room-id.png)
+![namespace-room-id](/assets/post-img/real-time-service/namespace-room-id.png)
 
 
 표 1. Socket.io 트래픽 격리 구분 
@@ -270,7 +270,7 @@ socket.io에서 트래픽을 격리하여 구분하는 단위로 사용됩니다
 
 socket.io에서 이벤트를 송/수신하는 방식을 말합니다.
 
-![public-private-broadcasting](/post-img/real-time-service/public-private-broadcasting.png)
+![public-private-broadcasting](/assets/post-img/real-time-service/public-private-broadcasting.png)
 
 표 2. Socket.io 이벤트 송수신 방식
 
@@ -383,7 +383,7 @@ if (cluster.isWorker) {
 
 **worker 끼리 이벤트를 전/송수신 하는 매개체로 redis pub/sub 를 이용**했다. worker 1에 접속된 client가 이벤트를 전송하면 나머지 worker들에게  redis pub/sub을 통해 이벤트를 전송하고 수신받아 자신에게 접속된 client들에게 최종적으로 이벤트 메시지를 전송한다.
 
-![socketio-clustring](/post-img/real-time-service/socketio-clustring.png) 
+![socketio-clustring](/assets/post-img/real-time-service/socketio-clustring.png) 
 
 그림 5. 클러스터링 구성도
 
@@ -426,7 +426,7 @@ app.get('/ridersorda', function (req, res, next) {
 
 앞서 말한 것 처럼 **접속한 Client의 수와 이름 과 Room 리스트 데이터들은 각각의 worker 프로세스에서 공유 되지 못하고 따로 관리가 되기 때문에 이런 관리 데이터들은 1곳에 저장하고 조회 할 필요성**이 생겼다. 또한 **채팅 기능에서 서로 간 대화 메시지들이 보관되어야 할 저장소**도 필요했다. Clustering 구성시에 Redis를 사용하고 있었기 때문에 Redis를 활용하여 데이터들을 저장하고 사용했고 Client들이 접속 및 Room에 join/out 하거 할때 Redis에 정보를 update했고 실시간 이벤트로 모니터링 페이지에 전송했다.
 
-![socket-server-monitor](/post-img/real-time-service/socket-server-monitor.png)
+![socket-server-monitor](/assets/post-img/real-time-service/socket-server-monitor.png)
 
 그림 6. 소켓 서버 현황 페이지
 
@@ -503,7 +503,7 @@ redis에 저장된 서버 현황 데이터를 가져와서 적절하게 조합�
 
 socket 서버의 namespace/room/account/socketid 관리 데이터들은 서버의 현황 데이터기 때문에 사실상 file로 백업 될 필요가 없지만 Chatting시 채팅에 입장 후 재입장 시 대화 내용을 다시 보여 줘야 했기 때문에 redis가 재부팅 되거 나 하는 경우에도 영구적으로 기록 되어 있어야 했다.
 
-![bros-chatting](/post-img/real-time-service/bros-chatting.png)
+![bros-chatting](/assets/post-img/real-time-service/bros-chatting.png)
 
 그림 7. 채팅기능
 

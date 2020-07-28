@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://kimchajung.github.io/tag/tech/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T20:58:38+09:00</updated>
+  <updated>2020-07-29T00:20:55+09:00</updated>
   <id>https://kimchajung.github.io/tag/tech/feed.xml</id>
 
   
@@ -196,7 +196,7 @@
 
 &lt;p&gt;다음 이미지는 &lt;strong&gt;Google로 ‘redux diagram’ 키워드&lt;/strong&gt;로 검색했을 때 검색된 결과 들입니다. 리덕스의 개념을 설명하는데 &lt;strong&gt;Data Flow Diagram&lt;/strong&gt;이 자주 등장 합니다. &lt;strong&gt;Action, Reducer, Dispatcher, Store, View&lt;/strong&gt; 이런 개념들은 사실 State를 렌더링 하고 변경하기 위한 어떤 메소드 즉 서비스 같은 것을 가져다 그냥 사용하는 것 뿐인 데 개념을 장황하게 설명합니다. 그리고 그것들이 상호 작용하기 위해서 추가 해주는 보일러플레이트 코들이 매 Component마다 추가 해주어야합니다. 컴포넌트와 리덕스를 연결하기위해서 &lt;strong&gt;mapStateToProps, mapDispatchToProps&lt;/strong&gt; 함수를 사용하고 &lt;strong&gt;Action을 정의&lt;/strong&gt; 하고.. 등등 &lt;strong&gt;Javascript의 높은 문법 자유&lt;/strong&gt;도 때문에 &lt;strong&gt;예제 코드들의 선언 방식 또한 자유 분방&lt;/strong&gt;합니다. 바로 이런 것들이 React가 다소 어렵다라는 인식을 주게되는 하나의 요인 같댜는 생각이 개인적으로 들기도 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/react-mobx/redux-diagram.jpg&quot; alt=&quot;redux-data-flow-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/react-mobx/redux-diagram.jpg&quot; alt=&quot;redux-data-flow-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 1. redux diagram 키워드 검색한 결과&lt;/p&gt;
 
@@ -216,7 +216,7 @@
 
 &lt;p&gt;Mobx의 &lt;strong&gt;State(데이터)의 흐름과 핵심 개념&lt;/strong&gt;을 간단하게 표현 해보았습니다. 사실 더 자세한 개념은 공식문서에 있지만 이해하는 데 방해가되는 개념은 제외하고 제가 이해한 부분을 간략하게 그려보았습니다. 배달 리스트를 가져오기 위해서 &lt;strong&gt;DeliveryStore&lt;/strong&gt;(Spring의 서비스의 역할과 거의 비슷하다)의 &lt;strong&gt;findAllDeliveries&lt;/strong&gt;를 호출하여 서버로 부터 가져온 데이터를 선언해둔 &lt;strong&gt;deliveries&lt;/strong&gt; state에 할당 해주면 &lt;strong&gt;DeliveryComponent&lt;/strong&gt;에서 &lt;strong&gt;deliveries&lt;/strong&gt; 를 Rendering 하게 되는데 이것이 기본 동작 개념입니다. 기타 &lt;strong&gt;Mobx Store&lt;/strong&gt;와 &lt;strong&gt;React 컴포넌트를 연결&lt;/strong&gt;하는 방법은 Redux와 달리 &lt;strong&gt;@inject&lt;/strong&gt; 데코레이더 한줄로 이루어 집니다. 물론 그외 여러가지 기능을 하는 &lt;strong&gt;데코레이더 들이 제공&lt;/strong&gt;되고 있으며 설명은 이후 자세히 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/react-mobx/mobx-data-flow.jpg&quot; alt=&quot;mobx-data-flow-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/react-mobx/mobx-data-flow.jpg&quot; alt=&quot;mobx-data-flow-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 2. mobx 데이터 흐름&lt;/p&gt;
 
@@ -224,7 +224,7 @@
 
 &lt;p&gt;Mobx는 렌더링 할 State를 관찰대상으로 지정, State를 변경하면 React Component Render 메소드에 의해서 Rerendering 되는 아키텍쳐를 기본 골격으로 합니다. 예제와 함께 Mobx의 작동 방식과 특징을 알아 보겠습니다. 마치 &lt;strong&gt;Java Spring Framework유사한 Layer 아키텍쳐&lt;/strong&gt;를 가지고 있고 실제로 그런식으로 Layer를 분리하여 아키텍쳐를 구성하는 것을 권장하고 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/react-mobx/mobx-spring-layer.png&quot; alt=&quot;mobx-spring-layer-table&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/react-mobx/mobx-spring-layer.png&quot; alt=&quot;mobx-spring-layer-table&quot; /&gt;&lt;br /&gt;
 표 1.spring과 mobx layer 비교&lt;/p&gt;
 
 &lt;h3 id=&quot;store--service&quot;&gt;Store = Service&lt;/h3&gt;
@@ -484,7 +484,7 @@
 
 &lt;h3 id=&quot;같은-역할을-하는-두-라이브러리의-layer또는-라이브러리&quot;&gt;같은 역할을 하는 두 라이브러리의 Layer(또는 라이브러리)&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/react-mobx/mobx-redux-layer.png&quot; alt=&quot;mobx-redux-layer-table&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/react-mobx/mobx-redux-layer.png&quot; alt=&quot;mobx-redux-layer-table&quot; /&gt;&lt;br /&gt;
 표 2. Mobx와 Redux Layer 비교&lt;/p&gt;
 
 &lt;h3 id=&quot;service-layer---storemobx-vs-reducerredux&quot;&gt;Service Layer - Store(Mobx) VS Reducer(Redux)&lt;/h3&gt;
@@ -1145,10 +1145,10 @@
   &lt;p&gt;단순히 아웃풋을 빨리 뽑아내는데 집중한 것이 아니라 NPM에 넘쳐나는 React 관련 라이브러리들과 패턴을 관련 블로그나 문서들을 통하여 비교 조사하고 적용 해보면서 최상의 패턴과 라이브러리를 조합하는데 더 집중 하였습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Mobx와 Material-UI를 적용한 배달현황&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/brms-dashboard.png&quot; alt=&quot;brms-dashboard&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Mobx와 Material-UI를 적용한 배달현황&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/brms-dashboard.png&quot; alt=&quot;brms-dashboard&quot; /&gt;&lt;br /&gt;
 그림 5. mobx와 material-ui를 배달현황&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Mobx와 Material-UI를 적용한 라이더관리&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/brms-search-rider.png&quot; alt=&quot;brms-search-rider&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Mobx와 Material-UI를 적용한 라이더관리&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/brms-search-rider.png&quot; alt=&quot;brms-search-rider&quot; /&gt;&lt;br /&gt;
 그림 5. mobx와 material-ui를 라이더 관리&lt;/p&gt;
 
 &lt;p&gt;이를 통하여 &lt;strong&gt;마주한 고민&lt;/strong&gt;과 더불어 실제 &lt;strong&gt;개발 해보면서 느낀 것&lt;/strong&gt; 들과 약간의 정보 그런 이야기를 한번 해보고자 합니다.&lt;/p&gt;
@@ -1169,10 +1169,10 @@
 
 &lt;p&gt;간략한 특징은 다음과 같이 Atoms(원자), Molecules(분자), Organisms(유기체), Templates, Pages 분류로 React Component의 종류와 규모에 맞게 적절히 분류해서 생성하여 관리합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Atomic Design 단계 구분&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/atomic-design.png&quot; alt=&quot;atomic-design&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Atomic Design 단계 구분&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/atomic-design.png&quot; alt=&quot;atomic-design&quot; /&gt;&lt;br /&gt;
 그림 5. Atomic Design 단계구분&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Atomic Design 적용한 폴더 구조&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/atomic-design-folder.png&quot; alt=&quot;atomic-design-folder&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Atomic Design 적용한 폴더 구조&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/atomic-design-folder.png&quot; alt=&quot;atomic-design-folder&quot; /&gt;&lt;br /&gt;
 그림 5. Atomic Design 폴더 구조&lt;/p&gt;
 
 &lt;h3 id=&quot;react-component의-유형-구분&quot;&gt;React Component의 유형 구분&lt;/h3&gt;
@@ -1183,7 +1183,7 @@
   &lt;p&gt;React는 기본적으로 명확하게 두 영역을 구분해서 설계된 것이 아니기 때문에 Tutorial에서는 구분해서 코드를 설명하지는 않는다. 하지만 이런 식으로 두 영역을 명확하게 구분하여 개발하는 것이 좀더 구조적으로 유용하기 때문에 구분하는 것을 권장하고 있다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Component 유형구분&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/component-type.png&quot; alt=&quot;component-type&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Component 유형구분&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/component-type.png&quot; alt=&quot;component-type&quot; /&gt;&lt;br /&gt;
 그림 5. React Component의 유형&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Container Component&lt;/strong&gt; React Component 를 상속한 RiderSearchContainer는 State와 Method를 적절히 중간에서 연결해 주는 &lt;strong&gt;Controller와 같은 역할&lt;/strong&gt;만 수행하고 HTML 렌더링은 RiderListTemplate 같은 Presentational 영역을 담당하는 Component가 담당한다.&lt;/p&gt;
@@ -1312,7 +1312,7 @@ Bootstrap 4가 나온 상황에서 &lt;strong&gt;style이 좀 예전 것&lt;/str
 
 &lt;p&gt;개인적으로 Mobx로 개발을 진행 했을 때 Material-UI도 같이 적용 했습니다. 사실 처음에 &lt;strong&gt;우려되는 점이 다른 라이브러들과의 궁합&lt;/strong&gt;을 걱정했지만 이제 정식으로 3대 버전까지 개발되었으며 &lt;strong&gt;Mobx-React-Form(form validation 라이브러리 with mobx)이 Material-UI를 지원&lt;/strong&gt;하기 때문에 input의 &lt;strong&gt;유효성 검사와 그에 따른 UI의 변화와 오류 메시지 표시&lt;/strong&gt;등이 별다른 custom 작업없이 Style이 틀어지거나 하지 않고 자연스럽게 작동했고, 사용율도 Bootstrap 기반의 라이브러리들보다 훨씬 높은 수치를 나타내고 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;최근 NPM 경향&lt;/strong&gt; &lt;img src=&quot;/post-img/react-mobx/npm-trend-ui-lib.png&quot; alt=&quot;npm-trend-ui-lib&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;최근 NPM 경향&lt;/strong&gt; &lt;img src=&quot;/assets/post-img/react-mobx/npm-trend-ui-lib.png&quot; alt=&quot;npm-trend-ui-lib&quot; /&gt;&lt;br /&gt;
 그림 5. npm trend ui 라이브러리&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/p&gt;
@@ -1321,7 +1321,7 @@ Bootstrap 4가 나온 상황에서 &lt;strong&gt;style이 좀 예전 것&lt;/str
   &lt;li&gt;&lt;strong&gt;Web, Mobile, Desktop&lt;/strong&gt;에 까지 광범위하게 사용되고 있는 &lt;strong&gt;Google Material Design의 깔끔한 style&lt;/strong&gt;을 적용할 수 있다.&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;테마변경의 경우 &lt;strong&gt;css, sass를 새로 변경 rebuild&lt;/strong&gt;하는 것이 아니라 아주 &lt;strong&gt;간편하게 코드상&lt;/strong&gt;으로 &lt;strong&gt;변경&lt;/strong&gt;할 수 있어서 &lt;strong&gt;Dark Mode&lt;/strong&gt; 및 &lt;strong&gt;색상테마&lt;/strong&gt;를 사용자가 &lt;strong&gt;직접 설정해서 변경 할수 있도록 기능으로도 제공&lt;/strong&gt; 할 수 도 있다. &lt;br /&gt;
-&lt;img src=&quot;/post-img/react-mobx/brms-dashboard-dark.png&quot; alt=&quot;brms-dashboard-dark&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/post-img/react-mobx/brms-dashboard-dark.png&quot; alt=&quot;brms-dashboard-dark&quot; /&gt;&lt;br /&gt;
 그림 5. material-ui dark mode&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;css를 적용하는 방식이 아닌 [&lt;strong&gt;jss]&lt;a href=&quot;https://medium.com/@oleg008/jss-is-css-d7d41400b635&quot;&gt;15&lt;/a&gt; 방식으로 style을 해당 페이지에서 사용하는 스타일만 따로 격리&lt;/strong&gt;된 javascript객체로 관리가능 하고 &lt;strong&gt;동적으로 style 변경 적용이 직관적&lt;/strong&gt;이다&lt;/li&gt;
@@ -1343,7 +1343,7 @@ Bootstrap 4가 나온 상황에서 &lt;strong&gt;style이 좀 예전 것&lt;/str
 &lt;p&gt;Redux만 npm에서 다운받으면 되는 줄 알았는데 &lt;strong&gt;이게 다뭐야 하시는 분들&lt;/strong&gt;이 분명히 계실 것 이라고 생각됩니다. 리서치 하다보면 &lt;strong&gt;꼬리에 꼬리를 무는 수많은 추가 라이브러리&lt;/strong&gt;들과 그 것들이 뭐하는 라이브러리인지 파악하는 일도 상당한 리소스가 투여되는 경험이였습니다. 일단 Redux를 사용 할 것이라면 2018년 5월 기준으로 보편 아래 나열한 키워드의 라이브러리들을 기본적으로 사용하면 됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Redux와 관련 라이브러리&lt;/strong&gt;&lt;br /&gt;
-&lt;img src=&quot;/post-img/react-mobx/redux-with-libs.png&quot; alt=&quot;redux-with-lib&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/post-img/react-mobx/redux-with-libs.png&quot; alt=&quot;redux-with-lib&quot; /&gt;&lt;br /&gt;
 그림 5. Redux와 관련 라이브러리들&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1598,7 +1598,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;배민라이더스의 음식 주문은 평균 1시간 내외로 주문의 접수, 처리 및 배송이 완료 되어야 합니다. 즉 주문이 발생한 경우 &lt;strong&gt;콜센터직원은 바로 주문의 발생을 알아야&lt;/strong&gt; 하며, 주문접수가 처리 되면 &lt;strong&gt;라이더는 즉시 배달건의 존재를 알아야&lt;/strong&gt; 합니다. 또한 &lt;strong&gt;배달의 상태(대기 - 배차 - 픽업 - 전달)와 라이더의 실시간 위치가 업데이트&lt;/strong&gt; 되어야 관제자와 라이더들은 원할한 관제 및 배달업무를 수행 할 수 있습니다. 또한 기존 polling 방식의 배민 콜센터 주문접수(현재는 fade out)는 주문건이 증가함에 따라 DB Select가 급증하여 서비스가 위험했던 적이 있었기  때문에 BROS개발 당시 실시간성을 유지하면서 DB Select를 줄이기 위해서 필수로 실시간 이벤트 서버 도입을 해야 했습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/order-delivery-activity.png&quot; alt=&quot;order-activity-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/order-delivery-activity.png&quot; alt=&quot;order-activity-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 1. 주문 처리 activity 다이어그램&lt;/p&gt;
 
@@ -1606,7 +1606,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;주문과 배달의 생성 상태변경이 있을 때 마다 socket.io 실시간 이벤트를 전송하고 수신 시 api를 호출하여 배달리스트를 갱신하는 방식은 데이터의 변경이 있는 경우만 database를 select하지만 피크시간대에는 이벤트가 증가하므로 database select가 급증하게 됩니다. &lt;strong&gt;angularjs model&lt;/strong&gt; 변경은 angularjs가 알아서 뷰에 반영하기 때문에 실시간 이벤트를 송수신 할 때 마다 배달리스트를 호출 하지 않고 배달데이터를 &lt;strong&gt;생성 삭제 수정 한 후 실시간 이벤트 메시지로 angularjs model에 반영&lt;/strong&gt; 하도록 하면 뷰는 &lt;strong&gt;자동으로 실시간 반영&lt;/strong&gt; 됩니다. 또한 개발자는 뷰를 업데이트하는 비즈니스로직을 신경쓸 필요가 없고 데이터를 뷰에 나타나는 로직만 구성해 놓으면 됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/angularjs-model.png&quot; alt=&quot;angularjs-model&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/angularjs-model.png&quot; alt=&quot;angularjs-model&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 2. AngularJs 모델 데이터 반영&lt;/p&gt;
 
@@ -1681,12 +1681,12 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;배달현황-화면&quot;&gt;배달현황 화면&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/bros-delivery-list.png&quot; alt=&quot;bros-delivery-list&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/bros-delivery-list.png&quot; alt=&quot;bros-delivery-list&quot; /&gt;
 그림 3. BORS 실시간 배달현황 화면&lt;/p&gt;
 
 &lt;h3 id=&quot;라이더-관제-및-배차-화면&quot;&gt;라이더 관제 및 배차 화면&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/bros-gps.png&quot; alt=&quot;bros-gps&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/bros-gps.png&quot; alt=&quot;bros-gps&quot; /&gt;
 그림 3. BORS 실시간 라이더 배차 화면&lt;/p&gt;
 
 &lt;h2 id=&quot;맞닥뜨려야했던-이슈들&quot;&gt;맞닥뜨려야했던 이슈들&lt;/h2&gt;
@@ -1782,7 +1782,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;cron job을 사용하여 2분에 1번씩 batch proccess 한곳에서 만 배달 데이터를 select 하여 database  부하를 줄이면서socket.io 실시간 이벤트로 브로드캐스팅을 하도록 하고 client는 수신받은 데이터로 유실이 발생한 배달 리스트를 fetch 하는 것으로 이벤트 누락에 대한 데이터 미변경을 보완 하였고 적용 이후에는 사용성에 대한 문제가 보고 되지 않았습니다.(더 좋은 방법도 분명 있을 겁니다.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/websocket-broadcasting.png&quot; alt=&quot;namespace-room-id&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/websocket-broadcasting.png&quot; alt=&quot;namespace-room-id&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 4. 이벤트 유실을 보완하기 위한 Broadcasting&lt;/p&gt;
 
@@ -1802,7 +1802,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;socket.io에서 트래픽을 격리하여 구분하는 단위로 사용됩니다 event는 명칭 그대로 송/수신하는 이벤트의 이름입니다. 트래픽격리 구분없이 이벤트를 송/수신하면 이벤트 리스너를 등록하여 이벤트를 처리하는 코드가 없더라도 접속한 모든 client에 전송 및 수신을 하게 됩니다. 불필요한 트래픽이 발생하게 되고 서버 자체의 성능도 저하되기 때문에 적절한 설계로 구분해아합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/namespace-room-id.png&quot; alt=&quot;namespace-room-id&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/namespace-room-id.png&quot; alt=&quot;namespace-room-id&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;표 1. Socket.io 트래픽 격리 구분&lt;/p&gt;
 
@@ -1814,7 +1814,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;socket.io에서 이벤트를 송/수신하는 방식을 말합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/public-private-broadcasting.png&quot; alt=&quot;public-private-broadcasting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/public-private-broadcasting.png&quot; alt=&quot;public-private-broadcasting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;표 2. Socket.io 이벤트 송수신 방식&lt;/p&gt;
 
@@ -1932,7 +1932,7 @@ io.on('connection', (socket) =&amp;gt; {
 
 &lt;p&gt;&lt;strong&gt;worker 끼리 이벤트를 전/송수신 하는 매개체로 redis pub/sub 를 이용&lt;/strong&gt;했다. worker 1에 접속된 client가 이벤트를 전송하면 나머지 worker들에게  redis pub/sub을 통해 이벤트를 전송하고 수신받아 자신에게 접속된 client들에게 최종적으로 이벤트 메시지를 전송한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/socketio-clustring.png&quot; alt=&quot;socketio-clustring&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/socketio-clustring.png&quot; alt=&quot;socketio-clustring&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 5. 클러스터링 구성도&lt;/p&gt;
 
@@ -1974,7 +1974,7 @@ io.on('connection', (socket) =&amp;gt; {
 
 &lt;p&gt;앞서 말한 것 처럼 &lt;strong&gt;접속한 Client의 수와 이름 과 Room 리스트 데이터들은 각각의 worker 프로세스에서 공유 되지 못하고 따로 관리가 되기 때문에 이런 관리 데이터들은 1곳에 저장하고 조회 할 필요성&lt;/strong&gt;이 생겼다. 또한 &lt;strong&gt;채팅 기능에서 서로 간 대화 메시지들이 보관되어야 할 저장소&lt;/strong&gt;도 필요했다. Clustering 구성시에 Redis를 사용하고 있었기 때문에 Redis를 활용하여 데이터들을 저장하고 사용했고 Client들이 접속 및 Room에 join/out 하거 할때 Redis에 정보를 update했고 실시간 이벤트로 모니터링 페이지에 전송했다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/socket-server-monitor.png&quot; alt=&quot;socket-server-monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/socket-server-monitor.png&quot; alt=&quot;socket-server-monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 6. 소켓 서버 현황 페이지&lt;/p&gt;
 
@@ -2051,7 +2051,7 @@ io.on('connection', (socket) =&amp;gt; {
 
 &lt;p&gt;socket 서버의 namespace/room/account/socketid 관리 데이터들은 서버의 현황 데이터기 때문에 사실상 file로 백업 될 필요가 없지만 Chatting시 채팅에 입장 후 재입장 시 대화 내용을 다시 보여 줘야 했기 때문에 redis가 재부팅 되거 나 하는 경우에도 영구적으로 기록 되어 있어야 했다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/real-time-service/bros-chatting.png&quot; alt=&quot;bros-chatting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/real-time-service/bros-chatting.png&quot; alt=&quot;bros-chatting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;그림 7. 채팅기능&lt;/p&gt;
 
@@ -2124,7 +2124,7 @@ io.on('connection', (socket) =&amp;gt; {
   &lt;p&gt;이 것은 객제관점에서 보아도 배달객체가 주문객제를 직접 변경하는 것 매우 부자연스럽다. 객체 관점에서도 필요할 때는 주문 객체에서 제공되는 주문상태 변경 메소드를 호출하여 주문객체에게 주문상태 변경해달라고 요청하는 모습처럼 마이크로 서비스도 하나의 객체단위로 보는 관점이 필요 하다고 본다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png&quot; alt=&quot;spring-microservice-diagrams-monolithic-to-microservice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png&quot; alt=&quot;spring-microservice-diagrams-monolithic-to-microservice&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;마이크로서비스는-자율적&quot;&gt;마이크로서비스는 자율적&lt;/h3&gt;
 &lt;p&gt;책 내용은 구구절절한데 &lt;code class=&quot;highlighter-rouge&quot;&gt;한마디로 하나의 단독 서비스 처럼 돌아갸야 된다는 이야기&lt;/code&gt;다. 웹서비스라면 하나의 웹서비스가 독립적으로 구동되는 형태로 생각하면 이해가 빠를 듯 하다.&lt;/p&gt;
@@ -2275,11 +2275,11 @@ io.on('connection', (socket) =&amp;gt; {
   &lt;li&gt;분석한 의존성을 바탕으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;의존 관계 그래프를 그려&lt;/code&gt;본다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/dependency-diagram.png&quot; alt=&quot;dependency-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/dependency-diagram.png&quot; alt=&quot;dependency-diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;세번째---면밀한-의존-관계-분석&quot;&gt;세번째 - 면밀한 의존 관계 분석&lt;/h3&gt;
 &lt;h4 id=&quot;이벤트-소싱에-유리한-케이스&quot;&gt;이벤트 소싱에 유리한 케이스&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-get-delivery-list.png&quot; alt=&quot;spring-microservice-get-delivery-list&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-get-delivery-list.png&quot; alt=&quot;spring-microservice-get-delivery-list&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;ul&gt;
@@ -2290,7 +2290,7 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;이벤트-소싱에-불리한-케이스1&quot;&gt;이벤트 소싱에 불리한 케이스(1)&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-get-delivery-list-from-calculator.png&quot; alt=&quot;spring-microservice-get-delivery-list-from-calculator&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-get-delivery-list-from-calculator.png&quot; alt=&quot;spring-microservice-get-delivery-list-from-calculator&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;ul&gt;
@@ -2301,7 +2301,7 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;이벤트-소싱에-불리한-케이스2&quot;&gt;이벤트 소싱에 불리한 케이스(2)&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-get-delivery-list-from-crm.png&quot; alt=&quot;spring-microservice-get-delivery-list-from-crm&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-get-delivery-list-from-crm.png&quot; alt=&quot;spring-microservice-get-delivery-list-from-crm&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;ul&gt;
     &lt;li&gt;고객응대 시스템에서 발생하는 배달건의 고객응대 건수는 발생하는 배달 건수에 비해 현저하게 적은 건수를 가진다. (배달이 100건이라고 한다면 배달불만 접수는 10건이라고 한다면)&lt;/li&gt;
@@ -2312,19 +2312,19 @@ io.on('connection', (socket) =&amp;gt; {
 
 &lt;h4 id=&quot;동기화-되어야-할-서비스들-사이에서의-이벤트소싱&quot;&gt;동기화 되어야 할 서비스들 사이에서의 이벤트소싱&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-delivery-dashboard-direct.png&quot; alt=&quot;spring-microservice-delivery-dashboard-direct&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-delivery-dashboard-direct.png&quot; alt=&quot;spring-microservice-delivery-dashboard-direct&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;배달 현황 및 각종 정보를 관리하고 실시간 모니터링하는 서비스가 있다고 한다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;지속적으로 각각의 마이크로서비스로 분리된 시스템&lt;/code&gt;에서(배달, 라이더, 배달로) 주기적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;데이터를 직접 가져오는 방식&lt;/code&gt;이 될 것이다.&lt;/li&gt;
   &lt;li&gt;위 그림과 같은 직접 적인 방식에서 아래 그림과 같은 &lt;code class=&quot;highlighter-rouge&quot;&gt;이벤트 소싱 방식으로 전환&lt;/code&gt; 할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-delivery-dashboard-event-sourcing.png&quot; alt=&quot;spring-microservice-delivery-dashboard-event-sourcing&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-delivery-dashboard-event-sourcing.png&quot; alt=&quot;spring-microservice-delivery-dashboard-event-sourcing&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;위 그림과 같은 이벤트 소싱 방식으로의 전환이 각 시스템간 의존성을 낮춘다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;동기화-되어야-할-서비스들-사이에서의-이벤트소싱-문제점&quot;&gt;동기화 되어야 할 서비스들 사이에서의 이벤트소싱 문제점&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-wait-delivery-event-sourcing.png&quot; alt=&quot;spring-microservice-wait-delivery-event-sourcing&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-wait-delivery-event-sourcing.png&quot; alt=&quot;spring-microservice-wait-delivery-event-sourcing&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;ul&gt;
     &lt;li&gt;배달을 라이더에게 배차했을 경우 배차 대기 목록 서비스에서 배달상태변경 이벤트를 비동기 이벤트로 구독받아 변경사항을 반영하고 있다.&lt;/li&gt;
@@ -2335,7 +2335,7 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;마이크로서비스간-유효성을-확인-해야하는-경우&quot;&gt;마이크로서비스간 유효성을 확인 해야하는 경우&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-validate-delivery.png&quot; alt=&quot;spring-microservice-validate-delivery&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-validate-delivery.png&quot; alt=&quot;spring-microservice-validate-delivery&quot; /&gt;&lt;br /&gt;
 배차의 경우 배달건을 배차 할 수 있는 배달건인지 유효성을 다음과 같이 확인 할 것이다.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;ul&gt;
@@ -2347,7 +2347,7 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/blockquote&gt;
 
 &lt;p&gt;이런 경우는 아래 그림과 같이 복잡한 유효성을 확인 하는 것 보다 적적한 유효성을 기존으로 미 배차 배달건 목록을 배달 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로시스템에서 관리하여 타 시스템에게 제공하는 편이 유리&lt;/code&gt;할 것이다.&lt;br /&gt;
-&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-management-wait-delivery-list.png&quot; alt=&quot;spring-microservice-management-wait-delivery-list&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-management-wait-delivery-list.png&quot; alt=&quot;spring-microservice-management-wait-delivery-list&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;마이그레이션을-위한-마이크로서비스-우선순위-지정&quot;&gt;마이그레이션을 위한 마이크로서비스 우선순위 지정&lt;/h3&gt;
 &lt;p&gt;타이틀이 애매한데 풀어서 이야기 하자면 모놀리식 시스템에서 마이크로서비스로 분리하여 전환하고자 초기 설계 이후 도출된 각 마이크로서비스들 중 어떤 서비스를 먼저 전환 해야하는지에 대한 이야기로 이해하면 될 듯 하다. &lt;code class=&quot;highlighter-rouge&quot;&gt;우선순위를 매기는 기준에 대한 설명&lt;/code&gt;.&lt;/p&gt;
@@ -2413,7 +2413,7 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;h5 id=&quot;이벤트소싱-방식&quot;&gt;이벤트소싱 방식&lt;/h5&gt;
 &lt;p&gt;참조 데이터를 처리하는 마이크로서비스를 따로 만들어 각 마이크로 서비스에 제공하는 방식을 추천하는데 &lt;code class=&quot;highlighter-rouge&quot;&gt;이벤트소싱 방식은 동기화 문제가 있을 수 있다&lt;/code&gt;. 배달팁이 변경 되고 비동기 이벤트를 발행하고 배달 마이크로서비스에서 배달 생성시 아직 &lt;code class=&quot;highlighter-rouge&quot;&gt;변경된 이벤트를 수신 받지 못한 상태&lt;/code&gt;에서 변경전 배달료로 배달이 생성될 수도 있다는 이야기다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-diagrams-refer-data-event-sourcing.png&quot; alt=&quot;spring-microservice-diagrams-refer-data-event-sourcing&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-diagrams-refer-data-event-sourcing.png&quot; alt=&quot;spring-microservice-diagrams-refer-data-event-sourcing&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;인메모리-데이터-그리드&quot;&gt;인메모리 데이터 그리드&lt;/h5&gt;
 &lt;p&gt;참조 데이터 마이크로서비스는 참조데이터의 변경사항을 인메모리 데이터 그리드에 반영 처리하고 각 마이크로서비스들은 인메모리 데이터 그리드를 참조한다. 이 방법은 &lt;code class=&quot;highlighter-rouge&quot;&gt;데이터 동기화에 대한 문제를 해결&lt;/code&gt;한다.&lt;/p&gt;
@@ -2422,7 +2422,7 @@ io.on('connection', (socket) =&amp;gt; {
   &lt;p&gt;인메모리 데이터 그리드는 데이터를 메모리로 관리한다는 점에서 REDIS인가? 하고 생각 할 수 있지만 REDIS와는 또 다른 개념이 적용된 메모리 저장소 인 듯 하다. 자세한 개념은 구글링을 통해서 찾아보면 도움이 될 듯 하다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/post-img/spring-microservice/spring-microservice-diagrams-refer-data-in-memory-data-grid.png&quot; alt=&quot;spring-microservice-diagrams-refer-data-in-memory-data-grid&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-diagrams-refer-data-in-memory-data-grid.png&quot; alt=&quot;spring-microservice-diagrams-refer-data-in-memory-data-grid&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;마무리&quot;&gt;마무리&lt;/h3&gt;
 &lt;p&gt;스프링 마이크로서비스의 책 내용중 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점&lt;/code&gt; 등의 내용만 정리해 보았습니다.&lt;/p&gt;</content>

@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/composite-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/composite-pattern-class-diagram.png
 navigation: True
 title: "컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-18 09:00:00 +0900
@@ -55,7 +55,7 @@ published: true
 - 여러 종류의 객체를 일반화 시켰기 때문에 특정 객체에 제약 조건을 주거나 할 수 없다.
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/composite-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/composite-pattern-class-diagram.png)
 
 
 ## 예제코드

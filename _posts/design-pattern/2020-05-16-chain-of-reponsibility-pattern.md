@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png
+cover: assets/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png
 navigation: True
 title: "책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-16 09:00:00 +0900
@@ -32,7 +32,7 @@ published: true
 - 무한루프에 빠질 수 있으니 잘 고려해서 구성 해야함
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png)
 ## 예제코드
 
 ### 처리객체

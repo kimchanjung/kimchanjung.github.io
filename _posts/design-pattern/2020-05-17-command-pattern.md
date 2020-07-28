@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/design-pattern/command-pattern-class-diagram.png"
+cover: assets/post-img/design-pattern/command-pattern-class-diagram.png"
 navigation: True
 title: "커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-17 09:00:00 +0900
@@ -57,7 +57,7 @@ published: true
 - 명령에 대한 클래스가 늘어난다.
 
 ## 클래스 다이어그램
-![class-diagram](/post-img/design-pattern/command-pattern-class-diagram.png)
+![class-diagram](/assets/post-img/design-pattern/command-pattern-class-diagram.png)
 
 
 ## 예제코드

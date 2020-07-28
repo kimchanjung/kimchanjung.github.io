@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: post-img/react/material-ui-datepicker.png
+cover: assets/post-img/react/material-ui-datepicker.png
 navigation: True
 title: "[React] mobx-react-form 사용시 material-ui datepicker의 date format이 미동작 해결 방법"
 date: 2020-06-22 12:00:00 +0900
@@ -19,7 +19,7 @@ Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을
 # mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결
 Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 `날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만` `실제 값은 적용되어 있지 않은 문제`가 있습니다.
 
-![material-ui-datepicker](/post-img/react/material-ui-datepicker.png){: width="40%"}{: .img-center}
+![material-ui-datepicker](/assets/post-img/react/material-ui-datepicker.png){: width="40%"}{: .img-center}
 
 > datepicker 에서 날짜를 선택 했고 설정한 날짜형식은 yyyy-MM-dd 대로 입직일 항목에 2019-05-31로 표시가 되어 있지만 `실제값은 yyyy-MM-dd가 아닌 Fry May 31 2019 13:44:31 GMT+0900 되어 있는 버그`입니다  
 

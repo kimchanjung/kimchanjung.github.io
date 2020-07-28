@@ -108,7 +108,9 @@ into the {body} of the default.hbs template -->
                     </script>
                 </section>
             {% endif %}
-
+            {% if site.utteranc or page.utteranc %}
+                {% include github-comment.html %}
+            {% endif %}
         </article>
 
     </div>

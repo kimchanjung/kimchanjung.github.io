@@ -15,8 +15,8 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     
     <!-- highlight.js -->
@@ -46,7 +46,7 @@
     <meta property="og:title" content="데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]" />
     <meta property="og:description" content="데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다. 데코레이터 패턴 - Decorator Pattern 데코레이터 패턴이란 데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다. 이해를 돕기위한 설명 개발자는 개발이라는 업무만 할 수 있다." />
     <meta property="og:url" content="https://kimchajung.github.io/design-pattern/2020/05/19/decorator-pattern/" />
-    <meta property="og:image" content="https://kimchajung.github.io/post-img/design-pattern/decorator-pattern-class-diagram.png" />
+    <meta property="og:image" content="https://kimchajung.github.io/assets/post-img/design-pattern/decorator-pattern-class-diagram.png" />
     <meta property="article:publisher" content="https://www.facebook.com/mogomezwai" />
     <meta property="article:author" content="https://www.facebook.com/mogomezwai" />
     <meta property="article:published_time" content="2020-05-19T09:00:00+09:00" />
@@ -56,7 +56,7 @@
     <meta name="twitter:title" content="데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]" />
     <meta name="twitter:description" content="데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다. 데코레이터 패턴 - Decorator Pattern 데코레이터 패턴이란 데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다. 이해를 돕기위한 설명 개발자는 개발이라는 업무만 할 수 있다." />
     <meta name="twitter:url" content="https://kimchajung.github.io/" />
-    <meta name="twitter:image" content="https://kimchajung.github.io/post-img/design-pattern/decorator-pattern-class-diagram.png" />
+    <meta name="twitter:image" content="https://kimchajung.github.io/assets/post-img/design-pattern/decorator-pattern-class-diagram.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="kimchajung" />
     <meta name="twitter:label2" content="Filed under" />
@@ -78,7 +78,7 @@
     "url": "https://kimchajung.github.io/design-pattern/2020/05/19/decorator-pattern/",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kimchajung.github.io/post-img/design-pattern/decorator-pattern-class-diagram.png",
+        "url": "https://kimchajung.github.io/assets/post-img/design-pattern/decorator-pattern-class-diagram.png",
         "width": 2000,
         "height": 666
     },
@@ -125,6 +125,7 @@ into the {body} of the default.hbs template -->
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-resume" role="menuitem"><a href="/resume/">Resume</a></li>
     <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
     <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
     <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
@@ -175,7 +176,7 @@ into the {body} of the default.hbs template -->
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/post-img/design-pattern/decorator-pattern-class-diagram.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/post-img/design-pattern/decorator-pattern-class-diagram.png)">
             </figure>
             
 
@@ -234,7 +235,7 @@ into the {body} of the default.hbs template -->
 </ul>
 
 <h2 id="클래스-다이어그램">클래스 다이어그램</h2>
-<p><img src="/post-img/design-pattern/decorator-pattern-class-diagram.png" alt="class-diagram" /></p>
+<p><img src="/assets/post-img/design-pattern/decorator-pattern-class-diagram.png" alt="class-diagram" /></p>
 
 <h2 id="예제코드">예제코드</h2>
 
@@ -323,7 +324,7 @@ into the {body} of the default.hbs template -->
                     
                         <section class="author-card">
                             
-                                <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="kimchanjung" />
+                                <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="kimchanjung" />
                             
                             <section class="author-card-content">
                                 <h4 class="author-card-name"><a href="/author/kimchanjung">김찬정</a></h4>
@@ -344,7 +345,18 @@ into the {body} of the default.hbs template -->
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
             
+            
+                <section class="post-full-comments">
+<script src="https://utteranc.es/client.js"
+        repo="kimchanjung/utterance-comments"
+        issue-term="데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>                           
 
+            
         </article>
 
     </div>
@@ -575,7 +587,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/design-pattern/2020/05/20/facade-pattern/">
-                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/facade-pattern-class-diagram.png)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/post-img/design-pattern/facade-pattern-class-diagram.png)"></div>
             </a>
         
         <div class="post-card-content">
@@ -601,7 +613,7 @@ into the {body} of the default.hbs template -->
                 
                     
                         
-                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
                         
                         <span class="post-card-author">
                             <a href="/author/kimchanjung/">김찬정</a>
@@ -627,7 +639,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/design-pattern/2020/05/18/composite-pattern/">
-                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/composite-pattern-class-diagram.png)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/post-img/design-pattern/composite-pattern-class-diagram.png)"></div>
             </a>
         
         <div class="post-card-content">
@@ -653,7 +665,7 @@ into the {body} of the default.hbs template -->
                 
                     
                         
-                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
                         
                         <span class="post-card-author">
                             <a href="/author/kimchanjung/">김찬정</a>
