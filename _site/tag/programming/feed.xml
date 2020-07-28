@@ -2,17 +2,17 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://kimchajung.github.io/tag/programming/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://kimchajung.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-07-29T00:20:55+09:00</updated>
-  <id>https://kimchajung.github.io/tag/programming/feed.xml</id>
+  <link href="https://kimchanjung.github.io/tag/programming/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kimchanjung.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-07-29T01:28:36+09:00</updated>
+  <id>https://kimchanjung.github.io/tag/programming/feed.xml</id>
 
   
   
   
 
   
-    <title type="html">kimchajung | </title>
+    <title type="html">kimchanjung | </title>
   
 
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)</title>
-      <link href="https://kimchajung.github.io/programming/2020/07/05/typescipt-import-js-module-error/" rel="alternate" type="text/html" title="[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)" />
+      <link href="https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/" rel="alternate" type="text/html" title="[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)" />
       <published>2020-07-05T21:00:00+09:00</published>
       <updated>2020-07-05T21:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/07/05/typescipt-import-js-module-error</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/07/05/typescipt-import-js-module-error/">&lt;p&gt;typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/">&lt;p&gt;typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;typescript에서-js-npm-모듈-import시-오류를-해결하는-방법&quot;&gt;Typescript에서 js npm 모듈 import시 오류를 해결하는 방법&lt;/h1&gt;
 &lt;p&gt;typescript로 프로젝트를 할 때 npm에서 필요한 모듈들을 설치하고 import해서 사용하려고 할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;모듈 'module name'에 대한 선언 파일을 찾을 수 없습니다.&lt;/code&gt; 라는 메시지와 함께 모듈을 import할 수가 없습니다.&lt;/p&gt;
@@ -120,11 +120,11 @@
   
     <entry>
       <title type="html">[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)</title>
-      <link href="https://kimchajung.github.io/programming/2020/07/03/spring-security-03/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)" />
+      <link href="https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)" />
       <published>2020-07-03T14:00:00+09:00</published>
       <updated>2020-07-03T14:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/07/03/spring-security-03</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/07/03/spring-security-03/">&lt;p&gt;스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/07/03/spring-security-03</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/">&lt;p&gt;스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---커스텀-필터의-구현3&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -376,11 +376,11 @@
   
     <entry>
       <title type="html">[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)</title>
-      <link href="https://kimchajung.github.io/programming/2020/07/02/spring-security-02/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)" />
+      <link href="https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)" />
       <published>2020-07-02T12:00:00+09:00</published>
       <updated>2020-07-02T12:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/07/02/spring-security-02</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/07/02/spring-security-02/">&lt;p&gt;스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/07/02/spring-security-02</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/">&lt;p&gt;스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-설정2&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -694,11 +694,11 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
   
     <entry>
       <title type="html">[Spring Security] 스프링시큐리티 동작구조의 이해(1)</title>
-      <link href="https://kimchajung.github.io/programming/2020/07/01/spring-security-01/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 동작구조의 이해(1)" />
+      <link href="https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/" rel="alternate" type="text/html" title="[Spring Security] 스프링시큐리티 동작구조의 이해(1)" />
       <published>2020-07-01T01:00:00+09:00</published>
       <updated>2020-07-01T01:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/07/01/spring-security-01</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/07/01/spring-security-01/">&lt;p&gt;스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다”&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/07/01/spring-security-01</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/">&lt;p&gt;스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다”&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-동작구조의-이해1&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -803,11 +803,11 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
   
     <entry>
       <title type="html">[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/" rel="alternate" type="text/html" title="[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/" rel="alternate" type="text/html" title="[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결" />
       <published>2020-06-28T20:00:00+09:00</published>
       <updated>2020-06-28T20:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/">&lt;p&gt;@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/">&lt;p&gt;@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다&lt;/p&gt;
 
 &lt;h1 id=&quot;jpa-entitylisteners에서-autowired를-통한-의존성-주입이-미동작하는-문제-해결&quot;&gt;JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;JPA Entity 클래스에 @EntityListeners 추가&lt;/strong&gt; 하여 엔티티의 &lt;strong&gt;CRUD가 일어날때 로그&lt;/strong&gt;를 남긴다던가 하는 &lt;strong&gt;추가 작업&lt;/strong&gt;을 선언하여 &lt;strong&gt;코드 중복을 줄일&lt;/strong&gt; 수 있습니다.&lt;br /&gt;
@@ -1011,11 +1011,11 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
   
     <entry>
       <title type="html">[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/26/react-spinner/" rel="alternate" type="text/html" title="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/26/react-spinner/" rel="alternate" type="text/html" title="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법" />
       <published>2020-06-26T14:00:00+09:00</published>
       <updated>2020-06-26T14:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/26/react-spinner</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/26/react-spinner/">&lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/26/react-spinner</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/26/react-spinner/">&lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;API호출&lt;/strong&gt;시 보통 &lt;strong&gt;로딩을 처리하는 동안 Spinner를 표시&lt;/strong&gt;해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. 
 &lt;strong&gt;NPM에서 React용 Spinner&lt;/strong&gt;를 찾아보면 &lt;strong&gt;수많은 종류&lt;/strong&gt;의 로딩처리 Spinner 모듈들이 존재합니다. &lt;strong&gt;기능이나 디자인도 수없이 다양&lt;/strong&gt;합니다. NPM &lt;strong&gt;대부분의 Spinner 모듈이 다양한 방식&lt;/strong&gt;으로 사용하고자 할때 &lt;strong&gt;몇가지 문제점&lt;/strong&gt;이 있었습니다.
@@ -1430,11 +1430,11 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
   
     <entry>
       <title type="html">[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/25/react-scroll-top/" rel="alternate" type="text/html" title="[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/" rel="alternate" type="text/html" title="[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)" />
       <published>2020-06-25T16:00:00+09:00</published>
       <updated>2020-06-25T16:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/25/react-scroll-top</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/25/react-scroll-top/">&lt;p&gt;React로 개발 하다보면 기본 매카니즘이 상태란 것 남아 있기 때문에 나는 분명 다른페이지로 이동 했는데도 새로 고침을 하였는데도 불구하고 이전의 스크롤위치로 페이지가 나타나는 현상이 있습니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/">&lt;p&gt;React로 개발 하다보면 기본 매카니즘이 상태란 것 남아 있기 때문에 나는 분명 다른페이지로 이동 했는데도 새로 고침을 하였는데도 불구하고 이전의 스크롤위치로 페이지가 나타나는 현상이 있습니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react-페이지-이동시-스크롤을-상단으로-초기화-하는-방법scroll-top&quot;&gt;[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1534,11 +1534,11 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
   
     <entry>
       <title type="html">[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/24/react-router-private-router/" rel="alternate" type="text/html" title="[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/" rel="alternate" type="text/html" title="[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)" />
       <published>2020-06-24T18:00:00+09:00</published>
       <updated>2020-06-24T18:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/24/react-router-private-router</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/24/react-router-private-router/">&lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/">&lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
 
 &lt;h1 id=&quot;react-router-에서-private-router-구현하기권한별-routing&quot;&gt;react-router 에서 Private Router 구현하기(권한별 routing)&lt;/h1&gt;
 &lt;p&gt;실무에서 페이지를 개발할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증 및 부여된 권한 등급에 따라서 메뉴의 노출 및 접근이 제한&lt;/code&gt; 되도록 구성하는것이 일반적입니다. 
@@ -1636,11 +1636,11 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
   
     <entry>
       <title type="html">[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end/" rel="alternate" type="text/html" title="[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end/" rel="alternate" type="text/html" title="[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법" />
       <published>2020-06-24T14:00:00+09:00</published>
       <updated>2020-06-24T14:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end/">&lt;p&gt;스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/24/spring-gradle-build-with-front-end/">&lt;p&gt;스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;yarn-빌드-react-프로젝트를-spring-프로젝트-gradle-빌드에-통합하여-빌드하는-방법&quot;&gt;Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여 빌드하는 방법&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1797,11 +1797,11 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
   
     <entry>
       <title type="html">[React] Mobx의 async action(비동기 액션) 처리를 mobx-utils를 이용하여 가장 깔끔하게 구현하는 방법</title>
-      <link href="https://kimchajung.github.io/programming/2020/06/24/react-mobx-async-action/" rel="alternate" type="text/html" title="[React] Mobx의 async action(비동기 액션) 처리를 mobx-utils를 이용하여 가장 깔끔하게 구현하는 방법" />
+      <link href="https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/" rel="alternate" type="text/html" title="[React] Mobx의 async action(비동기 액션) 처리를 mobx-utils를 이용하여 가장 깔끔하게 구현하는 방법" />
       <published>2020-06-24T14:00:00+09:00</published>
       <updated>2020-06-24T14:00:00+09:00</updated>
-      <id>https://kimchajung.github.io/programming/2020/06/24/react-mobx-async-action</id>
-      <content type="html" xml:base="https://kimchajung.github.io/programming/2020/06/24/react-mobx-async-action/">&lt;p&gt;Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다&lt;/p&gt;
+      <id>https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/">&lt;p&gt;Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx의-async-action비동기-액션-처리를-가장-깔끔하게-구현하는-방법&quot;&gt;Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법&lt;/h1&gt;
 &lt;p&gt;Mobx에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;상태를 수정하는 함수는 @action 데코레이터를 추가하여 상태를 변경&lt;/code&gt;합니다. api를 호출하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;비동기 처리의 경우 Mobx에서는
