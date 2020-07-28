@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-29T02:03:39+09:00</updated>
-  <id>http://localhost:4000/tag/algorithm/feed.xml</id>
+  <link href="https://kimchanjung.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kimchanjung.github.io/" rel="alternate" type="text/html" />
+  <updated>2020-07-29T02:04:05+09:00</updated>
+  <id>https://kimchanjung.github.io/tag/algorithm/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
-      <link href="http://localhost:4000/algorithm/2020/07/13/bracket/" rel="alternate" type="text/html" title="프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/07/13/bracket/" rel="alternate" type="text/html" title="프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]" />
       <published>2020-07-13T16:00:00+09:00</published>
       <updated>2020-07-13T16:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/07/13/bracket</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/07/13/bracket/">&lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/07/13/bracket</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/07/13/bracket/">&lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;프로그래머스---괄호변환&quot;&gt;프로그래머스 - 괄호변환&lt;/h1&gt;
 &lt;h3 id=&quot;문제바로가기&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;문제바로가기&lt;/a&gt;&lt;/h3&gt;
@@ -206,11 +206,11 @@
   
     <entry>
       <title type="html">주식가격 (42584) - 프로그래머스 [코테][알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/" rel="alternate" type="text/html" title="주식가격 (42584) - 프로그래머스 [코테][알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/" rel="alternate" type="text/html" title="주식가격 (42584) - 프로그래머스 [코테][알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/stock-prices-42584</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/">&lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/">&lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--스택큐--주식가격-42584&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 스택/큐 &amp;gt; 주식가격 (42584)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42584&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -316,11 +316,11 @@
   
     <entry>
       <title type="html">등굣길 (42898) - 프로그래머스 [코테][알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/" rel="alternate" type="text/html" title="등굣길 (42898) - 프로그래머스 [코테][알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/" rel="alternate" type="text/html" title="등굣길 (42898) - 프로그래머스 [코테][알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/way-to-school-42898</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/">&lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/">&lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--등굣길-9305&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 등굣길 (9305)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42898&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -403,11 +403,11 @@
   
     <entry>
       <title type="html">정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/" rel="alternate" type="text/html" title="정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/" rel="alternate" type="text/html" title="정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/">&lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/">&lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--정수-삼각형-43105&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 정수 삼각형 (43105)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43105&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -485,11 +485,11 @@
   
     <entry>
       <title type="html">타일장식물 (43104) - 프로그래머스 [코테][알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/" rel="alternate" type="text/html" title="타일장식물 (43104) - 프로그래머스 [코테][알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/" rel="alternate" type="text/html" title="타일장식물 (43104) - 프로그래머스 [코테][알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/tile-deco-43104</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/">&lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/">&lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--타일장식물-43104&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 타일장식물 (43104)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43104&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -576,11 +576,11 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
   
     <entry>
       <title type="html">네트워크 (43162) - 프로그래머스 [코테][알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/network-43162/" rel="alternate" type="text/html" title="네트워크 (43162) - 프로그래머스 [코테][알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/" rel="alternate" type="text/html" title="네트워크 (43162) - 프로그래머스 [코테][알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/network-43162</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/network-43162/">&lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/network-43162</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/">&lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--깊이너비-우선-탐색dfsbfs--네트워크-43162&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 깊이/너비 우선 탐색(DFS/BFS) &amp;gt; 네트워크 (43162)&lt;/h2&gt;
 &lt;h3 id=&quot;이-문제는-서로연결된-그래프-그룹이-몇개-인지-찾는-문제&quot;&gt;이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제&lt;/h3&gt;
@@ -680,11 +680,11 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
   
     <entry>
       <title type="html">Coin Change - LeetCode [코테/알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/Coin-Change/" rel="alternate" type="text/html" title="Coin Change  - LeetCode [코테/알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/" rel="alternate" type="text/html" title="Coin Change  - LeetCode [코테/알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/Coin-Change</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/Coin-Change/">&lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/">&lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;leetcode-leetcode---coin-change&quot;&gt;[LeetCode] LeetCode - Coin Change&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;hhttps://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/809&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -807,11 +807,11 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
   
     <entry>
       <title type="html">Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/" rel="alternate" type="text/html" title="Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/" rel="alternate" type="text/html" title="Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters%20copy</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/">&lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters%20copy</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/">&lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/779/&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -897,11 +897,11 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
   
     <entry>
       <title type="html">Sherlock and anagrams - hackerank [코테/알고리즘]</title>
-      <link href="http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/" rel="alternate" type="text/html" title="Sherlock and anagrams - hackerank [코테/알고리즘]" />
+      <link href="https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/" rel="alternate" type="text/html" title="Sherlock and anagrams - hackerank [코테/알고리즘]" />
       <published>2020-05-08T00:00:00+09:00</published>
       <updated>2020-05-08T00:00:00+09:00</updated>
-      <id>http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams</id>
-      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/">&lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+      <id>https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams</id>
+      <content type="html" xml:base="https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/">&lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;특정-문자열의-개별-문자를-쌍으로-구성하는-경우-가능한-케이스의-개수를-찾는-문제&quot;&gt;특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제&lt;/h2&gt;
 
