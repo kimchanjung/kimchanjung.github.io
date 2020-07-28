@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Design Pattern - kimchajung</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Developer KimChanJung's Blog" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/tag/design-pattern/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="kimchajung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Design Pattern - kimchajung" />
+    <meta property="og:description" content="Developer KimChanJung's Blog" />
+    <meta property="og:url" content="http://localhost:4000/tag/design-pattern/" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/new-blog-cover.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/mogomezwai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Design Pattern - kimchajung" />
+    <meta name="twitter:description" content="Developer KimChanJung's Blog" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/new-blog-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="kimchajung" />
+    <meta name="twitter:site" content="@mogomezwai" />
+    <meta name="twitter:creator" content="@mogomezwai" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "kimchajung",
+        "logo": "http://localhost:4000/assets/images/mogomezwai-logo.png"
+    },
+    "url": "http://localhost:4000/tag/design-pattern/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/images/new-blog-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/tag/design-pattern/"
+    },
+    "description": "Developer KimChanJung's Blog"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Tag Page" href="/feed.xml" />
+    <meta name="naver-site-verification" content="f1cd735caec0d9f78c0108426288fb40e725f65f" />
+
+</head>
+<body class="tag-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
+
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<!-- #tag -->
+<!-- dynamically loading backgrounds for tags,  descriptions and page titles -->
+
+
+
+<header class="site-header outer " style="background-image: url(/assets/images/tag-design-pattern-cover.jpg) ">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/mogomezwai-logo.png" alt="kimchajung" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
+    <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
+    <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
+    <li class="nav-algorithm" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/mogomezwai" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/mogomezwai" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+        <div class="site-header-content">
+            <h1 class="site-title">Design-pattern</h1>
+            <h2 class="site-description">
+                
+                    디자인패턴
+                
+            </h2>
+        </div>
+    </div>
+</header>
+<!-- tag -->
+
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            
+
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/29/visitor-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/29/visitor-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/28/template-method-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/28/template-method-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/28/strategy-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/28/strategy-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/26/state-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/26/state-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>상태 패턴은 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를 구현한 별개의 상태객체에게 위임하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/25/singleton-pattern/">
+                <div class="post-card-image" style="background-image: url(/assets/images/tag-design-pattern-cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/25/singleton-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/24/proxy-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/proxy-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/24/proxy-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/23/observer-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/observer-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/23/observer-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/22/flyweight-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/flyweight-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/22/flyweight-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>플라이웨이트 패턴은 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/21/factory-method-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/factory-method-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/21/factory-method-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">팩토리 메소드 패턴 - Factory Method Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/20/facade-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/facade-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/20/facade-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/19/decorator-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/decorator-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/19/decorator-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/18/composite-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/composite-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/18/composite-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/2020/05/17/command-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/command-pattern-class-diagram.png")"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/2020/05/17/command-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/16/chain-of-reponsibility-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/16/chain-of-reponsibility-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/15/adapter-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/adapter-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/15/adapter-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">어댑터 패턴 - Adapter Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/design-pattern/2020/05/14/abstract-factory-pattern/">
+                <div class="post-card-image" style="background-image: url(/post-img/design-pattern/abstract-pattern-class-diagram.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/design-pattern/2020/05/14/abstract-factory-pattern/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Design-pattern</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴/코틀린/kotlin]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+
+        </div>
+    </div>
+</main>
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">kimchajung</a> &copy; 2020</section>
+                <section class="email"><a href="mailto:mogomezwai@gmail.com">mogomezwai@gmail.com</a></section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/mogomezwai" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mogomezwai" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <!-- highlight.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script> -->
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!--script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script-->
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('1');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-165866221-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

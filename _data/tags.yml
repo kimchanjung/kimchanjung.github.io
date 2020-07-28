@@ -1,0 +1,16 @@
+programming:
+  name: programming
+  description: 개발관련 포스팅.
+  cover: assets/images/tag-programming-cover.jpg
+design-pattern:
+  name: design-pattern
+  description: 디자인패턴
+  cover: assets/images/tag-design-pattern-cover.jpg
+algorithm:
+  name: algorithm
+  description: 알고리즘 코딩 테스트
+  cover: assets/images/tag-algorithm-cover.jpg
+projects:
+  name: projects
+  description: 프로젝트
+  cover: assets/images/tag-projects-cover.jpg

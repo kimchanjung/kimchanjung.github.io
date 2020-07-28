@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-07-28T20:22:16+09:00</updated>
+  <id>http://localhost:4000/tag/etc/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">kimchajung | </title>
+  
+
+  
+    <subtitle>Developer KimChanJung's Blog</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">JAVA - 자료구조, Collection 별 특징 정리</title>
+      <link href="http://localhost:4000/etc/2020/01/15/java-collection/" rel="alternate" type="text/html" title="JAVA - 자료구조, Collection 별 특징 정리" />
+      <published>2020-01-15T00:00:00+09:00</published>
+      <updated>2020-01-15T00:00:00+09:00</updated>
+      <id>http://localhost:4000/etc/2020/01/15/java-collection</id>
+      <content type="html" xml:base="http://localhost:4000/etc/2020/01/15/java-collection/">&lt;p&gt;JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;java---자료구조-collection-별-특징-정리&quot;&gt;JAVA - 자료구조, Collection 별 특징 정리&lt;/h2&gt;
+
+&lt;h3 id=&quot;collection-특징-구분&quot;&gt;Collection 특징 구분&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;구분&lt;/th&gt;
+      &lt;th&gt;종류&lt;/th&gt;
+      &lt;th&gt;중복허용&lt;/th&gt;
+      &lt;th&gt;순서 존재&lt;/th&gt;
+      &lt;th&gt;정렬여부&lt;/th&gt;
+      &lt;th&gt;Thread-safe&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LIST&lt;/td&gt;
+      &lt;td&gt;ArrayList &lt;br /&gt;  LinkedList &lt;br /&gt; Vector&lt;/td&gt;
+      &lt;td&gt;Yes &lt;br /&gt;Yes&lt;br /&gt;Yes&lt;/td&gt;
+      &lt;td&gt;Yes &lt;br /&gt;Yes&lt;br /&gt;Yes&lt;/td&gt;
+      &lt;td&gt;No &lt;br /&gt; No  &lt;br /&gt; No&lt;/td&gt;
+      &lt;td&gt;No  &lt;br /&gt; No  &lt;br /&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SET&lt;/td&gt;
+      &lt;td&gt;HashSet&lt;br /&gt;LinkedHashSet&lt;br /&gt;TreeSet&lt;/td&gt;
+      &lt;td&gt;No &lt;br /&gt; No &lt;br /&gt; No&lt;/td&gt;
+      &lt;td&gt;No  &lt;br /&gt; Yes&lt;br /&gt;Yes&lt;/td&gt;
+      &lt;td&gt;No&lt;br /&gt; No&lt;br /&gt; Yes&lt;/td&gt;
+      &lt;td&gt;No&lt;br /&gt;   No&lt;br /&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MAP&lt;/td&gt;
+      &lt;td&gt;HashMap &lt;br /&gt; LinkedHashMap &lt;br /&gt;   Hashtable &lt;br /&gt; TreeMap&lt;/td&gt;
+      &lt;td&gt;No &lt;br /&gt; No &lt;br /&gt; No &lt;br /&gt; No&lt;/td&gt;
+      &lt;td&gt;No  &lt;br /&gt; Yes  &lt;br /&gt;No  &lt;br /&gt;Yes&lt;/td&gt;
+      &lt;td&gt;Yes(Key)  &lt;br /&gt;   No &lt;br /&gt; No &lt;br /&gt; Yes&lt;/td&gt;
+      &lt;td&gt;No  &lt;br /&gt; No  &lt;br /&gt; Yes &lt;br /&gt;  No&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;자료-구조-특징-구분&quot;&gt;자료 구조 특징 구분&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;종류&lt;/th&gt;
+      &lt;th&gt;특징&lt;/th&gt;
+      &lt;th&gt;중복허용&lt;/th&gt;
+      &lt;th&gt;Null 허용&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;List&lt;/td&gt;
+      &lt;td&gt;원하는 순서로 Element 삽입가능 &lt;br /&gt; 각 요소는 Index 번호를 부여 받는다.&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Set&lt;/td&gt;
+      &lt;td&gt;중복 Element 불가능 &lt;br /&gt; 그러므로 쉽게 여부 중복확인 가능. 특정 순서(Order) 정할수 없음.&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Queue&lt;/td&gt;
+      &lt;td&gt;Output으로 나올 Element만 기본적으로 접근 가능하다&lt;br /&gt;&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PriorityQueue&lt;/td&gt;
+      &lt;td&gt;가장 우선순위가 높은 Element가 Head First가 된다&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Deque&lt;/td&gt;
+      &lt;td&gt;양 끝단에서 모두 삽입 / 삭제 가능&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Map&lt;/td&gt;
+      &lt;td&gt;Key / Value로 구성된다.&lt;/td&gt;
+      &lt;td&gt;키 : No - 값 : Yes&lt;/td&gt;
+      &lt;td&gt;키 : 하나의 (null) 키 허용) - 값 : Yes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;list&quot;&gt;LIST&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class Name&lt;/th&gt;
+      &lt;th&gt;Add&lt;/th&gt;
+      &lt;th&gt;Remove&lt;/th&gt;
+      &lt;th&gt;Get&lt;/th&gt;
+      &lt;th&gt;Contains&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ArrayList&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LinkedList&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;set&quot;&gt;SET&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class Name&lt;/th&gt;
+      &lt;th&gt;Add&lt;/th&gt;
+      &lt;th&gt;Contains&lt;/th&gt;
+      &lt;th&gt;Next&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HashSet&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(h/n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LinkedHashSet&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EnumSet&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;TreeSet&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;queue&quot;&gt;QUEUE&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class Name&lt;/th&gt;
+      &lt;th&gt;Offer&lt;/th&gt;
+      &lt;th&gt;Peak&lt;/th&gt;
+      &lt;th&gt;Poll&lt;/th&gt;
+      &lt;th&gt;Size&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PriorityQueue&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LinkedList&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ArrayDequeue&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DelayQueue&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;map&quot;&gt;MAP&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class Name&lt;/th&gt;
+      &lt;th&gt;Get&lt;/th&gt;
+      &lt;th&gt;ContainsKey&lt;/th&gt;
+      &lt;th&gt;Next&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HashMap&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(h/n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LinkedHashMap&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WeakHashMap&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(h/n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EnumMap&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;TreeMap&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

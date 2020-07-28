@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-07-28T20:22:16+09:00</updated>
+  <id>http://localhost:4000/tag/algorithm/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">kimchajung | </title>
+  
+
+  
+    <subtitle>Developer KimChanJung's Blog</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
+      <link href="http://localhost:4000/algorithm/2020/07/13/bracket/" rel="alternate" type="text/html" title="프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]" />
+      <published>2020-07-13T16:00:00+09:00</published>
+      <updated>2020-07-13T16:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/07/13/bracket</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/07/13/bracket/">&lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;프로그래머스---괄호변환&quot;&gt;프로그래머스 - 괄호변환&lt;/h1&gt;
+&lt;h3 id=&quot;문제바로가기&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;문제바로가기&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h2 id=&quot;문제유형&quot;&gt;문제유형&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Stack&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;괄호를 확인하여 올바른 열고닫음의 짝수 괄호인지 확인하고 열고닫임이 맞지 않는 경우 변환하여 리턴하는 문제&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;stack을 이용한 괄호 문제를 어렵게 내기 위해 꼬아 놓은 듯한 문제라 문제를 이해하는 것이 쉬운 편은 아님&lt;/p&gt;
+
+&lt;h3 id=&quot;괄호를-설명하는-예시&quot;&gt;괄호를 설명하는 예시&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. &lt;span class=&quot;o&quot;&gt;(()())()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 괄호가 짝도 맞고 열고 닫음 도 맞다 그대로 리턴
+2. &lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 괄호가 짝은 맞지만 열고닫음이 틀리다 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;로 변환하여 리턴
+3. &lt;span class=&quot;o&quot;&gt;()))((()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 괄호가 짝은 맞지만 열고닫음이 틀리다 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()(())()&lt;/span&gt;로 변환하여 리턴
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;풀이법&quot;&gt;풀이법&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;문제 지면에 자세한 알고리즘이 설명되어 있다 사실 이것을 잘 이해하는 것이 중요하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;일반적인-stack을-이용한-괄호-판별문제&quot;&gt;일반적인 Stack을 이용한 괄호 판별문제&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;”(“ 열린 괄호를 스택에 &lt;code class=&quot;highlighter-rouge&quot;&gt;넣다가&lt;/code&gt; “)” 닫힌 괄호가 나오면 스택에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;꺼낸다&lt;/code&gt;.&lt;/li&gt;
+    &lt;li&gt;1번 작업을 모두 완료 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;스택이 최종적으로 비었으면 짝이 맞다는 것&lt;/code&gt;으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;올바른 괄호로 판단&lt;/code&gt;하는 것이 기본 알고리즘&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;문제를-해결하는-핵심&quot;&gt;문제를 해결하는 핵심&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;올바른 여닫음 및 쌍으로 이루진 괄호를 &lt;code class=&quot;highlighter-rouge&quot;&gt;판단하는 기준이 문제 해결의 핵심&lt;/code&gt;이다&lt;code class=&quot;highlighter-rouge&quot;&gt; 
+그리고 괄호를 나누고 재조합하는 단위 U, V의 정의를 자세히 보아&lt;/code&gt;야한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;u의-정의&quot;&gt;U의 정의&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;괄호가 “)(“,  “))((“ &lt;code class=&quot;highlighter-rouge&quot;&gt;열고닫음이 반대인 경우라도 서로 짝이 맞으면 U&lt;/code&gt;가 된다.&lt;br /&gt;
+그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;최소한의 단위&lt;/code&gt;여야한다 (())(()) 경우 짝이 맞지만 (()), (()) 쪼개 지기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;최소 개수로 짝이 맞으면 U가 된다&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;v의-정의&quot;&gt;V의 정의&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;V는 U를 분리한 나머지괄호를 의미한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주어진 괄호 &lt;span class=&quot;o&quot;&gt;()))((()&lt;/span&gt;에 대해서 처리를 순서대로 본다면 
+1. &lt;span class=&quot;o&quot;&gt;()))((()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; U &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;,   V &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;))((()&lt;/span&gt; 
+   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; U &lt;span class=&quot;s2&quot;&gt;&quot;()&quot;&lt;/span&gt; 개수도 짝이며 열고닫음도 맞다 
+   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; U +  재귀&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;V&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 합친후 리턴한다
+2. &lt;span class=&quot;o&quot;&gt;))((()&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; U &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;))((&lt;/span&gt;, V &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; U &lt;span class=&quot;s2&quot;&gt;&quot;))((&quot;&lt;/span&gt; 개수는 짝이지만 열고닫음이 맞지 않다. 변환 처리를 한다
+   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;(&quot;&lt;/span&gt; + 재귀&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;V&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; +&lt;span class=&quot;s2&quot;&gt;&quot;)&quot;&lt;/span&gt; + 변환처리&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;U&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 를 반환 한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;U가 열고 닫음이 바르면 &lt;code class=&quot;highlighter-rouge&quot;&gt;U+재귀(V)&lt;/code&gt; 리턴하고&lt;/li&gt;
+  &lt;li&gt;U가 열고 닫음이 틀리면 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;(&quot;+재귀(V)+&quot;)&quot;+ 변환처리(U)&lt;/code&gt; 리턴한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;u를-판단하고-분리하는-조건&quot;&gt;U를 판단하고 분리하는 조건&lt;/h3&gt;
+&lt;p&gt;U를 판단하는 메소드는 stack을 이용해서 괄호를 판단하는 로직을 구성한다&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;”(“ 스택에 넣는다, 여는괄호 개수 증가&lt;/li&gt;
+    &lt;li&gt;”)” 스택에서 뺀다  닫는괄호 개수 증가&lt;/li&gt;
+    &lt;li&gt;for loop를 수행하는 동안 &lt;code class=&quot;highlighter-rouge&quot;&gt;매번 여는괄호 == 닫는괄호 체크하여 같으면 loop를 종료&lt;/code&gt;한다&lt;/li&gt;
+    &lt;li&gt;스택이 비었으면 열고닫음이 맞는 괄호 이므로 TRUE를 리턴 아니면 FALSE를 리턴한다.&lt;/li&gt;
+    &lt;li&gt;이때 까지 수행한 괄호 문자열의 &lt;code class=&quot;highlighter-rouge&quot;&gt;INDEX 저장하여 추후 U,V를 분리해 내는 기준 INDEX로 활용&lt;/code&gt;한다.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;올바르지-않는-괄호의-변환처리의-조건&quot;&gt;올바르지 않는 괄호의 변환처리의 조건&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;”))(( “ U가 열고 닫음이 틀리면&lt;/li&gt;
+    &lt;li&gt;첫번째와 마지막을 제거하여  “)(“만 남게 된다.&lt;/li&gt;
+    &lt;li&gt;”)(“ =&amp;gt; 뒤집은 후 () 리턴한다&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;중요! - U가 “)(“인 경우는 =&amp;gt; 첫번째와 마지막을 제거 =&amp;gt; “” 공백을 리턴한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;문제-처리의-골격&quot;&gt;문제 처리의 골격&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;올바른괄호여부 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 괄호체크&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;괄호&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+ 
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;올바른괄호여부 &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 참&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;U + 재귀함수&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;V&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else
+   return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;(&quot;&lt;/span&gt;+재귀함수&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;V&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;+&lt;span class=&quot;s2&quot;&gt;&quot;)&quot;&lt;/span&gt; + 변환처리&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;U&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;소스코드&quot;&gt;소스코드&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;U&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;U&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// U를 판단하는 메소드&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;balanced&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'('&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;balanced&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;balanced&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;balanced&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 올바르지 않은 괄호를 변환하는 메소드&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'('&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;joining&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">주식가격 (42584) - 프로그래머스 [코테][알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/" rel="alternate" type="text/html" title="주식가격 (42584) - 프로그래머스 [코테][알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/stock-prices-42584</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/">&lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로그래머스-코딩테스트-연습--스택큐--주식가격-42584&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 스택/큐 &amp;gt; 주식가격 (42584)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42584&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이중 for 문을 사용한 풀이법 뿐이라 stack을 사용한 방법으로 해결, 시간 복잡도가 훨씬 줄어드는 방법.&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-조건&quot;&gt;문제 조건&lt;/h2&gt;
+&lt;p&gt;1, 2, 3, 2, 3 의 주식 값 배열이 주어 졌을 경우, 주식 값이 떨어지지 않는 날을 각각 배열에 담아 반환&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1, 2, 3, 2, 3 &amp;lt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 주식 값
+4, 3, 1, 1, 0 &amp;lt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 주식 값이 떨어지지 않는 날
+
+1 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 떨이지는 날이 없으므로 2, 3, 2, 3 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 총 4일간 유지
+2 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 역시 떨어지는 날이 없으므로  3, 2, 3 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;총 3일간 유지
+3 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 다음 날이 2 이므로 주식 값이 떨어지므로 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 총 1일간 유지 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;이부분이 헷갈릴 수 있음&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        2,3 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 1일이고
+        2,1  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 1일 임
+        2,3,4 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 2일 이고
+        2,2,1  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 2일 임
+        즉 다음 날이 주식 값이 떨어지는 날도 1일로 포함 하는 조건 인데&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;헷갈리는 요소&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+2 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 다음 날이 3이고 더이상 없으므로 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 총 1일간 유지
+3 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 다음 날이 없으므로 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 0일간 유지
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;stack을-이용한-방법&quot;&gt;Stack을 이용한 방법&lt;/h3&gt;
+&lt;p&gt;1, 2, 3, 2, 3 뒤에서 부터 루프를 시작한다 =&amp;gt; 3, 2, 3, 2, 1 =&amp;gt; 마지막은 항상 0일 이므로 뒤에서 마지막을 제외하고 시작&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;즉 2, 3, 2, 1 를 루프 돌린다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stack에는 두 값을 저장한다 =&amp;gt; 주식값, 떨어지지 않는 날 수.&lt;/li&gt;
+  &lt;li&gt;Stack이 비어 있지 않고, Stack의 마지막 값 &amp;gt;= 현재 주식값 인경우 =&amp;gt; 꺼낸다.&lt;/li&gt;
+  &lt;li&gt;꺼낸 값에서 주식이 떨이지지 않는 날을 합산한다.&lt;/li&gt;
+  &lt;li&gt;Stack에 주식값, Stack 에서 합산된 주식이 떨어지지 않는 날 + 1 =&amp;gt; 저장한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;단계별-데이터-상황-설명&quot;&gt;단계별 데이터 상황 설명&lt;/h3&gt;
+&lt;p&gt;2, 3, 2, 1&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주식값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2 , stack &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; empty, 주식 유지 날 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0+1 
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; stack 저장 값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2, 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조건에 의해 stack pop 하지 않음&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+주식값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3 , stack &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2,1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 주식 유지 날 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0+1 
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; stack 저장 값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,2&lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;2, 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조건에 의해 stack pop 하지 않음&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+주식값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2,  stack &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,1&lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;2,1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 주식 유지 날 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1+1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;+1 
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; stack 저장값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조건에 의해 stack에 값을 pop 하여 주식 유지 날을 합산 하고 +1 하여 저장함&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+주식값 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1,  stack &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 주식 유지 날 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + 1
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; stack에 저장 값 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 조건에 의해 stack에 값을 pop 하여 주식 유지 날을 합산 하고 +1 하여 저장함&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;각 개별 주식 가격 유지 날 수 는&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;1, 2, 3, 2, 3 &amp;lt;= 주식 값&lt;br /&gt;
+4, 3, 1, 1, 0 &amp;lt;= 주식 값이 떨어지지 않는 날&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;peek&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">등굣길 (42898) - 프로그래머스 [코테][알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/" rel="alternate" type="text/html" title="등굣길 (42898) - 프로그래머스 [코테][알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/way-to-school-42898</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/">&lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--등굣길-9305&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 등굣길 (9305)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42898&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;이-문제의-핵심은-도달-가능한-지점의-개수--왼쪽개수--위쪽개수-가-핵심&quot;&gt;이 문제의 핵심은 도달 가능한 지점의 개수 = 왼쪽개수 + 위쪽개수 가 핵심&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 1&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 1&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+ 1&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2,1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2,2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그리드에서 (2,2) 위치 도달 개수는&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;왼쪽(2,1) 도달개수 1&lt;/li&gt;
+  &lt;li&gt;위쪽(1,2) 도달개수 1&lt;/li&gt;
+  &lt;li&gt;도착지점의 도달 개수는 결국 왼쪽에서 들어오는 길, 위쪽에서 들어 오는길 2가지 이므로&lt;br /&gt;
+결국 왼쪽+위쪽 의 개수가 된다.&lt;/li&gt;
+  &lt;li&gt;웅덩이는 지나갈 수 없으므로 0이 되는 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;점화식으로-표현하면&quot;&gt;점화식으로 표현하면&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;point(n. m) = point(n, m -1) + point(n-1, m)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;그리드 배열의 인덱스는 0 부터 이나, 문제에서는 1 부터 이므로 배열[n+1][m+1] 선언한다.&lt;/li&gt;
+  &lt;li&gt;웅덩이는 선언된 그리드 배열에 -1 값으로 표시한다(처리 시 0은 아직 개수가 계산되지 않은 지점, -1은 웅덩이를 구별하기 위함)&lt;/li&gt;
+  &lt;li&gt;출발 지점 그리드[1][1] = 1로 설정한다.&lt;/li&gt;
+  &lt;li&gt;재귀를 사용하여 점화식을 그대로 표현 하여 구현한다.&lt;/li&gt;
+  &lt;li&gt;재귀에서 이미 point(1,1) 보다 이전 위치의 값은 은 0을 리턴, 처리된 값이 있다면 그값을 리턴, 웅덩이라면 0을 리턴 하도록 처리&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;주의&quot;&gt;주의&lt;/h3&gt;
+&lt;p&gt;웅덩이 배열 값 [1,2] =&amp;gt; [row, col] 이 아니라 반대 입니다. 이것 때문에  로직은 맞으나 테스트를 통과 못하여 한참을 찾았네요..ㅠ
+즉 그리드에 웅덩이 값을 선언 할때 grid[2][1] = -1 이렇게 들어 가야합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;puddles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puddles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000000007&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/" rel="alternate" type="text/html" title="정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/">&lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--정수-삼각형-43105&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 정수 삼각형 (43105)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43105&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;트리탐색의-후위순회를-예를-들어-설명하면&quot;&gt;트리탐색의 후위순회를 예를 들어 설명하면&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1+3 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+2   3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;탐색 순서는 2 -&amp;gt; 3 -&amp;gt; 1 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;해결방법&quot;&gt;해결방법&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;자식 노드 2 와 3중에 큰 값과 1을 더한 값을 저장합니다. 
+즉 1의 두 자식 노드 중 큰 값과 자기 자신을 계속 적으로 더해 나가는 방법을 사용합니다. 
+점화식으로 표현하면 아래와 같습니다.
+    &lt;blockquote&gt;
+      &lt;p&gt;부모합산 = 부모 + max(오른쪽자식, 왼쪽자식)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;재귀를 사용하여 해결한 코드&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;부모노드&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;노드의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;번호가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;초과하면&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;합산값이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;이미&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;있다면&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합산&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;부모노드&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+   
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합산&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;부모&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;부모&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;왼쪽자식&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;오른쪽자식&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodesSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;triangle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;triangle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;nodesSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;triangle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;triangle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodesSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodesSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodesSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">타일장식물 (43104) - 프로그래머스 [코테][알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/" rel="alternate" type="text/html" title="타일장식물 (43104) - 프로그래머스 [코테][알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/tile-deco-43104</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/">&lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--타일장식물-43104&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 타일장식물 (43104)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43104&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;이문제는-피보나치-수열-문제&quot;&gt;이문제는 피보나치 수열 문제&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|      |  3  |
+| 5    |1| 2 |
+|      |1|   |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;처음 제공되는 정사각형 타일의 한변의 크기는 아래와 같이 제공된다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;[1, 1, 2, 3, 5, 8, …]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;위 정사각형 한변의 크기는 피보나치 수열 인데 위 숫자가 해결해야될 수열이 아니라 n 차에서 4변의 합이 수열이다 약간 꼬아 놓은 문제&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[1, 1, 2,  3,  5,  8]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;위 와 같은 한변의 크기를 가진 정사각형의 둘레의 합은 결국 아래와 같고&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[4, 6, 10, 16, 26, 42]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;위 정사각형 둘레 값을 수열로 풀어야한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
+&lt;h4 id=&quot;수열의-점화식을-도출-해보면&quot;&gt;수열의 점화식을 도출 해보면&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;a1 = 4 (1+1+1+1)&lt;br /&gt;
+a2 = 6 (2+2+1+1) &lt;br /&gt;
+a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
+…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;결국-도출된-수열의-점화식은-아래와-같다&quot;&gt;결국 도출된 수열의 점화식은 아래와 같다.&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;an = a(n-2)+a(n-1)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;p&gt;도출된 점화식을 재귀로 그대로 표현하면&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">네트워크 (43162) - 프로그래머스 [코테][알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/network-43162/" rel="alternate" type="text/html" title="네트워크 (43162) - 프로그래머스 [코테][알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/network-43162</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/network-43162/">&lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로그래머스-코딩테스트-연습--깊이너비-우선-탐색dfsbfs--네트워크-43162&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 깊이/너비 우선 탐색(DFS/BFS) &amp;gt; 네트워크 (43162)&lt;/h2&gt;
+&lt;h3 id=&quot;이-문제는-서로연결된-그래프-그룹이-몇개-인지-찾는-문제&quot;&gt;이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;test-case-1&quot;&gt;TEST CASE 1&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1
+  /
+2       3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;그래프 그룹 1 - 2 = 1개&lt;/li&gt;
+  &lt;li&gt;그래프 그룹      3 = 1개&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;test-case-2&quot;&gt;TEST CASE 2&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1
+  /
+2   -   3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;그래프 그룹 1 - 2  - 3 =  1개&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;해결방법-test-case-1기준&quot;&gt;해결방법 (TEST CASE 1기준)&lt;/h3&gt;
+&lt;p&gt;각 노드 1, 2, 3을 출발점으로 DFS 탐색을 한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1번을 시작으로  =&amp;gt; 1[방문] -&amp;gt; 2[방문] 종료 =  1개&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;다음 노드 2번을 출발점으로 DFS 탐색&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2번은 1번노드 DFS시 방문한 노드 이므로 제외한다(카운트하지 않는다.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;3번 노드 출발점으로 DFS탐색&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3번노드는 1번 출발점으로 탐색시 연결되어 있지 않아 미방문상태 이므로 DFS 탐색 (카운트 포함)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;결론 적으로 1 2 3 을 개별 출발점으로 DFS 하더라도 1-2연결됨으로써 카운트는 1번 
+3은 1,2와 연결되지 않은 개별 그래프 이므로 DFS를 수행하게 됨으로써 카운트 1번&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1-2-3 의 경우는 모두 연결되어 있으므로 1,2,3, 개별 노드를 출발점으로 DFS 하더라도 
+미방문시에만 DFS하도록 되어 있어 결론은 1번이 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAsInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Coin Change - LeetCode [코테/알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/Coin-Change/" rel="alternate" type="text/html" title="Coin Change  - LeetCode [코테/알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/Coin-Change</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/Coin-Change/">&lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;leetcode-leetcode---coin-change&quot;&gt;[LeetCode] LeetCode - Coin Change&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;hhttps://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/809&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;문제설명&quot;&gt;문제설명&lt;/h3&gt;
+&lt;h4 id=&quot;1원-2원-5원-짜리-동전을-가지고-있는-경우-11원을-만드는-경우-최소-동전의-개수를-구하는-문제&quot;&gt;1원, 2원, 5원 짜리 동전을 가지고 있는 경우 11원을 만드는 경우 최소 동전의 개수를 구하는 문제&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;주어진 동전의 종류 = [1, 2, 5] &lt;br /&gt;
+총 개수는 = 5+5+1 = 3개&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;이-문제를-이해-하기-위해서는-유명한-피보나치-수열-이용한-계단-문제를-먼저-이해-해야한다&quot;&gt;이 문제를 이해 하기 위해서는 유명한 피보나치 수열 이용한 계단 문제를 먼저 이해 해야한다.&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;계단의 개수 = 3개&lt;br /&gt;
+계단은 1칸, 2칸 씩만 올라 갈수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 3개의 계단 까지 오르는 방법의 수는  
+ 첫번째 계단 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1가지 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1칸 올라 갈수 있다&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+ 두번째 계단 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2가지 &lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;1,1], &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2] &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 1칸씩 올라가는 방법 1가지, 2칸을 한꺼번에 올라가는 방법 1가지&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+ 새번째 계단 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3가지 &lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;1,1,1], &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,2], &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2,1]&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            첫번째 계단까지 1가지 + 두번째 계단 까지 2가지를 합한 3가지 방법이 된다.  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;점화식으로-표현하면&quot;&gt;점화식으로 표현하면&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;a1 = 1&lt;br /&gt;
+a2 = 2&lt;br /&gt;
+a3 = a2 + a1&lt;br /&gt;
+…&lt;br /&gt;
+a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;다시-원래-문제로-돌아-오면&quot;&gt;다시 원래 문제로 돌아 오면&lt;/h4&gt;
+&lt;p&gt;11원을 만들기 위해 최소의 동전 개수를 구하기 위해 1원 부터 시작 해본다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1원 = 1개 (1원)
+2원 = 1개 (1원+1원, 2원) 최소 동전 개수
+3원 = 2개 (1원+1원+1원, 1원+2원) 최소 동전 개수
+4원 = 2개 (1원+1원+1원+1원, 1원+1원+2원, 2원+2원) 최소 동전 개수 
+5원 = 1개 
+     (5원 - 1원 = 4원을 만들 수 있는 최소 개수 = 2개)
+     (5원 - 2원 = 3원을 만들 수 있는 최소 개수 = 2개)
+     (5원 - 5원 = 0원을 만들 수 있는 최소 개수 = 0개) 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;셋-중-최소-개수에--1을-하는데-그-이유는-125-동전으로-5원을-만들기-위해서&quot;&gt;셋 중 최소 개수에 + 1을 하는데, 그 이유는 1,2,5 동전으로 5원을 만들기 위해서&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1은 4원이 필요하고 =&amp;gt; 4원을 만드는데 최소 개수 + 1원(1개) = 2개(2원 + 2원) + 1개 5원 
+2은 3원이 필요하고 =&amp;gt; 3원을 만드는데 최소 개수 + 2원(1개) = 2개(2원 + 1원) + 1개 5원
+5원 0원이 필요하고 =&amp;gt; 5원을 만드는데 최소 개수 + 5원(1개) = 0개(0원     ) + 1개 5원
+
+그래서 5원을 만드는데 각 1,2,5 원 자기 자신을 제외한 돈을 만드는 개수를 가져와 
+그중 최소 개수에 + 1을 하게 되는 것이다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;점화식으로-표현하면-1&quot;&gt;점화식으로 표현하면&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;a(n) = min( a(n-1), a(n-2), a(n-5) ) + 1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;min-an-1-an-2-an-5--부분-즉-동전-종류가-고정으로-주어지지-않으므로-코드로-표현하면&quot;&gt;min( a(n-1), a(n-2), a(n-5) ) 부분 즉 동전 종류가 고정으로 주어지지 않으므로 코드로 표현하면&lt;/h4&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 동전 개수가 동적이므로 동전 개수만큼 해당 동전별 최소 개수를 모두 가져와 최소 개수를 도출한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;p&gt;도출된 점화식을 재귀로 그대로 표현하면&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CoinChange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;coinChange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 문제에서 특별히 주어진 동전종류로 원하는 금액을 만들 수 없는 경우 -1을 &lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 리턴 해야 하므로 아래 처림 처리&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;recur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 동전을 만들 수 없는 경우는 제외 하므로&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 1원 = 1원만 필요하고 2원을 필요하지 않기 때문에 max값을 리턴하여 최소 개수계산에 제외 된다.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MAX_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 불필요한 계산을 피하기위한 memorization&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MAX_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 점화식이 표현 된 부분&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/" rel="alternate" type="text/html" title="Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters%20copy</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/">&lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/779/&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;이-문제는-주어진-문자열에-중복이-없는-부분-문자열의-길이를-찾는-문제&quot;&gt;이 문제는 주어진 문자열에 중복이 없는 부분 문자열의 길이를 찾는 문제&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;abcabcbb &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; abc
+bbbbb &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; b
+pwwkew &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; wke
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
+&lt;p&gt;문자열의 첫번째 문자열 부터 시작 하여 하나씩 증가 시켜고 다음 문자열이 포함되는지 체크한다.
+중복없는 문자열의 길이중 가장 긴 값을 리턴한다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;abcabcbb
+a &amp;lt;- b  // 포함 하지 않으면 다음 문자열까지 잘라서 비교한다.
+ab &amp;lt;- c // 포함 하지 않으면 다음 문자열까지 잘라서 비교한다.
+abc &amp;lt;- a // a가 포함 되었다. 비교문자를 자르는 시작을 a 다음 인 b 부터 시작한다
+bca &amp;lt;- b // b가 포함 되었다. 비교문자를 자르는 시작을 c 다음 인 c 부터 시작한다
+cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 다음 인 a 부터 시작한다
+..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+&lt;p&gt;도출된 점화식을 재귀로 그대로 표현하면&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LongestSubstringWithoutRepeatingCharacters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lengthOfLongestSubstring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    
+            &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;cm&quot;&gt;/**
+             * 문자가 비교할 문자열에 포함이 되어 있다면
+             * 비교할 문자열의 시작위치를 포함된 문자열의 마지막 인덱스 다음 값으로 한다.
+             * abcabcbb 에서 
+             * ---abcb- abc에 b가 포함 되었는데 잘라낸 문자열 abc에서 b의 인덱스는 1이 된다
+             * 우리가 원하는건 abcabcbb에서 
+             *             ----b--- 
+             *                 4    4번 index값을 찾아서 다음 비교를 시작 해야하므로 
+             * 처음부터 현재까지 즉 abcabcbb 중에서 abcabc 까지에서  b 중 마지막에 있는 b의 index를 찾아낸다 
+             * 그래야 abcabcbb 
+             *      -----cb 와 b를 다시 검사 할 수 있다.
+            */&lt;/span&gt;    
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lastIndexOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Sherlock and anagrams - hackerank [코테/알고리즘]</title>
+      <link href="http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/" rel="alternate" type="text/html" title="Sherlock and anagrams - hackerank [코테/알고리즘]" />
+      <published>2020-05-08T00:00:00+09:00</published>
+      <updated>2020-05-08T00:00:00+09:00</updated>
+      <id>http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams</id>
+      <content type="html" xml:base="http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/">&lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;특정-문자열의-개별-문자를-쌍으로-구성하는-경우-가능한-케이스의-개수를-찾는-문제&quot;&gt;특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hackerrank.com/challenges/sherlock-and-anagrams&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;문제-조건&quot;&gt;문제 조건&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;주어진 문자열 자체의 순서는 변경할 수 없다
+    &lt;blockquote&gt;
+      &lt;p&gt;“abcd” -&amp;gt; “bacd” 이렇게 변경 할수 없다.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;개별 문자열은 순서는 상관없다
+    &lt;blockquote&gt;
+      &lt;p&gt;“ifailuhkqq”
+“ifa” == “fai”는 같은 것으로 본다 =&amp;gt; [“ifa”, “fai”] 아나그램 조합이 허용된다.&lt;/p&gt;
+
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;문자열 “abba”의 경우 가능한 케이스는&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;a,a] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ab, ba] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;b,b] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;abb, bba]  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 4가지
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;문자열 “ifailuhkqq” 경우는&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;i,i] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;g,g] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ifa, fai] &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 처럼 3가지다  
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ifa, fai] &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 순서는 다르지만 각각 i, f, a 포함 되었으므로 같은 아나그램으로 본다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;문자열 “kkkk” 경우는&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k]
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,2] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2,3] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3,4] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,4] 
+처럼 개별 자리의 문자로 인식한다
+즉 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k]가 있다고 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;k,k] 케이스가 또있네 라고 햇갈릴수 있는데
+각각 개별 자리의 문자를 독립적으로 본다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
+&lt;p&gt;문자열 “aaa”가 있을 때 각각 문자열a, aa, aaa를 아래와 같이 저장한다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;map에 key = 문자, value = 각 문자열의 개수(1,2,3,…n 수열의 차수로 사용될 것이다.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;문자열 “aaaa” 경우 개별 문자열의 개수 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 4개 
+aa   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3개 
+aaa  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2개
+aaaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;문자열 “aaaa” 개별 문자열 개수가 도출 된 이유를 설명하면&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1   2   3   4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;문자열 순번&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+a   a   a   a
+
+문자                                개수&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  조합개수
+a    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, a&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, a&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, a&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 4개     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 6개
+aa   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; aa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, aa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2,3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, aa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3,4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3개     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3개
+aaa  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; aaa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,2,3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, aaa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2,3,4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2개     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개
+aaaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; aaaa&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,2,3,4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0개 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;아나그램으로 조합할 수가 없다 1개만 존재하므로&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 도출된 개수를 수열로 보면&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aaaa  aaa   aa     a &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;각문자&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+ 1     2     3     4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+ 0     1     3     6 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조합개수&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 총 10개&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;정답&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;조합개수 1, 3, 6을 가만히 보면&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2 3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+1 3 6 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 계차 수열임
+ 2 3  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 공차가 1인 등차수열을 가지는 
+  1   &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 공차&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;더 자세히 보면 공차가 1인 등차수열을 가지는 계차수열이기도 하지만
+각각의 일반항이 n차 자연수의 합과 같다는 것을 알수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1     2     3   &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n 차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+1     3     6   &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n일 때 일반항의 개수&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;자연수의 합&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+1    1+2  1+2+3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n이 1일 때 일반항 1, n이 2일 때 일반항 3&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1+2 &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; 자연수의 합공식&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;자연수의 합 공식은&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;n(n+1) / 2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;자연수의 합공식을 이용하여 각 일반항을 모두 더해주면 정답이 나오는데
+n 차수가 다르다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;원래는 차수 1부터 순차적으로 증가할 때 각 n차의 일반항의 개수가 아래와 같은데
+1  2  3 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+1  3  6 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조합개수&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 총 10개&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;정답&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+이 경우 차수가 +1씩 크다
+1  2  3  4 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n차&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+0  1  3  6 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;조합개수&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 총 10개&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;정답&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그래서 자연수 합 공식에서 n =2 일때 1이 되어야 하므로 n-1을 해주어야 한다.&lt;/p&gt;
+
+&lt;p&gt;자연수 합 공식 n(n+1) / 2 에서 n을 -1 씩 하게 되면&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;(n-1){(n-1)+1} / 2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;되고 전개 해서 풀이하면 결국&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;n(n-1) / 2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;와 같은 식이 도출된다.&lt;/p&gt;
+
+&lt;p&gt;n(n-1)/2 공식을 적용하여 aaa 3일때 각 조합은&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3개 이고 공식 적용하면 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3
+aa  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2개 이고 공식적용 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1
+aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0
+1+3 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 모두 더하면 4가 된다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;소스코드&quot;&gt;소스코드&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SherlockAndAnagrams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sherlockAndAnagrams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;chars&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;String:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;joining&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;dic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김찬정</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

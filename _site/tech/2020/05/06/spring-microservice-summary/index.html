@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Developer KimChanJung's Blog" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/tech/2020/05/06/spring-microservice-summary/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="kimchajung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)" />
+    <meta property="og:description" content="스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리 [마이크로서비스] 스프링 마이크로서비스 정리 스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만 정리 한 것임을 미리 밝혀 둡니다. 마이크로서비스의 원칙 마이크로서비스를 설계하는 원칙들은 좋은 마이크로서비스를 설계하고 구현하는데 필수적 이다." />
+    <meta property="og:url" content="http://localhost:4000/tech/2020/05/06/spring-microservice-summary/" />
+    <meta property="og:image" content="http://localhost:4000/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/mogomezwai" />
+    <meta property="article:author" content="https://www.facebook.com/mogomezwai" />
+    <meta property="article:published_time" content="2020-05-06T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-05-06T00:00:00+09:00" />
+    <meta property="article:tag" content="Tech" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)" />
+    <meta name="twitter:description" content="스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리 [마이크로서비스] 스프링 마이크로서비스 정리 스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만 정리 한 것임을 미리 밝혀 둡니다. 마이크로서비스의 원칙 마이크로서비스를 설계하는 원칙들은 좋은 마이크로서비스를 설계하고 구현하는데 필수적 이다." />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="kimchajung" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Tech" />
+    <meta name="twitter:site" content="@mogomezwai" />
+    <meta name="twitter:creator" content="@mogomezwai" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "kimchajung",
+        "logo": "http://localhost:4000/assets/images/mogomezwai-logo.png"
+    },
+    "url": "http://localhost:4000/tech/2020/05/06/spring-microservice-summary/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/tech/2020/05/06/spring-microservice-summary/"
+    },
+    "description": "스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리 [마이크로서비스] 스프링 마이크로서비스 정리 스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만 정리 한 것임을 미리 밝혀 둡니다. 마이크로서비스의 원칙 마이크로서비스를 설계하는 원칙들은 좋은 마이크로서비스를 설계하고 구현하는데 필수적 이다."
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)" href="/feed.xml" />
+    <meta name="naver-site-verification" content="f1cd735caec0d9f78c0108426288fb40e725f65f" />
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/mogomezwai-logo.png" alt="kimchajung" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
+    <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
+    <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
+    <li class="nav-algorithm" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/mogomezwai" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/mogomezwai" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-tech post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 6 May 2020"> 6 May 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/tech/'>TECH</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리</p>
+
+<h1 id="마이크로서비스-스프링-마이크로서비스-정리">[마이크로서비스] 스프링 마이크로서비스 정리</h1>
+
+<p>스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만 정리 한 것임을 미리 밝혀 둡니다.</p>
+
+<h2 id="마이크로서비스의-원칙">마이크로서비스의 원칙</h2>
+<blockquote>
+  <p>마이크로서비스를 설계하는 원칙들은 <code class="highlighter-rouge">좋은 마이크로서비스를 설계하고 구현하는데 필수</code>적 이다.</p>
+</blockquote>
+
+<h3 id="서비스하나에-책임도-하나">서비스하나에 책임도 하나</h3>
+<p>객체지향에 등장하는 개념인 SOLID 원칙중 하나인 <code class="highlighter-rouge">단일책임원칙과 마찬가지로 하나의 마이크로서비스는 하나의 책임을 가져야</code>한다. 그렇게 됨으로써 각 서비스간 낮은 결합도를 유지 할 수 있다.</p>
+<blockquote>
+  <p>하나의 책임이라는 의미가 중요한 듯 하다 하나의 기능이 아니라 하나의 책임 즉 배달과 주문이 있다고 한다면 배달은 배달과 관련된 기능만 수행한다. 배달 마이크로 서비스가 주문의 상태를 변경하거나 하는 기능이 포함되면 안된다는 의미다.</p>
+</blockquote>
+
+<blockquote>
+  <p>이 것은 객제관점에서 보아도 배달객체가 주문객제를 직접 변경하는 것 매우 부자연스럽다. 객체 관점에서도 필요할 때는 주문 객체에서 제공되는 주문상태 변경 메소드를 호출하여 주문객체에게 주문상태 변경해달라고 요청하는 모습처럼 마이크로 서비스도 하나의 객체단위로 보는 관점이 필요 하다고 본다.</p>
+</blockquote>
+
+<p><img src="/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png" alt="spring-microservice-diagrams-monolithic-to-microservice" /></p>
+
+<h3 id="마이크로서비스는-자율적">마이크로서비스는 자율적</h3>
+<p>책 내용은 구구절절한데 <code class="highlighter-rouge">한마디로 하나의 단독 서비스 처럼 돌아갸야 된다는 이야기</code>다. 웹서비스라면 하나의 웹서비스가 독립적으로 구동되는 형태로 생각하면 이해가 빠를 듯 하다.</p>
+
+<h2 id="마이크로서비스의-경계-설정">마이크로서비스의 경계 설정</h2>
+<blockquote>
+  <p>마이크로 서비스의 경계 설정에 있어 만병 통치약은 없다</p>
+</blockquote>
+
+<h3 id="마이크로서비스의-경계-설정-시-피해야-할-조건">마이크로서비스의 경계 설정 시 피해야 할 조건</h3>
+<blockquote>
+  <p>마이크로서비스간 낮은 응집도와 결합도를 유지 해야한다</p>
+</blockquote>
+
+<ul>
+  <li>너무 많은 정보교환</li>
+  <li>너무 많은 동기적 요청, 응답</li>
+  <li>순환 의존 관계</li>
+  <li>트랜잭션 범위가 여러 마이크로서비스에 걸치지 않게 해야함</li>
+</ul>
+
+<h3 id="적절한-마이크로서비스-경계-설정-조건">적절한 마이크로서비스 경계 설정 조건</h3>
+
+<h4 id="자율적인-기능">자율적인 기능</h4>
+<blockquote>
+  <ul>
+    <li>외부 기능에 대한 의존도가 낮다</li>
+  </ul>
+</blockquote>
+
+<h4 id="배포-단위의-크기">배포 단위의 크기</h4>
+<blockquote>
+  <ul>
+    <li>기능이 많은 서비스는 배포규모가 커진다</li>
+    <li>배포단위의 크기를 감당 가능한 수준으로 유지</li>
+  </ul>
+</blockquote>
+
+<h4 id="분리하기-적합한-기능-또는-서브도메인">분리하기 적합한 기능 또는 서브도메인</h4>
+<blockquote>
+  <ul>
+    <li>마이크로서비스 전환시 자원소모량, 소유 비용, 비즈니스 유용성, 유연성 등이 분석 기준이 된다</li>
+    <li>마이크로서비스로의 분리가 유용한 선택인지, 분석기준을 통하여 판단한다</li>
+    <li>검색 요청이 전체 리소스에 많은 부분을 차지하는 시스템이라면 분리 시 여러가지로 유리 하다</li>
+  </ul>
+</blockquote>
+
+<h4 id="하나의-제품으로-생각을-해본다">하나의 제품으로 생각을 해본다</h4>
+<blockquote>
+  <ul>
+    <li>경계 지어진 마이크로서비스가 하나의 제품으로 구성될 수 있는지의 관점에서 평가 해보자</li>
+  </ul>
+</blockquote>
+
+<h2 id="동기와-비동기-선택기준">동기와 비동기 선택기준</h2>
+<blockquote>
+  <p>어느 하나의 방식만으로 시스템을 개발하는 것은 불가능, 장단점을 따져서 두방식을 적절히 조합 해야한다</p>
+</blockquote>
+
+<h3 id="동기">동기</h3>
+<blockquote>
+  <ul>
+    <li>사용자가 즉시 응답을 받아야 하는 서비스</li>
+    <li>마이크로서비스간 의존성을 높이는 단점</li>
+  </ul>
+</blockquote>
+
+<h3 id="비동기">비동기</h3>
+<blockquote>
+  <ul>
+    <li>즉시 응답 받지 않아도 되는 서비스<br />
+예) 이메일, 문자 발송, 포인트 서비스, 재고 갱신</li>
+  </ul>
+</blockquote>
+
+<h2 id="마이크로-서비스의-과제">마이크로 서비스의 과제</h2>
+
+<h3 id="마이크로-서비스와-대규모-데이터">마이크로 서비스와 대규모 데이터</h3>
+<blockquote>
+  <p>주문 마이크로 서비스와 고객 마이크로서비스가 있다고 할 경우 고객별 주문 리스트를 가져와야할 경우에 대한 문제와 고려해 볼 방법들  결론 적으로 주문 - 고객을 조인쿼리로 가져올 수 없다는 문제에 대한 해결 방법</p>
+</blockquote>
+
+<h4 id="필요한-데이터를-미리-생성">필요한 데이터를 미리 생성</h4>
+<ul>
+  <li>즉 고객 별 주문 리스트를 가져오고 싶으면 각각의 마이크로 서비스에서 가져와 필요한 곳에 데이터를 생성(복제본) 해놓는 방법</li>
+  <li>
+    <p>단점은 데이터 중복문제</p>
+
+    <blockquote>
+      <p>이 방법 없이 <code class="highlighter-rouge">조인쿼리를 사용할 수 없는 상황</code>에서 두 마이크로 서비스의 <code class="highlighter-rouge">데이터를 리스트로 가져오는 방법은 경험상 정말 비즈니스 로직이 복잡</code>해진다.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>이런 페이지들이 많다면 개<code class="highlighter-rouge">발리소스도 훨씬 많이 들어</code>가고, 어떤 경우는 <code class="highlighter-rouge">특정 검색조건에 따라 리스트를 가져올 수 없는 경우</code>도 발생한다.</p>
+    </blockquote>
+
+    <blockquote>
+      <p><code class="highlighter-rouge">내 경험상 데이터 중복 문제가 단점이라고 이 방법 없이</code> 여러 마이크로 서비스의 데이터를 <code class="highlighter-rouge">조인 없이 조인과 같은 결과를 내는 방법</code>으로 개발을 하는 것은 정말 실<code class="highlighter-rouge">수 하는 것이라고 조심스럽게 말해본다</code>.</p>
+    </blockquote>
+  </li>
+  <li>복제본 데이터를 어떻게 구성할 것인가는 마이크로서비스를 어떻게 구성 했느냐에 따라 달라지므로 상황에 맞게 구성
+    <ul>
+      <li>통합적인 통계 관련 데이터를 제공 하는 서비스가 있다고 한다면 <code class="highlighter-rouge">각 마이크로 서비스로 부터 지속적으로 데이터의 생성 변화를 입수하여 데이터 웨어하우스</code> 같은 형태로 관리한다.</li>
+      <li>입수 방식은 <code class="highlighter-rouge">이벤트 소싱(event pub/sub) 방식</code>이 대표적, 메시지 큐 같은 여러 서비스를 활용, rabbitMQ, kafka 등등</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="의존-관계-관리">의존 관계 관리</h3>
+<ul>
+  <li>서비스 경계를 적절하게 설정해서 의존성을 낮춘다.</li>
+  <li>의존성을 가능한 느슨하게 설계해서 변경에 대한 영향을 낮춘다.</li>
+  <li>비동기 통신 방식을 통해 서비스간 상호작용이 일어나도록 설계.</li>
+  <li>서킷 브레이커 같은 패턴을 사용하여 의존성 문제의 전파를 차단.</li>
+  <li>의존 관계 그래프 같은 시각화를 통하여 의존 관계를 모니터링.</li>
+</ul>
+
+<blockquote>
+  <p>사실 위 조건들이 마이크로 서비스 설계시 가장 어려운 문제 인 듯 하다.<br />
+모놀리식 서비스 와 마이크로 서비스 동기와 비동기 등이 어느 한쪽을 선택하면 이익을 얻는 대신 반드시 손해를 보게되는 trade-off 관계 이기 때문이다.</p>
+</blockquote>
+
+<h2 id="마이크로서비스로의-전환-계획">마이크로서비스로의 전환 계획</h2>
+<blockquote>
+  <p>실제 책에서 예제로 나오는 항공사 예약 시스템 대신 본인이 주로 다뤄 왔단 배달 도메인을 예로 설명 합니다.</p>
+</blockquote>
+
+<h3 id="전환-관점에서-제기되는-몇가지-중요한-질문">전환 관점에서 제기되는 몇가지 중요한 질문</h3>
+<ul>
+  <li>마이크로서비스 <code class="highlighter-rouge">경계 식별</code></li>
+  <li>마이그레이션을 위한 마이크로서비스 <code class="highlighter-rouge">우선순위 지정</code></li>
+  <li>전화 단계에서의 <code class="highlighter-rouge">데이터 동기화</code> 처리</li>
+  <li>이전 UI와 새로운 UI를 다루기 위한 <code class="highlighter-rouge">사용자 인터페이스 통합</code></li>
+  <li>새로운 시스템에서의 <code class="highlighter-rouge">참조 데이터</code> 처리</li>
+  <li>비즈니스 범위기 제대로 유지될 수 있게 보장하는 <code class="highlighter-rouge">테스트 전략</code></li>
+  <li>마이크로 서비스의 기능. 프레임워크 등과 같은 마이크로서비스 개발을 위한 전제 조건 확인</li>
+</ul>
+
+<h3 id="첫번째---마이크로서비스의-경계-식별">첫번째 - 마이크로서비스의 경계 식별</h3>
+<ul>
+  <li><code class="highlighter-rouge">가장 먼저 해야 할 일</code>은 모놀리식 서비스에서 마이크로서비스로 전환 하고자 하는 <code class="highlighter-rouge">도메인의 경계를 식별</code>하는 것</li>
+  <li>모놀리식 서비스를 <code class="highlighter-rouge">분해 해본다는 관점</code>으로 접근</li>
+</ul>
+
+<h3 id="두번째---의존-관계-분석">두번째 - 의존 관계 분석</h3>
+<ul>
+  <li>첫번째 단계에서 뽑아낸 <code class="highlighter-rouge">마이크로서비스 후보들 간의 의존성을 분석</code>한다.</li>
+  <li>분석한 의존성을 바탕으로 <code class="highlighter-rouge">의존 관계 그래프를 그려</code>본다.</li>
+</ul>
+
+<p><img src="/post-img/spring-microservice/dependency-diagram.png" alt="dependency-diagram" /></p>
+
+<h3 id="세번째---면밀한-의존-관계-분석">세번째 - 면밀한 의존 관계 분석</h3>
+<h4 id="이벤트-소싱에-유리한-케이스">이벤트 소싱에 유리한 케이스</h4>
+<p><img src="/post-img/spring-microservice/spring-microservice-get-delivery-list.png" alt="spring-microservice-get-delivery-list" /></p>
+
+<blockquote>
+  <ul>
+    <li>배달 운영에 관한 각종 현황 정보 조회 및 모니터링 가능한 배달운영관리 시스템과 배달을 분리 할 수 있다.</li>
+    <li>위 그림 처림 배달 운영 시스템이 배달을 직접 가져오는 대신 배달의 생성 및 상태 변경을 배달 모듈이 이벤트를 발행하고, 배달운영관리 시스템은 배달의 변경사항을 구독한다.</li>
+    <li>이런 시나리오는 배달, 라이더, 배달팁 모듈들에서 변경사항 이벤트를 발행하고, 배달 운영 관리 시스템음 각 모듈의 변경사항을 구독하여 관리하는 방식으로 여러 모듈들에게 적용할 수 있다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="이벤트-소싱에-불리한-케이스1">이벤트 소싱에 불리한 케이스(1)</h4>
+<p><img src="/post-img/spring-microservice/spring-microservice-get-delivery-list-from-calculator.png" alt="spring-microservice-get-delivery-list-from-calculator" /></p>
+
+<blockquote>
+  <ul>
+    <li>라이더에게 지급할 배달팁 정산을 위해서 정산 시스템 배달 목록을 가져오는데  월단위, 주단위, 일단위 정산이 일반적이므로 모든 배달 데이터는 사실상 필요가 없다</li>
+    <li>이벤트 소싱으로 구성 된다면 정산 시스템은 항상 모든 배달건의 상태 변경에 대한 이벤트를 구독 받아 처리 해야하므로 불필요한 자원 낭비가 될 수 있다.</li>
+    <li>차라리 정산 주기에 따라 1번씩 해당 하는 정산 기간의 배달 데이터를 공급 배달 모듈로 부터 공급 받는 것이 결과적으로 유리하다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="이벤트-소싱에-불리한-케이스2">이벤트 소싱에 불리한 케이스(2)</h4>
+<p><img src="/post-img/spring-microservice/spring-microservice-get-delivery-list-from-crm.png" alt="spring-microservice-get-delivery-list-from-crm" /></p>
+<blockquote>
+  <ul>
+    <li>고객응대 시스템에서 발생하는 배달건의 고객응대 건수는 발생하는 배달 건수에 비해 현저하게 적은 건수를 가진다. (배달이 100건이라고 한다면 배달불만 접수는 10건이라고 한다면)</li>
+    <li>이런 경우 고객응대 시스템에서 배달건마다 발생하는 모든 이벤트를 구독받아 배달 데이터를 유지하고 있는 것은 사실상 리소스 낭비에 해당한다.</li>
+    <li>배달건에 대한 고객 불만 사항이 발생 할때 차라리 직접 배달을 가져오는 편이 유리하다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="동기화-되어야-할-서비스들-사이에서의-이벤트소싱">동기화 되어야 할 서비스들 사이에서의 이벤트소싱</h4>
+
+<p><img src="/post-img/spring-microservice/spring-microservice-delivery-dashboard-direct.png" alt="spring-microservice-delivery-dashboard-direct" /></p>
+<ul>
+  <li>배달 현황 및 각종 정보를 관리하고 실시간 모니터링하는 서비스가 있다고 한다면 <code class="highlighter-rouge">지속적으로 각각의 마이크로서비스로 분리된 시스템</code>에서(배달, 라이더, 배달로) 주기적으로 <code class="highlighter-rouge">데이터를 직접 가져오는 방식</code>이 될 것이다.</li>
+  <li>위 그림과 같은 직접 적인 방식에서 아래 그림과 같은 <code class="highlighter-rouge">이벤트 소싱 방식으로 전환</code> 할 수 있다.</li>
+</ul>
+
+<p><img src="/post-img/spring-microservice/spring-microservice-delivery-dashboard-event-sourcing.png" alt="spring-microservice-delivery-dashboard-event-sourcing" /></p>
+<ul>
+  <li>위 그림과 같은 이벤트 소싱 방식으로의 전환이 각 시스템간 의존성을 낮춘다.</li>
+</ul>
+
+<h4 id="동기화-되어야-할-서비스들-사이에서의-이벤트소싱-문제점">동기화 되어야 할 서비스들 사이에서의 이벤트소싱 문제점</h4>
+<p><img src="/post-img/spring-microservice/spring-microservice-wait-delivery-event-sourcing.png" alt="spring-microservice-wait-delivery-event-sourcing" /></p>
+<blockquote>
+  <ul>
+    <li>배달을 라이더에게 배차했을 경우 배차 대기 목록 서비스에서 배달상태변경 이벤트를 비동기 이벤트로 구독받아 변경사항을 반영하고 있다.</li>
+    <li>라이더는 배차대기 목록을 보고 자신이 배달하고 싶은 배달건을 가져온다.</li>
+    <li>이런 시나리오에서는 배차대기 배달목록이 비동기로 유지될 경우 배달 상태가 불일치하는 경우가 발생할 수 도 있다.</li>
+    <li>이런경우 라이더는 이미 다른 라이더에게 배차가된 배달건을 가져올 수도 있다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="마이크로서비스간-유효성을-확인-해야하는-경우">마이크로서비스간 유효성을 확인 해야하는 경우</h4>
+<p><img src="/post-img/spring-microservice/spring-microservice-validate-delivery.png" alt="spring-microservice-validate-delivery" /><br />
+배차의 경우 배달건을 배차 할 수 있는 배달건인지 유효성을 다음과 같이 확인 할 것이다.</p>
+<blockquote>
+  <ul>
+    <li>이 배달건은 미배차 배달 건인가?</li>
+    <li>이 배달건은 금일 발생한 배달 건인가?</li>
+    <li>이 배달건은 해당 배달권역의 배달건 인가?</li>
+    <li>기타 등등</li>
+  </ul>
+</blockquote>
+
+<p>이런 경우는 아래 그림과 같이 복잡한 유효성을 확인 하는 것 보다 적적한 유효성을 기존으로 미 배차 배달건 목록을 배달 <code class="highlighter-rouge">마이크로시스템에서 관리하여 타 시스템에게 제공하는 편이 유리</code>할 것이다.<br />
+<img src="/post-img/spring-microservice/spring-microservice-management-wait-delivery-list.png" alt="spring-microservice-management-wait-delivery-list" /></p>
+
+<h3 id="마이그레이션을-위한-마이크로서비스-우선순위-지정">마이그레이션을 위한 마이크로서비스 우선순위 지정</h3>
+<p>타이틀이 애매한데 풀어서 이야기 하자면 모놀리식 시스템에서 마이크로서비스로 분리하여 전환하고자 초기 설계 이후 도출된 각 마이크로서비스들 중 어떤 서비스를 먼저 전환 해야하는지에 대한 이야기로 이해하면 될 듯 하다. <code class="highlighter-rouge">우선순위를 매기는 기준에 대한 설명</code>.</p>
+
+<h4 id="의존관계">의존관계</h4>
+<p>의존관계가 없거나 적은 서비스는 마이크로서비스로의 전환이 쉬운 반면, <code class="highlighter-rouge">의존관계가 매우 복잡하고 높은 서비스는 위험성과 전환 과정이 어렵</code>다.</p>
+
+<h4 id="트랜잭션-크기요청이-많고-적음">트랜잭션 크기(요청이 많고 적음)</h4>
+<p><code class="highlighter-rouge">트랜잭션의 크기가 큰 시스템을 마이크로서비스로 전환</code>하는 것은 기존 레거시 시스템의 부하를 줄여주기 때문에 <code class="highlighter-rouge">유지보수 관점에서 보았을 때 큰 가치</code>가 있다. 그러나 <code class="highlighter-rouge">위험부담이 크다는 단점</code>도 있다.</p>
+<blockquote>
+  <p>어떤 위험부담이 있는지에 대한 내용이 책에 없다…..</p>
+</blockquote>
+
+<h4 id="리소스-이용율">리소스 이용율</h4>
+<p>서버자원을 많이 사용하는 서비스를 마이크로서비스로 전환하는 것은 기존 레거시시스템에 남아 있는 기능들이 더 잘 작동할 수 있다.</p>
+<blockquote>
+  <p>개념은 트랜잭션 크기 이야기와 일맥상통한다.</p>
+</blockquote>
+
+<h4 id="복잡도">복잡도</h4>
+<p>덜 복잡한 시스템이 마이크로서비스로의 전환이 쉽다(당연한 이야기 아닌가??)</p>
+
+<h4 id="사업적-중요도">사업적 중요도</h4>
+<p>저자는 사업적 중요도가 높은 서비스를 마이크로서비스로의 전환하는 것이 좋다고하는데 이유설명이 없어서 아쉽다. 아마도 먼저언급한 여러가지 유용한 이점들이 사업적 중요도가 높은 서비스에게 적용되기 때문이라는 이유 일 듯 싶다.</p>
+
+<h4 id="변경속도">변경속도</h4>
+<p>개발적인 변경이 빈번하게 이루어지는 서비스가 그렇지 않은 서비스보다 마이크로서비스로의 전환에 있어 우선순위가 높다.</p>
+<blockquote>
+  <p>역시나 책내용에  근거가 없다…</p>
+</blockquote>
+
+<h4 id="혁신">혁신</h4>
+<p>책 내용을 풀이하자면 서비스가 <code class="highlighter-rouge">혁신적으로 변경되는 서비스들을 마이크로서비스로 전환하여 운영</code>하는 것이 <code class="highlighter-rouge">더 유리</code>하다는 이야기다 서비스를 혁신적으로 변경해야할 때 <code class="highlighter-rouge">기존 레거시 시스템에서 혁신적으로 변경하는 것이 더 어렵</code>다고 이야기 하고 있다.</p>
+
+<h3 id="마이크로서비스로의-전환-중-레거시시스템과의-데이터-동기화">마이크로서비스로의 전환 중 레거시시스템과의 데이터 동기화</h3>
+<p>책 내용을 대략 풀이 하자면 전체 모놀리식 시스템을 한번에 모두 마이크로서비스로 전환하는 시나리오는 현실적으로 어렵기도 하고, 레거시 시스템에서 하나씩 분리하여 <code class="highlighter-rouge">점진적으로 마이크로서비스로 전환하는 과정</code>에서 <code class="highlighter-rouge">레거시 시스템과 마이크로 시스템간의 데이터 동기화를 어떻게 할 것</code>인가에 대한 이야기다.</p>
+
+<h4 id="예를-들어보자면">예를 들어보자면</h4>
+<blockquote>
+  <ul>
+    <li>배달과 라이더가 같은 시스템에 함께 존재 하였는데 라이더관리 시스템으로 분리</li>
+    <li>분리된 라이더 관리 시스템에서는 라이더 정보를 등록,수정,삭제 관리한다.</li>
+    <li>기존 레거시 시스템에서는 라이더정보 등록,수정,삭제는 제거 되고 라이더 관리 시스템에서 처리하고 있다.</li>
+    <li>하지만 기존 레거시 시스템에서는 라이더와 배달건을 조회하는 목록 페이지가 여전히 존재한다.</li>
+    <li>이 경우 여전히 레거시 시스템의 DB에서 라이더 정보를 가져오는 로직이 남아 있기 때문에 라이더 관리 시스템으로 이전 되기 전까지는 두 시스템 사이에 라이더 데이터는 동기화 되어야한다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="해결책">해결책</h4>
+<p>이벤트 소싱을 이용해서 해결, 즉 <code class="highlighter-rouge">라이더 관리 시스템에서 라이더 정보의 생성, 수정, 삭제 이벤트를 발행</code>하고 기존 <code class="highlighter-rouge">레거시 시스템은 구독하여 로컬 DB에 반영</code>하도록 한다.</p>
+<blockquote>
+  <p>[사족] 그런데 나중에 모두 라이더 관리 마이크로서비스로 전환 되더라도 대규모 데이터를 조인 없이 가져와야될 상황이라면 어짜피 이벤트소싱으로 구성해야되는 것은 마찬가지 이다.</p>
+</blockquote>
+
+<h3 id="참조-데이터-관리">참조 데이터 관리</h3>
+<p>책에서 이야기하는 참조 데이터가 어떤 데이터를 의미하는지 명확한 설명이 없어서 조금 애매한 부분이다. 마이크로서비스단위의 큰 도메인 데이터가 아니라(배달, 주문, 라이더 같은) 여러 마이크로서비스에서 필요에 의해 참조해야는 데이터 들이 아닌가 추측해본다.</p>
+
+<p>예를 들자면 배달, 라이더 둘다 필요한 배달팁 정책 같은 데이터를 의미하는 것 일 수도 있다.</p>
+
+<p>배달을 생성 할때 배달팁을 참조하여 배달가격을 책정하기에 필요하다. 이런 경우 마이크로서비스에서 기존레거시를 직접 호출하는 것은 기존 레거시 시스템에 트랜잭션이 몰릴수 있기 때문에 지양하라고 한다.</p>
+
+<h4 id="해결책-1">해결책</h4>
+<h5 id="이벤트소싱-방식">이벤트소싱 방식</h5>
+<p>참조 데이터를 처리하는 마이크로서비스를 따로 만들어 각 마이크로 서비스에 제공하는 방식을 추천하는데 <code class="highlighter-rouge">이벤트소싱 방식은 동기화 문제가 있을 수 있다</code>. 배달팁이 변경 되고 비동기 이벤트를 발행하고 배달 마이크로서비스에서 배달 생성시 아직 <code class="highlighter-rouge">변경된 이벤트를 수신 받지 못한 상태</code>에서 변경전 배달료로 배달이 생성될 수도 있다는 이야기다.</p>
+
+<p><img src="/post-img/spring-microservice/spring-microservice-diagrams-refer-data-event-sourcing.png" alt="spring-microservice-diagrams-refer-data-event-sourcing" /></p>
+
+<h5 id="인메모리-데이터-그리드">인메모리 데이터 그리드</h5>
+<p>참조 데이터 마이크로서비스는 참조데이터의 변경사항을 인메모리 데이터 그리드에 반영 처리하고 각 마이크로서비스들은 인메모리 데이터 그리드를 참조한다. 이 방법은 <code class="highlighter-rouge">데이터 동기화에 대한 문제를 해결</code>한다.</p>
+
+<blockquote>
+  <p>인메모리 데이터 그리드는 데이터를 메모리로 관리한다는 점에서 REDIS인가? 하고 생각 할 수 있지만 REDIS와는 또 다른 개념이 적용된 메모리 저장소 인 듯 하다. 자세한 개념은 구글링을 통해서 찾아보면 도움이 될 듯 하다.</p>
+</blockquote>
+
+<p><img src="/post-img/spring-microservice/spring-microservice-diagrams-refer-data-in-memory-data-grid.png" alt="spring-microservice-diagrams-refer-data-in-memory-data-grid" /></p>
+
+<h3 id="마무리">마무리</h3>
+<p>스프링 마이크로서비스의 책 내용중 <code class="highlighter-rouge">마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점</code> 등의 내용만 정리해 보았습니다.</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="kimchanjung" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/kimchanjung">김찬정</a></h4>
+                                
+                                    <p>좀 더 넓은 TEST 커버리지! 좀 더 나은 Architecture! 좀 더 나은 Code Pattern! 보다 더 간결하고 깔끔한 코드!를 항상 갈망 합니다.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/kimchanjung">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/new-blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; kimchajung &mdash;</small>
+                            
+                                <h3 class="read-next-card-header"><a href="/tag/tech/">Tech</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/tech/2020/05/08/react-mobx/">[Mobx] React 에서 Mobx 사용기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/tech/2020/05/08/real-time-service/">[Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/tech/">
+                                
+                                    See all 2 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/algorithm/2020/05/08/sherlock-and-anagrams/">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-default-hackerrank-cover.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/algorithm/2020/05/08/sherlock-and-anagrams/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Algorithm</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Sherlock and anagrams - hackerank [코테/알고리즘]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/programming/2020/05/06/kotlin-basic-syntax-summary/">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-default-kotlin-cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/programming/2020/05/06/kotlin-basic-syntax-summary/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Programming</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-muzik-icon.jpg" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+                <img src="/assets/images/favicon.png" alt="kimchajung icon" />
+            
+            <span>kimchajung</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%5B%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4%5D+%EC%8A%A4%ED%94%84%EB%A7%81+%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4+%EC%9A%94%EC%95%BD+%EC%A0%95%EB%A6%AC+%28spring+microservice%2C+msa%29&amp;url=https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">kimchajung</a> &copy; 2020</section>
+                <section class="email"><a href="mailto:mogomezwai@gmail.com">mogomezwai@gmail.com</a></section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/mogomezwai" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mogomezwai" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <!-- highlight.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script> -->
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!--script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script-->
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-165866221-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
