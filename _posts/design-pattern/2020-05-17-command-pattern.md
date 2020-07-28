@@ -6,6 +6,7 @@ navigation: True
 title: "커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]"
 date: 2020-05-17 09:00:00 +0900
 tags: design-pattern
+categories: design-pattern
 class: post-template
 subclass: 'post'
 author: kimchanjung
