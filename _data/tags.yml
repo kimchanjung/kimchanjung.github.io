@@ -14,3 +14,11 @@ projects:
   name: projects
   description: 프로젝트
   cover: assets/images/tag-projects-cover.jpg
+tech:
+  name: tech
+  description: 소프트웨어 기술 & 컴퓨터 공학
+  cover: assets/images/tag-tech-cover.jpg
+etc:
+  name: etc
+  description: 기타 그외..
+  cover: assets/images/tag-etc-cover.jpg
