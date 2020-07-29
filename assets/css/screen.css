@@ -644,9 +644,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
         padding: 5vw 7vw 0;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .post-full-content {
-        font-size: 1.9rem;
+        /* font-size: 1.7rem; */
     }
 }
 

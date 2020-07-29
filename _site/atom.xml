@@ -5,9 +5,23 @@
     <description>Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io//</link>
     <atom:link href="https://kimchanjung.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jul 2020 16:00:33 +0900</pubDate>
-    <lastBuildDate>Wed, 29 Jul 2020 16:00:33 +0900</lastBuildDate>
+    <pubDate>Wed, 29 Jul 2020 16:41:04 +0900</pubDate>
+    <lastBuildDate>Wed, 29 Jul 2020 16:41:04 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>프로그래머스 - 문자열 압축 [2020 KAKAO BLIND RECRUITMENT]</title>
+        <description>카카오 블라인드 2020 문자열 압축 문제를 설명과 함께 풀이 합니다. 프로그래머스 - 문자열 압축 문제바로가기 문제유형 Brute-Force 문제 설명 주어진 문자열을 압축하는 문제 aabbaccc =&gt; 2a2ba3c 각 중복되는 문자열앞에 중복개수를 붙여준다. 단 1개짜리</description>
+        <pubDate>Wed, 29 Jul 2020 16:00:00 +0900</pubDate>
+        <link>https://kimchanjung.github.io//algorithm/2020/07/29/zip/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/07/29/zip/</guid>
+        
+        <category>algorithm</category>
+        
+        
+        <category>algorithm</category>
+        
+      </item>
     
       <item>
         <title>프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
