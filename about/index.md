@@ -19,4 +19,4 @@ subclass: 'post page'
 #### 좀 더 넓은 TEST 커버리지! 좀 더 나은 Architecture! 좀 더 나은 Code Pattern! 보다 더 간결하고 깔끔한 코드!를 항상 갈망 합니다. 
 
 ### [이력서 바로가기](/resume/)
-### [주요 프로젝트 보기](/tag/projects)
+### [주요 프로젝트 보기](/tag/projects) 
