@@ -26,6 +26,7 @@ subscribers: false # you need to connect an external service for this to work,
 twitter: mogomezwai # replace by your username
 facebook: mogomezwai # replace by your username
 email: mogomezwai@gmail.com
+github: kimchanjung
 
 # Disqus
 disqus: false
