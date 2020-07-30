@@ -5,13 +5,14 @@
     <description>Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io//</link>
     <atom:link href="https://kimchanjung.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jul 2020 15:18:01 +0900</pubDate>
-    <lastBuildDate>Thu, 30 Jul 2020 15:18:01 +0900</lastBuildDate>
+    <pubDate>Thu, 30 Jul 2020 15:22:12 +0900</pubDate>
+    <lastBuildDate>Thu, 30 Jul 2020 15:22:12 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>프로그래머스 - 문자열 압축 [2020 KAKAO BLIND RECRUITMENT]</title>
-        <description>&lt;p&gt;카카오 블라인드 2020 문자열 압축 문제를 설명과 함께 풀이 합니다.&lt;/p&gt;
+          <description>카카오 블라인드 2020 문자열 압축 문제를 설명과 함께 풀이 합니다. 프로그래머스 - 문자열 압축 문제바로가기 문제유형 Brute-Force 문제 설명 주어진 문자열을 압축하는 문제 aabbaccc =&gt; 2a2ba3c 각 중복되는 문자열앞에 중복개수를 붙여준다. 단 1개짜리</description>
+        <!-- <description>&lt;p&gt;카카오 블라인드 2020 문자열 압축 문제를 설명과 함께 풀이 합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;프로그래머스---문자열-압축&quot;&gt;프로그래머스 - 문자열 압축&lt;/h1&gt;
 &lt;h3 id=&quot;문제바로가기&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/60057&quot;&gt;문제바로가기&lt;/a&gt;&lt;/h3&gt;
@@ -82,7 +83,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Wed, 29 Jul 2020 16:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/07/29/zip/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/07/29/zip/</guid>
@@ -96,7 +97,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
     
       <item>
         <title>프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
-        <description>&lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
+          <description>깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다. 프로그래머스 - 괄호변환 문제바로가기 문제유형 Stack 문제 설명 괄호를 확인하여 올바른 열고닫음의 짝수 괄호인지 확인하고 열고닫임이 맞지 않는 경우 변환하여 리턴하는 문제 stack을 이용한 괄호</description>
+        <!-- <description>&lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;프로그래머스---괄호변환&quot;&gt;프로그래머스 - 괄호변환&lt;/h1&gt;
 &lt;h3 id=&quot;문제바로가기&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;문제바로가기&lt;/a&gt;&lt;/h3&gt;
@@ -235,7 +237,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
                 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;joining&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Mon, 13 Jul 2020 16:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/07/13/bracket/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/07/13/bracket/</guid>
@@ -249,7 +251,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
     
       <item>
         <title>[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)</title>
-        <description>&lt;p&gt;typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다.&lt;/p&gt;
+          <description>typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다. Typescript에서 js npm 모듈 import시 오류를 해결하는 방법 typescript로 프로젝트를 할 때 npm에서 필요한 모듈들을 설치하고 import해서 사용하려고 할때 모듈 'module name'에 대한 선언</description>
+        <!-- <description>&lt;p&gt;typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;typescript에서-js-npm-모듈-import시-오류를-해결하는-방법&quot;&gt;Typescript에서 js npm 모듈 import시 오류를 해결하는 방법&lt;/h1&gt;
 &lt;p&gt;typescript로 프로젝트를 할 때 npm에서 필요한 모듈들을 설치하고 import해서 사용하려고 할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;모듈 'module name'에 대한 선언 파일을 찾을 수 없습니다.&lt;/code&gt; 라는 메시지와 함께 모듈을 import할 수가 없습니다.&lt;/p&gt;
@@ -302,7 +305,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;마무리&quot;&gt;마무리&lt;/h3&gt;
-&lt;p&gt;typescript사용시 npm 모듈이 import되지 않는 문제 해결방법을 알아 보았습니다.&lt;/p&gt;</description>
+&lt;p&gt;typescript사용시 npm 모듈이 import되지 않는 문제 해결방법을 알아 보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Sun, 05 Jul 2020 21:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/05/typescipt-import-js-module-error/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/05/typescipt-import-js-module-error/</guid>
@@ -316,7 +319,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
     
       <item>
         <title>[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)</title>
-        <description>&lt;p&gt;스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다.&lt;/p&gt;
+          <description>스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다. Spring Security 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3) 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할</description>
+        <!-- <description>&lt;p&gt;스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---커스텀-필터의-구현3&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -538,7 +542,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;/spring/2020/07/01/spring-security-01.html&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/02/spring-security-02.html&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&quot;/spring/2020/07/02/spring-security-02.html&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;</description> -->
         <pubDate>Fri, 03 Jul 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/03/spring-security-03/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/03/spring-security-03/</guid>
@@ -552,7 +556,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
     
       <item>
         <title>[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)</title>
-        <description>&lt;p&gt;스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다.&lt;/p&gt;
+          <description>스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다. Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2) 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를</description>
+        <!-- <description>&lt;p&gt;스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-설정2&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -836,7 +841,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;/spring/2020/07/01/spring-security-01.html&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;</description> -->
         <pubDate>Thu, 02 Jul 2020 12:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/02/spring-security-02/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/02/spring-security-02/</guid>
@@ -850,7 +855,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
     
       <item>
         <title>[Spring Security] 스프링시큐리티 동작구조의 이해(1)</title>
-        <description>&lt;p&gt;스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다”&lt;/p&gt;
+          <description>스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다” Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1) 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다.</description>
+        <!-- <description>&lt;p&gt;스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다”&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-동작구조의-이해1&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -925,7 +931,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;/spring/2020/07/02/spring-security-02.html&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;</description>
+&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;</description> -->
         <pubDate>Wed, 01 Jul 2020 01:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/01/spring-security-01/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/01/spring-security-01/</guid>
@@ -939,7 +945,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
     
       <item>
         <title>[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결</title>
-        <description>&lt;p&gt;@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다&lt;/p&gt;
+          <description>@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다 JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결 JPA Entity 클래스에</description>
+        <!-- <description>&lt;p&gt;@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다&lt;/p&gt;
 
 &lt;h1 id=&quot;jpa-entitylisteners에서-autowired를-통한-의존성-주입이-미동작하는-문제-해결&quot;&gt;JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;JPA Entity 클래스에 @EntityListeners 추가&lt;/strong&gt; 하여 엔티티의 &lt;strong&gt;CRUD가 일어날때 로그&lt;/strong&gt;를 남긴다던가 하는 &lt;strong&gt;추가 작업&lt;/strong&gt;을 선언하여 &lt;strong&gt;코드 중복을 줄일&lt;/strong&gt; 수 있습니다.&lt;br /&gt;
@@ -1113,7 +1120,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 
 &lt;h3 id=&quot;마무리&quot;&gt;마무리&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;@EntityListeners&lt;/strong&gt;에 등록한 클래스는 &lt;strong&gt;스프링의 관리영역이 아니기&lt;/strong&gt; 때문에 &lt;strong&gt;사용자가 생성한 빈을 사용할 때는 null&lt;/strong&gt; 값이 되는 경우가 있습니다.&lt;br /&gt;
-하지만 &lt;strong&gt;ApplicationEventPublisher&lt;/strong&gt;를 사용하여 스프링 &lt;strong&gt;이벤트 발생/구독 모델로 분리&lt;/strong&gt;하고 정상적으로 &lt;strong&gt;사용자가 생성한 스프링빈을 사용할 수 있는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;</description>
+하지만 &lt;strong&gt;ApplicationEventPublisher&lt;/strong&gt;를 사용하여 스프링 &lt;strong&gt;이벤트 발생/구독 모델로 분리&lt;/strong&gt;하고 정상적으로 &lt;strong&gt;사용자가 생성한 스프링빈을 사용할 수 있는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Sun, 28 Jun 2020 20:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</guid>
@@ -1127,7 +1134,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
     
       <item>
         <title>[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</title>
-        <description>&lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
+          <description>NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다 API호출시 보통 로딩을 처리하는 동안 Spinner를 표시해서 로딩처리를 사용자에게 알리는 용도로 많이</description>
+        <!-- <description>&lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;API호출&lt;/strong&gt;시 보통 &lt;strong&gt;로딩을 처리하는 동안 Spinner를 표시&lt;/strong&gt;해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. 
 &lt;strong&gt;NPM에서 React용 Spinner&lt;/strong&gt;를 찾아보면 &lt;strong&gt;수많은 종류&lt;/strong&gt;의 로딩처리 Spinner 모듈들이 존재합니다. &lt;strong&gt;기능이나 디자인도 수없이 다양&lt;/strong&gt;합니다. NPM &lt;strong&gt;대부분의 Spinner 모듈이 다양한 방식&lt;/strong&gt;으로 사용하고자 할때 &lt;strong&gt;몇가지 문제점&lt;/strong&gt;이 있었습니다.
@@ -1512,7 +1520,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;마무리&quot;&gt;마무리&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Spinner모듈을 Modal&lt;/strong&gt;과 일반 페이지 둘다 &lt;strong&gt;position 설정이 가능하도록 Portal&lt;/strong&gt;을 이용하여 &lt;strong&gt;구현하는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Spinner모듈을 Modal&lt;/strong&gt;과 일반 페이지 둘다 &lt;strong&gt;position 설정이 가능하도록 Portal&lt;/strong&gt;을 이용하여 &lt;strong&gt;구현하는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Fri, 26 Jun 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/26/react-spinner/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/26/react-spinner/</guid>
@@ -1526,7 +1534,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
     
       <item>
         <title>[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)</title>
-        <description>&lt;p&gt;React로 개발 하다보면 기본 매카니즘이 상태란 것 남아 있기 때문에 나는 분명 다른페이지로 이동 했는데도 새로 고침을 하였는데도 불구하고 이전의 스크롤위치로 페이지가 나타나는 현상이 있습니다.&lt;/p&gt;
+          <description>React로 개발 하다보면 기본 매카니즘이 상태란 것 남아 있기 때문에 나는 분명 다른페이지로 이동 했는데도 새로 고침을 하였는데도 불구하고 이전의 스크롤위치로 페이지가 나타나는 현상이 있습니다. [React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll</description>
+        <!-- <description>&lt;p&gt;React로 개발 하다보면 기본 매카니즘이 상태란 것 남아 있기 때문에 나는 분명 다른페이지로 이동 했는데도 새로 고침을 하였는데도 불구하고 이전의 스크롤위치로 페이지가 나타나는 현상이 있습니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react-페이지-이동시-스크롤을-상단으로-초기화-하는-방법scroll-top&quot;&gt;[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1596,7 +1605,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-&lt;p&gt;실제 &lt;strong&gt;동작페이지 컴포넌트&lt;/strong&gt;와 &lt;strong&gt;라우팅설정컴포넌트&lt;/strong&gt; 사이에 &lt;strong&gt;스크롤상단처리컴포넌트&lt;/strong&gt;를 추가하여 &lt;strong&gt;페이지 이동시&lt;/strong&gt; 스크롤을 상단으로 &lt;strong&gt;초기화 하는 방법&lt;/strong&gt;을 알아보았습니다.&lt;/p&gt;</description>
+&lt;p&gt;실제 &lt;strong&gt;동작페이지 컴포넌트&lt;/strong&gt;와 &lt;strong&gt;라우팅설정컴포넌트&lt;/strong&gt; 사이에 &lt;strong&gt;스크롤상단처리컴포넌트&lt;/strong&gt;를 추가하여 &lt;strong&gt;페이지 이동시&lt;/strong&gt; 스크롤을 상단으로 &lt;strong&gt;초기화 하는 방법&lt;/strong&gt;을 알아보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Thu, 25 Jun 2020 16:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/25/react-scroll-top/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/25/react-scroll-top/</guid>
@@ -1610,7 +1619,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
     
       <item>
         <title>[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)</title>
-        <description>&lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
+          <description>react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다 react-router 에서 Private Router 구현하기(권한별 routing) 실무에서 페이지를 개발할 때 인증 및 부여된 권한 등급에 따라서</description>
+        <!-- <description>&lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
 
 &lt;h1 id=&quot;react-router-에서-private-router-구현하기권한별-routing&quot;&gt;react-router 에서 Private Router 구현하기(권한별 routing)&lt;/h1&gt;
 &lt;p&gt;실무에서 페이지를 개발할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증 및 부여된 권한 등급에 따라서 메뉴의 노출 및 접근이 제한&lt;/code&gt; 되도록 구성하는것이 일반적입니다. 
@@ -1678,7 +1688,7 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-&lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;</description>
+&lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Wed, 24 Jun 2020 18:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</guid>
@@ -1692,7 +1702,8 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
     
       <item>
         <title>[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법</title>
-        <description>&lt;p&gt;스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다.&lt;/p&gt;
+          <description>스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다. Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여</description>
+        <!-- <description>&lt;p&gt;스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;yarn-빌드-react-프로젝트를-spring-프로젝트-gradle-빌드에-통합하여-빌드하는-방법&quot;&gt;Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여 빌드하는 방법&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1819,7 +1830,7 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
 그렇지 않으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;프론트빌드가 완료되기 전에 java 빌드가 되기 때문에 프론트 파일이 미포함되는 경우&lt;/code&gt;가 발생하기 때문에 주의 해야합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-&lt;p&gt;Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요&lt;/p&gt;</description>
+&lt;p&gt;Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요&lt;/p&gt;</description> -->
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/24/spring-gradle-build-with-front-end/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/spring-gradle-build-with-front-end/</guid>
@@ -1833,7 +1844,8 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
     
       <item>
         <title>[React] Mobx의 async action(비동기 액션) 처리를 mobx-utils를 이용하여 가장 깔끔하게 구현하는 방법</title>
-        <description>&lt;p&gt;Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다&lt;/p&gt;
+          <description>Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다 Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법 Mobx에서 상태를 수정하는 함수는 @action 데코레이터를 추가하여 상태를 변경합니다. api를</description>
+        <!-- <description>&lt;p&gt;Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx의-async-action비동기-액션-처리를-가장-깔끔하게-구현하는-방법&quot;&gt;Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법&lt;/h1&gt;
 &lt;p&gt;Mobx에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;상태를 수정하는 함수는 @action 데코레이터를 추가하여 상태를 변경&lt;/code&gt;합니다. api를 호출하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;비동기 처리의 경우 Mobx에서는
@@ -2043,7 +2055,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;Mobx 공식 문서에서 제공하는 비동기액션의 처리방법은 래핑이 많아 깔끔하지 못합니다. 그래서 mobx-utils 라이브러이에서 제공하는
-데코레이터와 generator 또는 async/await 비동기처리 키워드의 조합을 통하여 직관적이고 깔끔한 방법으로 비동기처리하는 방법을 알아보았습니다.&lt;/p&gt;</description>
+데코레이터와 generator 또는 async/await 비동기처리 키워드의 조합을 통하여 직관적이고 깔끔한 방법으로 비동기처리하는 방법을 알아보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/24/react-mobx-async-action/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-mobx-async-action/</guid>
@@ -2057,7 +2069,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
     
       <item>
         <title>[React] Material-UI에서 withStyle 사용시 1개 이상 여러개 style을 함께 사용하는 방법(multiple)</title>
-        <description>&lt;p&gt;Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 여러개(multiple) 스타일을 같이 사용하는 방법을 알아봅니다.&lt;/p&gt;
+          <description>Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 여러개(multiple) 스타일을 같이 사용하는 방법을 알아봅니다. React Material-UI에서 withStyle 사용시 1개 이상 style을 함께 사용하는 방법 Material-UI사용시 스타일(css)를 적용하는 방법은 JSS(javascript 객체방식으로 style을 정의)로 정의한</description>
+        <!-- <description>&lt;p&gt;Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 여러개(multiple) 스타일을 같이 사용하는 방법을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react-material-ui에서-withstyle-사용시-1개-이상-style을-함께-사용하는-방법&quot;&gt;React Material-UI에서 withStyle 사용시 1개 이상 style을 함께 사용하는 방법&lt;/h1&gt;
 &lt;p&gt;Material-UI사용시 스타일(css)를 적용하는 방법은 &lt;code class=&quot;highlighter-rouge&quot;&gt;JSS(javascript 객체방식으로 style을 정의)로 정의한 파일&lt;/code&gt;을 withStyle(Higher-order component 방식으로 Style을 적용)함수를 이용하여 템플릿에 적용하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;style class를 가져와 사용하는 구조가 일반&lt;/code&gt;적입니다.&lt;br /&gt;
@@ -2159,7 +2172,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;Material-UI withStyle 함수의 스타일 적용 개수가 1개 뿐이라 적절히 구조적으로 나눈 스타일 파일을 상황에 맞게 여러개 적용하고 싶을 때
-해결하는 방법을 알아 보았습니다. 더 좋은 방법을 알고 계신분은 코멘트 남겨주세요&lt;/p&gt;</description>
+해결하는 방법을 알아 보았습니다. 더 좋은 방법을 알고 계신분은 코멘트 남겨주세요&lt;/p&gt;</description> -->
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/24/react-material-ui-combine-with-style/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-material-ui-combine-with-style/</guid>
@@ -2173,7 +2186,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
     
       <item>
         <title>[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 미동작 않는 경우 해결방법</title>
-        <description>&lt;p&gt;Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 미동작 문제점을 해결합니다.&lt;/p&gt;
+          <description>Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 미동작 문제점을 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link</description>
+        <!-- <description>&lt;p&gt;Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 미동작 문제점을 해결합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx-와-react-router-사용시-history를-이용한-url-이동이-동작하지-않는-경우-해결방법&quot;&gt;Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법&lt;/h1&gt;
 
@@ -2290,7 +2304,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
   &lt;p&gt;React로 개발하다 보면 뭔가 &lt;code class=&quot;highlighter-rouge&quot;&gt;매끄럽거나 깔끔하지 못한 부분이 많은&lt;/code&gt;데 아무래도 React는 &lt;code class=&quot;highlighter-rouge&quot;&gt;rendering만 제공&lt;/code&gt;하는 프레임워크가 아닌  &lt;code class=&quot;highlighter-rouge&quot;&gt;라이브러리이기 때문&lt;/code&gt;에 나머지 기능은 서드파티 라이브러리를 사용한다는 점에서 매끄럽게 관리 되지 못해서 그런것 같다는 생각을 해보기도 합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;깔끔한 방법을 아시는 분은 코멘트 남겨 주시면 감사하겠습니다.&lt;/p&gt;</description>
+&lt;p&gt;깔끔한 방법을 아시는 분은 코멘트 남겨 주시면 감사하겠습니다.&lt;/p&gt;</description> -->
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/22/react-router-history-with-mobx-problem/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-router-history-with-mobx-problem/</guid>
@@ -2304,7 +2318,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
     
       <item>
         <title>[React] mobx-react-form 사용시 material-ui datepicker의 date format이 미동작 해결 방법</title>
-        <description>&lt;p&gt;Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만 실제 값은 적용되어 있지 않은 미동작 문제를 해결하는 방법을 알아봅니다&lt;/p&gt;
+          <description>Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만 실제 값은 적용되어 있지 않은 미동작 문제를 해결하는 방법을 알아봅니다 mobx-react-form 사용시</description>
+        <!-- <description>&lt;p&gt;Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만 실제 값은 적용되어 있지 않은 미동작 문제를 해결하는 방법을 알아봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx-react-form-사용시-material-ui-datepicker의-date-format이-제대로-동작하지-않는-문제-해결&quot;&gt;mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결&lt;/h1&gt;
 &lt;p&gt;Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 &lt;code class=&quot;highlighter-rouge&quot;&gt;날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;실제 값은 적용되어 있지 않은 문제&lt;/code&gt;가 있습니다.&lt;/p&gt;
@@ -2375,7 +2390,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;mobx-react-form에도 많은 기능이 있기 때문에 mobx-react-form으로 선언한 form validation 처리 class내부에서 처리하는 방법이 일반적인데 여러가지 동작에서 제대로 작동하지 않고 제시한 방법처럼 처리해야만 해결이 가능 하였습니다.&lt;/p&gt;
 
-&lt;p&gt;혹시 최신버전에서 해결이되었거나 다른 깔끔한 방법을 알고 계시면 댓글을 남겨 주세요&lt;/p&gt;</description>
+&lt;p&gt;혹시 최신버전에서 해결이되었거나 다른 깔끔한 방법을 알고 계시면 댓글을 남겨 주세요&lt;/p&gt;</description> -->
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/22/react-material-ui-datepicker-binding/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-material-ui-datepicker-binding/</guid>
@@ -2389,7 +2404,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
     
       <item>
         <title>[React] react-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법</title>
-        <description>&lt;p&gt;react-router를 이용해서 아래와 같은 부모자식 트리구조 URL 구조가 있을 때 구현 하는 방법을 알아 봅니다&lt;/p&gt;
+          <description>react-router를 이용해서 아래와 같은 부모자식 트리구조 URL 구조가 있을 때 구현 하는 방법을 알아 봅니다 React-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법 react-router를 이용해서 아래와 같은 부모자식 URL 구조가 있을 때 구현</description>
+        <!-- <description>&lt;p&gt;react-router를 이용해서 아래와 같은 부모자식 트리구조 URL 구조가 있을 때 구현 하는 방법을 알아 봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;react-router-에서-트리구조의-부모자식-url-페이지를-구성하는-방법&quot;&gt;React-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -2509,7 +2525,7 @@ order - list
 &lt;p&gt;URL이 많을 경우 모튼 URL 매핑을 나열하면 부모자식 구조가 잘 한눈에 보이지 않고 파악이 어렵지만 위 같은 방식으로 부모자식으로 패턴을 구분하여 구현 할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;개인적으로는 react-router의 부모자식 구조로 router를 구성하는 방식이 그리 깔끔한 것 같지는 않다는 생각이 듭니다.&lt;br /&gt;
-조금더 깔끔한 방법을 아시는 분은 댓글 부탁드립니다.&lt;/p&gt;</description>
+조금더 깔끔한 방법을 아시는 분은 댓글 부탁드립니다.&lt;/p&gt;</description> -->
         <pubDate>Mon, 22 Jun 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/06/22/react-router-overlab-routing/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-router-overlab-routing/</guid>
@@ -2523,7 +2539,8 @@ order - list
     
       <item>
         <title>방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다&lt;/p&gt;
+          <description>방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다 방문자 패턴 - Visitor Pattern 방문자 패턴의 정의 패턴의 정의가 가장 어려운</description>
+        <!-- <description>&lt;p&gt;방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다&lt;/p&gt;
 
 &lt;h1 id=&quot;방문자-패턴---visitor-pattern&quot;&gt;방문자 패턴 - Visitor Pattern&lt;/h1&gt;
 
@@ -2659,7 +2676,7 @@ order - list
 &lt;blockquote&gt;
   &lt;p&gt;doTask 메소드는 정규직/시간제 라이더 타입별, 배달/운전/수리 메소드별 처리를 구분하는 로직이 필요 없고 
 추후 라이더 타입 추가 및 메소드 추가에도 코드 변경으로 부터 자유 롭다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Fri, 29 May 2020 18:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/29/visitor-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/29/visitor-pattern/</guid>
@@ -2673,7 +2690,8 @@ order - list
     
       <item>
         <title>템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다&lt;/p&gt;
+          <description>템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다 템플릿 메소드 패턴 - Template Method Pattern 템플릿 메소드 패턴 이란</description>
+        <!-- <description>&lt;p&gt;템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다&lt;/p&gt;
 
 &lt;h1 id=&quot;템플릿-메소드-패턴---template-method-pattern&quot;&gt;템플릿 메소드 패턴 - Template Method Pattern&lt;/h1&gt;
 
@@ -2778,7 +2796,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;사실상 전체 로직의 구성은 동일하나 일부 로직이 부분적으로 다른 경우에 사용하는 패턴이다. 만약에 메소드들을 외부에 노출하면 로직이 달라지기 때문에 주의 해야한다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Thu, 28 May 2020 16:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/28/template-method-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/28/template-method-pattern/</guid>
@@ -2792,7 +2810,8 @@ order - list
     
       <item>
         <title>전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴&lt;/p&gt;
+          <description>전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴 전략 패턴 - Strategy Pattern 전략 패턴 이란 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는</description>
+        <!-- <description>&lt;p&gt;전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;전략-패턴---strategy-pattern&quot;&gt;전략 패턴 - Strategy Pattern&lt;/h1&gt;
 
@@ -2918,7 +2937,7 @@ order - list
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;클라이언트는 출근 이동 수단 및 배달 이동 수단의 종류가 변경 되더라도 코드 변경에서 자유 롭다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Thu, 28 May 2020 04:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/28/strategy-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/28/strategy-pattern/</guid>
@@ -2932,7 +2951,8 @@ order - list
     
       <item>
         <title>상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;상태 패턴은 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를 구현한 별개의 상태객체에게 위임하는 패턴&lt;/p&gt;
+          <description>상태 패턴은 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를 구현한 별개의 상태객체에게 위임하는 패턴 상태 패턴 - State Pattern 상태 패턴 이란 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를</description>
+        <!-- <description>&lt;p&gt;상태 패턴은 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를 구현한 별개의 상태객체에게 위임하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;상태-패턴---state-pattern&quot;&gt;상태 패턴 - State Pattern&lt;/h1&gt;
 
@@ -3066,7 +3086,7 @@ order - list
 &lt;blockquote&gt;
   &lt;p&gt;배달클래스는 자신의 상태변경과 로직을 자신이 가지고 있지 않고 상태패턴으로 정의된 별도의 클래스를 사용한다.&lt;br /&gt;
 이로써 배달클래스는 새로운 상태추가 및 상태변경 조건 로직의 변경으로 부터 자유롭다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Tue, 26 May 2020 18:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/26/state-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/26/state-pattern/</guid>
@@ -3080,7 +3100,8 @@ order - list
     
       <item>
         <title>싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다.&lt;/p&gt;
+          <description>싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다. 싱글톤 패턴 - Singleton Pattern 싱글톤 패턴 이란 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때</description>
+        <!-- <description>&lt;p&gt;싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;싱글톤-패턴---singleton-pattern&quot;&gt;싱글톤 패턴 - Singleton Pattern&lt;/h1&gt;
 
@@ -3129,7 +3150,7 @@ order - list
                 &lt;span class=&quot;o&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LikeJavaSingletonPattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;also&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Mon, 25 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/25/singleton-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/25/singleton-pattern/</guid>
@@ -3143,7 +3164,8 @@ order - list
     
       <item>
         <title>프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴&lt;/p&gt;
+          <description>프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴 프록시 패턴 - Proxy Pattern 프록시 패턴 이란 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴 장점 원래 객체의</description>
+        <!-- <description>&lt;p&gt;프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;프록시-패턴---proxy-pattern&quot;&gt;프록시 패턴 - Proxy Pattern&lt;/h1&gt;
 
@@ -3226,7 +3248,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;배달서비스 클라이언트가 마치 실제 객체인 라이더객체를 사용하는 듯 하지만 주입된 프록시 구현체의 메소드가 호출된다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Sun, 24 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/24/proxy-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/24/proxy-pattern/</guid>
@@ -3240,7 +3262,8 @@ order - list
     
       <item>
         <title>옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다.&lt;/p&gt;
+          <description>옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다. 옵저버 패턴 - Observer Pattern</description>
+        <!-- <description>&lt;p&gt;옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다.&lt;/p&gt;
 
 &lt;h1 id=&quot;옵저버-패턴---observer-pattern&quot;&gt;옵저버 패턴 - Observer Pattern&lt;/h1&gt;
 
@@ -3329,7 +3352,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;구독자는 이벤트 발생 시 발행자에서 onUpdate 메소드가 호출 되어 이벤트를 수신 받게 된다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Sat, 23 May 2020 18:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/23/observer-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/23/observer-pattern/</guid>
@@ -3343,7 +3366,8 @@ order - list
     
       <item>
         <title>플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;플라이웨이트 패턴은 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴&lt;/p&gt;
+          <description>플라이웨이트 패턴은 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴 플라이웨이트 패턴 -</description>
+        <!-- <description>&lt;p&gt;플라이웨이트 패턴은 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;플라이웨이트-패턴---flyweight-pattern&quot;&gt;플라이웨이트 패턴 - Flyweight Pattern&lt;/h1&gt;
 
@@ -3444,7 +3468,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;라이더의 배달을 수행하는 라이더서비스는 배달 메소드 호출 시 지점과 라이더 타입만 매개변수로 받아서 riderFactory를 사용하여 라이더 객체를 가져온다. 수많은 객체가 필요해도 riderFactory에서 적절히 관리하여 1개의 인스턴스만 유지되고 라이더 서비스는 라이더타입의 추가, 객체성성 로직의 변화로 부터 자유롭다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Fri, 22 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/22/flyweight-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/22/flyweight-pattern/</guid>
@@ -3458,7 +3482,8 @@ order - list
     
       <item>
         <title>팩토리 메소드 패턴 - Factory Method Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴&lt;/p&gt;
+          <description>팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴 팩토리 메소드 패턴 - Factory Method Pattern 팩토리 메소드 패턴 이란 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를</description>
+        <!-- <description>&lt;p&gt;팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;팩토리-메소드-패턴---factory-method-pattern&quot;&gt;팩토리 메소드 패턴 - Factory Method Pattern&lt;/h1&gt;
 
@@ -3561,7 +3586,7 @@ order - list
 &lt;blockquote&gt;
   &lt;p&gt;라이더 타입에 따른 객체생성을 구분할 필요 없이 일관성있는 메소드로 생성이 가능하다.
 라이더 타입이 추가 되거나 야간타임라이더의 생성 가능 시간이 변경되어도 수정이 필요 없다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Thu, 21 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/21/factory-method-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/21/factory-method-pattern/</guid>
@@ -3575,7 +3600,8 @@ order - list
     
       <item>
         <title>퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다.&lt;/p&gt;
+          <description>퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다. 퍼사드 패턴 - Facade Pattern 퍼사드 패턴이란 일련의 복잡한 로직을 간추려 별도의 클래스로 만들어 제공한다. 퍼사드 패턴은 아마도 우리가</description>
+        <!-- <description>&lt;p&gt;퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다.&lt;/p&gt;
 
 &lt;h1 id=&quot;퍼사드-패턴---facade-pattern&quot;&gt;퍼사드 패턴 - Facade Pattern&lt;/h1&gt;
 
@@ -3701,7 +3727,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;라이더정보를 다루는 라이더서비스는 라이더 프로필을 업로드 하기위해 아마존 s3를 직접 다루지 않고 AwsS3UploadService를 사용한다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Wed, 20 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/20/facade-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/20/facade-pattern/</guid>
@@ -3715,7 +3741,8 @@ order - list
     
       <item>
         <title>데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.&lt;/p&gt;
+          <description>데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다. 데코레이터 패턴 - Decorator Pattern 데코레이터 패턴이란 데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지</description>
+        <!-- <description>&lt;p&gt;데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;데코레이터-패턴---decorator-pattern&quot;&gt;데코레이터 패턴 - Decorator Pattern&lt;/h1&gt;
 
@@ -3842,7 +3869,7 @@ order - list
 &lt;span class=&quot;c1&quot;&gt;// 개발자+ReactJS+SpringBoot 개발 기능을 추가 하여 풀스택개발자를 만듬
 &lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;fullStackDeveloper&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DeveloperWithSpringBoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;developerWithReactJs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Tue, 19 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/19/decorator-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/19/decorator-pattern/</guid>
@@ -3856,7 +3883,8 @@ order - list
     
       <item>
         <title>컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴&lt;/p&gt;
+          <description>컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴 컴포지트 패턴 - Composite Pattern 컴포지트 패턴이란 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴</description>
+        <!-- <description>&lt;p&gt;컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;컴포지트-패턴---composite-pattern&quot;&gt;컴포지트 패턴 - Composite Pattern&lt;/h1&gt;
 
@@ -3962,7 +3990,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;클라이언트는 하나의 객체처럼 다룬다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Mon, 18 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/18/composite-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/18/composite-pattern/</guid>
@@ -3976,7 +4004,8 @@ order - list
     
       <item>
         <title>커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴&lt;/p&gt;
+          <description>커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴 커맨드 패턴 - Command Pattern 커맨드 패턴이란 커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴</description>
+        <!-- <description>&lt;p&gt;커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;커맨드-패턴---command-pattern&quot;&gt;커맨드 패턴 - Command Pattern&lt;/h1&gt;
 
@@ -4084,7 +4113,7 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;라이더 클라이언트는 분기문 없이 일관성있는 코드를 사용하며 로직변경이나 탈것의 추가에도 코드 수정에서 자유롭다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Sun, 17 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/17/command-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/17/command-pattern/</guid>
@@ -4098,7 +4127,8 @@ order - list
     
       <item>
         <title>책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴&lt;/p&gt;
+          <description>요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴 책임 연쇄 패턴 - Chain Of Reponsibility Pattern 책임 연쇄 패턴이란 요청을 처리를 하나이상의</description>
+        <!-- <description>&lt;p&gt;요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;책임-연쇄-패턴---chain-of-reponsibility-pattern&quot;&gt;책임 연쇄 패턴 - Chain Of Reponsibility Pattern&lt;/h1&gt;
 
@@ -4168,7 +4198,7 @@ order - list
 &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;riderService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RiderService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FullTimeRider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PartTimeRider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ConnectRider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())))&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;delivery&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;riderService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delivery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;분식&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Sat, 16 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/16/chain-of-reponsibility-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/16/chain-of-reponsibility-pattern/</guid>
@@ -4182,7 +4212,8 @@ order - list
     
       <item>
         <title>어댑터 패턴 - Adapter Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다.&lt;/p&gt;
+          <description>사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다. 어댑터 패턴 - Adapter Pattern 어댑터 패턴이란 사용자는 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다. 현실에서 가장</description>
+        <!-- <description>&lt;p&gt;사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다.&lt;/p&gt;
 
 &lt;h1 id=&quot;어댑터-패턴---adapter-pattern&quot;&gt;어댑터 패턴 - Adapter Pattern&lt;/h1&gt;
 
@@ -4314,7 +4345,7 @@ order - list
 &lt;blockquote&gt;
   &lt;p&gt;클라이언트는 어떤 로그인서비스를 사용할지 스스로 판단하여 필요한 로직을 추가 구현할 필요없이 로그인 어댑터 인터페이스만 사용하면 된다.
 인증업체가 추가되어도 클라이언트코드는 변경이 없다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Fri, 15 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/15/adapter-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/15/adapter-pattern/</guid>
@@ -4328,7 +4359,8 @@ order - list
     
       <item>
         <title>추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴/코틀린/kotlin]</title>
-        <description>&lt;p&gt;추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다.&lt;/p&gt;
+          <description>추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다. 추상팩토리 패턴 - Abstract Factory Pattern 추상팩토리 패턴이란 추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성</description>
+        <!-- <description>&lt;p&gt;추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;추상팩토리-패턴---abstract-factory-pattern&quot;&gt;추상팩토리 패턴 - Abstract Factory Pattern&lt;/h1&gt;
 
@@ -4492,7 +4524,7 @@ order - list
 
 &lt;blockquote&gt;
   &lt;p&gt;라이더를 생성하여 사용하는 Client는 라이더 타입별 객체생성이 분기처리 없이 일관성있게 사용가능한 형태로 변경되었다.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;</description> -->
         <pubDate>Thu, 14 May 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//design-pattern/2020/05/14/abstract-factory-pattern/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/14/abstract-factory-pattern/</guid>
@@ -4506,7 +4538,8 @@ order - list
     
       <item>
         <title>[Mobx] React 에서 Mobx 사용기</title>
-        <description>&lt;p&gt;react와 mobx그리고 material-ui를 이용한 개발기와 예제코드를 통한 mobx vs react 차이점 비교 및 atomic design을 통한 프로젝트구조 react 서드파티 라이브러리 리뷰정보등을 알아봅니다.&lt;/p&gt;
+          <description>react와 mobx그리고 material-ui를 이용한 개발기와 예제코드를 통한 mobx vs react 차이점 비교 및 atomic design을 통한 프로젝트구조 react 서드파티 라이브러리 리뷰정보등을 알아봅니다. React에서 Mobx 경험기 (Redux와 비교기) 안녕하세요 딜리버리플랫폼팀 김찬정입니다. 이 글의 목적</description>
+        <!-- <description>&lt;p&gt;react와 mobx그리고 material-ui를 이용한 개발기와 예제코드를 통한 mobx vs react 차이점 비교 및 atomic design을 통한 프로젝트구조 react 서드파티 라이브러리 리뷰정보등을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react에서-mobx-경험기-redux와-비교기&quot;&gt;React에서 Mobx 경험기 (Redux와 비교기)&lt;/h1&gt;
 
@@ -5987,7 +6020,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;이글을-마치며&quot;&gt;이글을 마치며&lt;/h2&gt;
 
-&lt;p&gt;주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.&lt;/p&gt;</description>
+&lt;p&gt;주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.&lt;/p&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//tech/2020/05/08/react-mobx/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/08/react-mobx/</guid>
@@ -6001,7 +6034,8 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
     
       <item>
         <title>[Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)</title>
-        <description>&lt;p&gt;배달의민족 배민라이더스의 배달처리시스템 개발기와 socket.io(websocket)를 이용한 실시간 시스템 구현 방법을 자세히 알아 봅니다.&lt;/p&gt;
+          <description>배달의민족 배민라이더스의 배달처리시스템 개발기와 socket.io(websocket)를 이용한 실시간 시스템 구현 방법을 자세히 알아 봅니다. 경험기 들어가기 앞서 이 글은 신기술 사용기 또는 소개가 아닌 실시간 서비스 즉 배민라이더스 BROS 1.0 을 개발 하면서 겪어왔던</description>
+        <!-- <description>&lt;p&gt;배달의민족 배민라이더스의 배달처리시스템 개발기와 socket.io(websocket)를 이용한 실시간 시스템 구현 방법을 자세히 알아 봅니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;경험기&quot;&gt;경험기&lt;/h2&gt;
 
@@ -6518,7 +6552,7 @@ io.on('connection', (socket) =&amp;gt; {
 
 &lt;p&gt;실시간 서비스를 개발 하게 된다면 &lt;strong&gt;중요하게 고려해야될 부분은 Browser의 성능이다&lt;/strong&gt; 일반적인 웹페이지에서는 그렇게 와닫는 문제는 아니지만 &lt;strong&gt;실시간 서비스는 반드시  Browser의 성능과 마주하게 된다&lt;/strong&gt;. 그리고 &lt;strong&gt;실시간 이벤트 서버를 직접 개발 할 것인가 유료서비스를 사용할 것 인가를 결정하는 것&lt;/strong&gt;이다 &lt;strong&gt;서로 장단점을 충분히 고려 해서 최대한 안정적인 방향으로 결정&lt;/strong&gt;해야한다 그렇지 않으면 &lt;strong&gt;“배달건이 안보여요~”라는 피드백을 자주 들을 것이다&lt;/strong&gt; ㅠㅠ&lt;/p&gt;
 
-&lt;p&gt;BROS 1.0을 개발 하면서 처음 마주하는 framework와 기술들을 사용하면서 어려움도 있었지만 &lt;strong&gt;무척 흥분된 상태로 일했었다.&lt;/strong&gt; 퇴근 하면 거의 매일 코딩했고 주말에도 거의 대부분 코딩했다.  회사를 다니면서 실무를 하면 &lt;strong&gt;현실적으로 이런 경험을 하기는 쉽지 않지만 몇가지 상황이 충족이 되었기 때문이였던 것 같다.&lt;/strong&gt;  일단 오프라인(라이더센터와 사업적인)이슈들에 더 집중 되면서 다음 개발 이슈들에 대한 &lt;strong&gt;기간적인 여유&lt;/strong&gt;가 약간 있었고, &lt;strong&gt;처음 접해보는 신기술?(그때 당시에는)&lt;/strong&gt;로 개발 하면서 흥미가 높았다. 또한 &lt;strong&gt;개발에 집중 할 수 있도록 챙김이님의 배려&lt;/strong&gt;의 가 있었기 때문이 였다. (늦게 나마 다시한번 회사와 동료들에게 감사 드립닷~~)&lt;/p&gt;</description>
+&lt;p&gt;BROS 1.0을 개발 하면서 처음 마주하는 framework와 기술들을 사용하면서 어려움도 있었지만 &lt;strong&gt;무척 흥분된 상태로 일했었다.&lt;/strong&gt; 퇴근 하면 거의 매일 코딩했고 주말에도 거의 대부분 코딩했다.  회사를 다니면서 실무를 하면 &lt;strong&gt;현실적으로 이런 경험을 하기는 쉽지 않지만 몇가지 상황이 충족이 되었기 때문이였던 것 같다.&lt;/strong&gt;  일단 오프라인(라이더센터와 사업적인)이슈들에 더 집중 되면서 다음 개발 이슈들에 대한 &lt;strong&gt;기간적인 여유&lt;/strong&gt;가 약간 있었고, &lt;strong&gt;처음 접해보는 신기술?(그때 당시에는)&lt;/strong&gt;로 개발 하면서 흥미가 높았다. 또한 &lt;strong&gt;개발에 집중 할 수 있도록 챙김이님의 배려&lt;/strong&gt;의 가 있었기 때문이 였다. (늦게 나마 다시한번 회사와 동료들에게 감사 드립닷~~)&lt;/p&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//tech/2020/05/08/real-time-service/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/08/real-time-service/</guid>
@@ -6532,7 +6566,8 @@ io.on('connection', (socket) =&amp;gt; {
     
       <item>
         <title>주식가격 (42584) - 프로그래머스 [코테][알고리즘]</title>
-        <description>&lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다. [프로그래머스] 코딩테스트 연습 &gt; 스택/큐 &gt; 주식가격 (42584) 문제바로가기 이중 for 문을 사용한 풀이법 뿐이라 stack을 사용한 방법으로 해결, 시간 복잡도가 훨씬 줄어드는 방법. 문제 조건</description>
+        <!-- <description>&lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--스택큐--주식가격-42584&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 스택/큐 &amp;gt; 주식가격 (42584)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42584&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -6608,7 +6643,7 @@ io.on('connection', (socket) =&amp;gt; {
     
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/stock-prices-42584/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/stock-prices-42584/</guid>
@@ -6622,7 +6657,8 @@ io.on('connection', (socket) =&amp;gt; {
     
       <item>
         <title>등굣길 (42898) - 프로그래머스 [코테][알고리즘]</title>
-        <description>&lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다. [프로그래머스] 코딩테스트 연습 &gt; 동적계획법(Dynamic Programming) &gt; 등굣길 (9305) 문제바로가기 이 문제의 핵심은 도달 가능한 지점의 개수 = 왼쪽개수 + 위쪽개수 가 핵심 1(1,1) 1(1,2) 1(2,1)</description>
+        <!-- <description>&lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--등굣길-9305&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 등굣길 (9305)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42898&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -6675,7 +6711,7 @@ io.on('connection', (socket) =&amp;gt; {
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000000007&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/way-to-school-42898/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/way-to-school-42898/</guid>
@@ -6689,7 +6725,8 @@ io.on('connection', (socket) =&amp;gt; {
     
       <item>
         <title>정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]</title>
-        <description>&lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다. [프로그래머스] 코딩테스트 연습 &gt; 동적계획법(Dynamic Programming) &gt; 정수 삼각형 (43105) 문제바로가기 트리탐색의 후위순회를 예를 들어 설명하면 1 (1+3 = 4) 2 3 탐색 순서는 2 -&gt;</description>
+        <!-- <description>&lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--정수-삼각형-43105&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 정수 삼각형 (43105)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43105&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -6737,7 +6774,7 @@ io.on('connection', (socket) =&amp;gt; {
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/integer-triangle-43105/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/integer-triangle-43105/</guid>
@@ -6751,7 +6788,8 @@ io.on('connection', (socket) =&amp;gt; {
     
       <item>
         <title>타일장식물 (43104) - 프로그래머스 [코테][알고리즘]</title>
-        <description>&lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다. [프로그래머스] 코딩테스트 연습 &gt; 동적계획법(Dynamic Programming) &gt; 타일장식물 (43104) 문제바로가기 이문제는 피보나치 수열 문제 | | 3 | | 5 |1| 2 | | |1| |</description>
+        <!-- <description>&lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--타일장식물-43104&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 타일장식물 (43104)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43104&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -6808,7 +6846,7 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/tile-deco-43104/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/tile-deco-43104/</guid>
@@ -6822,7 +6860,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
     
       <item>
         <title>네트워크 (43162) - 프로그래머스 [코테][알고리즘]</title>
-        <description>&lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다. [프로그래머스] 코딩테스트 연습 &gt; 깊이/너비 우선 탐색(DFS/BFS) &gt; 네트워크 (43162) 이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제 문제바로가기 TEST CASE 1 1 /</description>
+        <!-- <description>&lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--깊이너비-우선-탐색dfsbfs--네트워크-43162&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 깊이/너비 우선 탐색(DFS/BFS) &amp;gt; 네트워크 (43162)&lt;/h2&gt;
 &lt;h3 id=&quot;이-문제는-서로연결된-그래프-그룹이-몇개-인지-찾는-문제&quot;&gt;이 문제는 서로연결된 그래프 그룹이 몇개 인지 찾는 문제&lt;/h3&gt;
@@ -6892,7 +6931,7 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
                 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAsInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/network-43162/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/network-43162/</guid>
@@ -6906,7 +6945,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
     
       <item>
         <title>Coin Change  - LeetCode [코테/알고리즘]</title>
-        <description>&lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다. [LeetCode] LeetCode - Coin Change 문제바로가기 문제설명 1원, 2원, 5원 짜리 동전을 가지고 있는 경우 11원을 만드는 경우 최소 동전의 개수를 구하는 문제 주어진 동전의 종류</description>
+        <!-- <description>&lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;leetcode-leetcode---coin-change&quot;&gt;[LeetCode] LeetCode - Coin Change&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;hhttps://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/809&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -6999,7 +7039,7 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amounts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/Coin-Change/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/Coin-Change/</guid>
@@ -7013,7 +7053,8 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
     
       <item>
         <title>Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]</title>
-        <description>&lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
+          <description>코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다 문제바로가기 이 문제는 주어진 문자열에 중복이 없는 부분 문자열의 길이를 찾는 문제 abcabcbb =&gt; abc bbbbb =&gt; b pwwkew</description>
+        <!-- <description>&lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/779/&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -7069,7 +7110,7 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</guid>
@@ -7083,7 +7124,8 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
     
       <item>
         <title>Sherlock and anagrams - hackerank [코테/알고리즘]</title>
-        <description>&lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+          <description>해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다. 특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제 문제바로가기 문제 조건 주어진 문자열 자체의 순서는 변경할 수 없다 “abcd” -&gt;</description>
+        <!-- <description>&lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;특정-문자열의-개별-문자를-쌍으로-구성하는-경우-가능한-케이스의-개수를-찾는-문제&quot;&gt;특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제&lt;/h2&gt;
 
@@ -7226,7 +7268,7 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
                 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//algorithm/2020/05/08/sherlock-and-anagrams/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/sherlock-and-anagrams/</guid>
@@ -7240,7 +7282,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
     
       <item>
         <title>[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</title>
-        <description>&lt;p&gt;스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리&lt;/p&gt;
+          <description>스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리 [마이크로서비스] 스프링 마이크로서비스 정리 스프링 마이크로서비스 책 내용을 모두 요약 한 것이 아니라 개인 적으로 중요하다고 생각되는 개념만</description>
+        <!-- <description>&lt;p&gt;스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리&lt;/p&gt;
 
 &lt;h1 id=&quot;마이크로서비스-스프링-마이크로서비스-정리&quot;&gt;[마이크로서비스] 스프링 마이크로서비스 정리&lt;/h1&gt;
 
@@ -7562,7 +7605,7 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
 &lt;p&gt;&lt;img src=&quot;/assets/post-img/spring-microservice/spring-microservice-diagrams-refer-data-in-memory-data-grid.png&quot; alt=&quot;spring-microservice-diagrams-refer-data-in-memory-data-grid&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;마무리&quot;&gt;마무리&lt;/h3&gt;
-&lt;p&gt;스프링 마이크로서비스의 책 내용중 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점&lt;/code&gt; 등의 내용만 정리해 보았습니다.&lt;/p&gt;</description>
+&lt;p&gt;스프링 마이크로서비스의 책 내용중 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점&lt;/code&gt; 등의 내용만 정리해 보았습니다.&lt;/p&gt;</description> -->
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//tech/2020/05/06/spring-microservice-summary/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/06/spring-microservice-summary/</guid>
@@ -7576,7 +7619,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
     
       <item>
         <title>코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</title>
-        <description>&lt;p&gt;코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다.&lt;/p&gt;
+          <description>코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다. 코틀린 기본 문법 kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다.</description>
+        <!-- <description>&lt;p&gt;코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;코틀린-기본-문법&quot;&gt;코틀린 기본 문법&lt;/h1&gt;
 
@@ -8783,7 +8827,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 배열
 &lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;coordinates&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arrayOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coordinates&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description> -->
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/05/06/kotlin-basic-syntax-summary/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/05/06/kotlin-basic-syntax-summary/</guid>
@@ -8797,7 +8841,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
     
       <item>
         <title>JAVA - 자료구조, Collection 별 특징 정리</title>
-        <description>&lt;p&gt;JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.&lt;/p&gt;
+          <description>JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다. JAVA - 자료구조, Collection 별 특징 정리 Collection 특징 구분 구분 종류 중복허용 순서 존재 정렬여부 Thread-safe LIST ArrayList LinkedList Vector Yes YesYes</description>
+        <!-- <description>&lt;p&gt;JAVA Collection별 특징과 시간 메소드별 시간 복잡도를 일목요연하게 정리한 내용입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;java---자료구조-collection-별-특징-정리&quot;&gt;JAVA - 자료구조, Collection 별 특징 정리&lt;/h2&gt;
 
@@ -9049,7 +9094,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
       &lt;td&gt;O(log n)&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</description>
+&lt;/table&gt;</description> -->
         <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//etc/2020/01/15/java-collection/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//etc/2020/01/15/java-collection/</guid>
@@ -9063,7 +9108,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
     
       <item>
         <title>라이더운영시스템</title>
-        <description>&lt;p&gt;배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개&lt;/p&gt;
+          <description>배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개 라이더운영시스템 기존 배민라이더운영시스템에서 라이더관련 부분을 분리하여 MSA로 구성한 라이더관리 전용 시스템 [그림 1] 메인화면 관련 기술블로그 React에서 Mobx 경험기 (Redux와 비교기) [마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice, msa)</description>
+        <!-- <description>&lt;p&gt;배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개&lt;/p&gt;
 
 &lt;h1 id=&quot;라이더운영시스템&quot;&gt;라이더운영시스템&lt;/h1&gt;
 
@@ -9149,7 +9195,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;MSA로 구성시 시스템간 단순 ACTION을 처리하는 것과는 다르게 DB 데이터를 완전히 분리하여 이벤트소싱으로 서로 동기화 하고 부가적인 연동 처리 (Email 발송, 회계시스템 연동 등등)등 다소 복잡한 구성을 MSA 로 처리한다는 것은 기술 문서나 기술동향에 정답이 있다기 보다 상황에 맞게 절절히 (비동기, 동기) 처리 해야함을 느낌&lt;/li&gt;
   &lt;li&gt;실무적인 경험이 더 중요한 분야 같음&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;</description> -->
         <pubDate>Sat, 04 Jan 2020 09:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//projects/2020/01/04/brms/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/04/brms/</guid>
@@ -9163,7 +9209,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
     
       <item>
         <title>배민라이더스운영시스템(2.0)</title>
-        <description>&lt;p&gt;배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다.&lt;/p&gt;
+          <description>배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다. 배민라이더스운영시스템(2.0) 배민라이더스의 업무처리 및 관리를 위한 메인 시스템 대부분 배민라이더스운영시스템을 운영 하고 신규 기능을 개발한는 것이 주 업무 [그림 1] 메인화면 프로젝트 기간 2016.02 ~ 2019.01 프로젝트</description>
+        <!-- <description>&lt;p&gt;배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템20&quot;&gt;배민라이더스운영시스템(2.0)&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -9242,7 +9289,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
   &lt;li&gt;본격적으로 팀내 코드 리뷰, 테스트코드, Pair Programming 문화가 정착 되기 시작한 프로젝트&lt;/li&gt;
   &lt;li&gt;팀내 개발 문화가 시스템 안정성을 높이는 결과를 가져왔음(무장애 300일)&lt;/li&gt;
   &lt;li&gt;장애 발생시 대외 신뢰성 추락, 금전적 피해를 감안해 보았을 때 안정성은 매우 중요한 가치라는 것을 증명해 보임(결과물을 빨리 내는 것에 대비하여)&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;</description> -->
         <pubDate>Fri, 03 Jan 2020 08:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//projects/2020/01/03/bros-v2/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/03/bros-v2/</guid>
@@ -9256,7 +9303,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
     
       <item>
         <title>실시간 메시징 서버(socket.io)</title>
-        <description>&lt;p&gt;배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다.&lt;/p&gt;
+          <description>배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다. 실시간 메시징 서버(socket.io) 멀티플랫폼(web/ios/android)을 지원하는 실시간 메시징 서버 [그림 1] 메인화면 관련 기술블로그 실시간 서비스 경험기(배달운영시스템) 프로젝트 기간 2015.08 ~ 2016.08 프로젝트</description>
+        <!-- <description>&lt;p&gt;배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;실시간-메시징-서버socketio&quot;&gt;실시간 메시징 서버(socket.io)&lt;/h1&gt;
 
@@ -9332,7 +9380,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
   &lt;li&gt;서버현황데이터 제공을 위하여 Client, NameSpace, Room 현황 데이터를 Redis로 관리하던 중 간혹 동기식 처리로직으로 인하여 급격한 성능저하를 경험.&lt;/li&gt;
   &lt;li&gt;Redis에는 데이터구조를 되도록 단순하게 설계, 관리 필요성과, Node.js는 동기적으로 처리하는 로직은 지양 해야함을 크게 느낌&lt;/li&gt;
   &lt;li&gt;NameSpace, Room, EventType 별로 적절한 구조화 필요&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;</description> -->
         <pubDate>Thu, 02 Jan 2020 11:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//projects/2020/01/02/socket-io-server/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/02/socket-io-server/</guid>
@@ -9346,7 +9394,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
     
       <item>
         <title>배민라이더스운영시스템(1.0)</title>
-        <description>&lt;p&gt;배달의민족 배민라이더의 배민라이더스운영시스템(1.0) 프로젝트 소개입니다.&lt;/p&gt;
+          <description>배달의민족 배민라이더의 배민라이더스운영시스템(1.0) 프로젝트 소개입니다. 배민라이더스운영시스템(1.0) 배달접수와 실시간 배달처리 현황 및 라이더 관제기능을 지원하는 종합 운영 시스템 [그림 1] 메인화면 관련 기술블로그 실시간 서비스 경험기(배달운영시스템) 프로젝트 기간 2015.02 ~ 2016.08 프로젝트 참여도 프로젝트</description>
+        <!-- <description>&lt;p&gt;배달의민족 배민라이더의 배민라이더스운영시스템(1.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템10&quot;&gt;배민라이더스운영시스템(1.0)&lt;/h1&gt;
 
@@ -9434,7 +9483,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
   &lt;li&gt;AngularJS + Socket.io 신기술의 장점을 활용하여 개발 해볼 수 있었던 기회 통해 출근이 기다려지는 기분을 경험.&lt;/li&gt;
   &lt;li&gt;실시간 서비스라는 다소 생소하고 복잡한 서비스 경험에 엄청난 개발욕구를 경험&lt;/li&gt;
   &lt;li&gt;실무를 통해서만 습득 할 수 있는 실시간 서비스만의 개발, 운영 이슈에 대한 깊이 있는 경험.&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;</description> -->
         <pubDate>Wed, 01 Jan 2020 10:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//projects/2020/01/01/bros-v1/</link>
         <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/01/bros-v1/</guid>
