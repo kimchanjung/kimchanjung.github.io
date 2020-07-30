@@ -58,9 +58,13 @@ $(function ($) {
 
         // Load more
         var nextPage = pathname + 'page' + currentPage + '/';
+        console.log("nextPage = "+nextPage+"(pathname = "+pathname+", currentPage = "+currentPage+")");
 
         $.get(nextPage, function (content) {
-            $result.append($(content).find('.post').hide().fadeIn(100));
+            // 여기 잘못 되어 있어서 수정함
+            // $result.append($(content).find('.post').hide().fadeIn(100));
+            // 위 처럼 되어 있어서 다음 항목을 제대로 붙이지 못했음 클래스 명도 틀리고 jquery selector 위치도 다름
+            $result.append($(content).find('.post-feed').children().hide().fadeIn(100));
 
         }).fail(function (xhr) {
             // 404 indicates we've run out of pages

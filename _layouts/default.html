@@ -42,7 +42,7 @@
         {{ content }}
 
         <!-- Previous/next page links - displayed on every page -->
-        {% if paginator.total_posts > site.paginate %}
+        {% if site.infinite_scroll == false and paginator.total_posts > site.paginate %}
             {% if page.class == 'home-template' %}
                 {% include post_pagination.html %}
             {% elsif page.class == 'page-template' %}
@@ -115,8 +115,8 @@
     </script>
     <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
-
-    {% if paginator.total_pages > site.paginate %}
+    
+    {% if site.infinite_scroll and paginator.total_posts > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
