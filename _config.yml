@@ -47,10 +47,15 @@ permalink: pretty
 
 # gems and other configs
 plugins_dir: [_plugins]
-plugins: [jekyll-paginate, jekyll-feed]
+# plugins: [jekyll-paginate, jekyll-feed]
 
-feed:
-  path: feed.xml
+# feed:
+#   path: feed.xml
+
+
+# 오버라이드
+plugins: [jekyll-paginate]
+
 
 # Additional settings available on the front-matter
 # Site logo in the index.html (as in demo.ghost.io)
@@ -77,7 +82,7 @@ repo: kimchanjung.github.io
 branch: master
 relative_source: ../
 destination: _site/
-production_url:  https://kimchanjung.github.io/
+production_url:  https://kimchanjung.github.io
 source_url:  https://github.com/kimchanjung/kimchanjung.github.io
 
 exclude:

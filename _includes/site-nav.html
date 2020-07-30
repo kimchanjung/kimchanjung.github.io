@@ -25,6 +25,7 @@
             {% if site.twitter %}
                 <a class="social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">{% include twitter.html %}</a>
             {% endif %}
+            <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/{{ site.url }}{{ site.baseurl }}feed.xml" target="_blank" rel="noopener">{% include rss.html %}</a>
         </div>
         {% if site.subscribers %}
             <a class="subscribe-button" href="#subscribe">Subscribe</a>

@@ -4,7 +4,7 @@ current: post
 cover: assets/post-img/projects/websocket-server/socket-server-monitor.png
 navigation: True
 title: "실시간 메시징 서버(socket.io)"
-date: 2020-01-04 11:00:00 +0900
+date: 2020-01-02 11:00:00 +0900
 tags: projects
 categories: projects
 class: post-template
