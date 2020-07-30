@@ -85,6 +85,9 @@ destination: _site/
 production_url:  https://kimchanjung.github.io
 source_url:  https://github.com/kimchanjung/kimchanjung.github.io
 
+include:
+  - .gitignore
+  
 exclude:
   - assets/css
   - node_modules
@@ -102,4 +105,3 @@ exclude:
   - script.py
   - changelog.md
   - "*.Rmd"
-  - .git*
