@@ -81,5 +81,5 @@ published: true
 
 
 ### 연관 글
-[[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)](/spring/2020/07/02/spring-security-02.html)  
-[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/spring/2020/07/03/spring-security-03.html)
+[[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)](/programming/2020/07/02/spring-security-02/)  
+[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/programming/2020/07/03/spring-security-03/)

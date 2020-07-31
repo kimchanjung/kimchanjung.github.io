@@ -284,5 +284,5 @@ filter.setAuthenticationFailureHandler(new CustomAuthenticationFailureHandler("/
 
 
 ### 연관 글
-[[Spring Security] 스프링시큐리티 동작구조의 이해(1) ](/spring/2020/07/01/spring-security-01.html)  
-[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/spring/2020/07/03/spring-security-03.html)
+[[Spring Security] 스프링시큐리티 동작구조의 이해(1) ](/programming/2020/07/01/spring-security-01/)  
+[[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)](/programming/2020/07/03/spring-security-03/)

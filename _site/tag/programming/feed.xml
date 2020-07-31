@@ -5,8 +5,8 @@
     <description>Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/</link>
     <atom:link href="https://kimchanjung.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Jul 2020 16:05:50 +0900</pubDate>
-    <lastBuildDate>Fri, 31 Jul 2020 16:05:50 +0900</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2020 16:09:08 +0900</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2020 16:09:08 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -548,8 +548,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;p&gt;최종적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;커스텀 인증 필터와 그에 필요한 클래스들의 생성 방법&lt;/code&gt;을 알아보고 적용하는 방법까지 알아 보았습니다. 물론 &lt;code class=&quot;highlighter-rouge&quot;&gt;세부적인 내용이나 구현은 내용이 많아 생략&lt;/code&gt;하였지만 원래 글의 의도인 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증로직을 사용자에 상황에 맞게 구현&lt;/code&gt;할 때 대략적인 &lt;code class=&quot;highlighter-rouge&quot;&gt;스프링시큐리티의 구조속에서 어떤 방향으로 접근&lt;/code&gt;해야하는지에 중점을 두어 글을 작성하였습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/spring/2020/07/01/spring-security-01.html&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/02/spring-security-02.html&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/programming/2020/07/01/spring-security-01/&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/programming/2020/07/02/spring-security-02/&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Fri, 03 Jul 2020 14:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/03/spring-security-03/</link>
@@ -849,8 +849,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 본 글에서는 대략적인 설정 내용을 알아 보았습니다. 다음 포스팅에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;커스텀 필터를 생성해서 사용자가 별도의 인증로직을 구현&lt;/code&gt;하는 커스텀 필터의 세부 내용을 알아보도록 하겠습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/spring/2020/07/01/spring-security-01.html&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/programming/2020/07/01/spring-security-01/&quot;&gt;[Spring Security] 스프링시큐리티 동작구조의 이해(1) &lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Thu, 02 Jul 2020 12:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/02/spring-security-02/</link>
@@ -941,8 +941,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;p&gt;인증을 구현하기 앞서 스프링시큐리티의 대략적인 동작구조를 알아보았습니다. 다음 포스팅에서는 본격적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;어떤 부분을 커스텀해야 하는지에 대해 알아 보도록 하겠습니다&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;연관-글&quot;&gt;연관 글&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/spring/2020/07/02/spring-security-02.html&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/spring/2020/07/03/spring-security-03.html&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/programming/2020/07/02/spring-security-02/&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Wed, 01 Jul 2020 01:00:00 +0900</pubDate>
         <link>https://kimchanjung.github.io//programming/2020/07/01/spring-security-01/</link>
