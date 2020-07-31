@@ -827,7 +827,7 @@ Usage (In Ghost editor):
     margin-bottom: 0;
 }
 
-.post-full-content code {
+.post-full-content code.highlighter-rouge {  
     padding: 1px 5px;
     /*font-size: 0.8em;*/
     line-height: 1em;
@@ -847,8 +847,13 @@ Usage (In Ghost editor):
     color: var(--whitegrey);
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: color(var(--darkgrey) l(-3%));
     box-shadow: 5px 5px 5px #8c8888;
+    background: #011627 !important; 
+    border-radius: 8px; 
+    font-family: 'Cousine', monospace;
+    @media only screen and (max-width: 550px) {
+      font-size: 1.3rem !important
+    }
 }
 
 .post-full-content pre code {
@@ -1960,4 +1965,4 @@ Usage (In Ghost editor):
 /* github comment  */
 .utterances {
     max-width: 100%;
-  }
+}
