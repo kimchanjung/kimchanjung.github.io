@@ -123,7 +123,8 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    /*이미지에 색상을 겹치게 해서 원래 이미지 색감과 달라져서 주석처리함 */
+    /* background: rgba(0,0,0,0.18); */
 }
 
 .site-header:after {
