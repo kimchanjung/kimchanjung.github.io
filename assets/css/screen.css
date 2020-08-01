@@ -280,6 +280,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 40px;
 }
 
+/* 상단에 하나더 추가 하고 모바일 화면에서 표시하는 용으로 추가함 */
+.site-nav-right-mobile {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
 .social-links {
     flex-shrink: 0;
     display: flex;
@@ -372,7 +380,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         display: none;
     }
 }
-
+/* 모바일버전에서 가려지도록 처리 */
+@media (min-width: 700px) {
+    .site-nav-right-mobile {
+        display: none;
+    }
+}
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */

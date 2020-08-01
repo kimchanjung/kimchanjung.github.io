@@ -496,12 +496,12 @@ h6 {
 }
 
 
-.youtube {
-    width: 80%;
+.fluid-width-video-container {
+    width: 80% !important;
 }
 
 @media screen and (max-width: 700px) {
-    .youtube {
-        width: 100%;
+    .fluid-width-video-container {
+        width: 100% !important;;
     }
 }
