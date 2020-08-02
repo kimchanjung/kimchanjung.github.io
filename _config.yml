@@ -3,7 +3,7 @@ markdown: kramdown
 highlighter: rouge
 infinite_scroll: true # 무한 스크롤 사용여부 값 
 paginate: 10 # it will paginate after this number
-language: 'kr'
+language: 'ko'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
