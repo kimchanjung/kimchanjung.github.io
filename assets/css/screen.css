@@ -1437,7 +1437,9 @@ Usage (In Ghost editor):
     align-items: center;
     height: 60px;
     border-bottom: rgba(0,0,0,0.06) 1px solid;
-    background: rgba(255,255,255,0.95);
+    background: rgba(26, 25, 25, 0.95);
+    background-image: url('/assets/images/floating-header-cover.jpg');
+    background-size: cover;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     transform: translate3d(0, -120%, 0);
 }
@@ -1446,8 +1448,6 @@ Usage (In Ghost editor):
     visibility: visible;
     transition: all 500ms cubic-bezier(0.22, 1, 0.27, 1);
     transform: translate3d(0, 0, 0);
-    background-image: url('/assets/images/floating-header-cover.jpg');
-    background-size: cover;
 }
 
 .floating-header-logo {
