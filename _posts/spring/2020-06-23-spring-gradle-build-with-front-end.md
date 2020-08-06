@@ -4,7 +4,7 @@ current: post
 cover: assets/images/post-default-spring-cover.jpg
 navigation: True
 title: "[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법"
-date: 2020-06-24 14:00:00 +0900
+date: 2020-06-25 14:00:00 +0900
 tags: programming
 categories: programming
 class: post-template

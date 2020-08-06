@@ -5,8 +5,8 @@
     <description>Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/</link>
     <atom:link href="https://kimchanjung.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Aug 2020 14:20:51 +0900</pubDate>
-    <lastBuildDate>Mon, 03 Aug 2020 14:20:51 +0900</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2020 14:46:40 +0900</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2020 14:46:40 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -1636,91 +1636,6 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       </item>
     
       <item>
-        <title>[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)</title>
-        <description>
-        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
-        &lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
-
-&lt;h1 id=&quot;react-router-에서-private-router-구현하기권한별-routing&quot;&gt;react-router 에서 Private Router 구현하기(권한별 routing)&lt;/h1&gt;
-&lt;p&gt;실무에서 페이지를 개발할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증 및 부여된 권한 등급에 따라서 메뉴의 노출 및 접근이 제한&lt;/code&gt; 되도록 구성하는것이 일반적입니다. 
-react-router 라이브러리는 routing을 구현하는 라이브러리인데 뭔가 &lt;code class=&quot;highlighter-rouge&quot;&gt;라이브러리 차원에서 권한별 라우팅을 쌈박한 방법&lt;/code&gt;으로 지원해 줄 것이라는 기대와 달리 뭔가 복잡하게 구현하는 예제만 제공되고 있었습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;본 포스팅에서 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;권한을-체크하는-router-component-생성&quot;&gt;권한을 체크하는 Router Component 생성&lt;/h2&gt;
-&lt;div class=&quot;language-react highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Redirect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react-router'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Route&lt;/span&gt;
-      &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;render=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;checkAuth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parentMenu=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Redirect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/403&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Route 컴포넌트가 호출되기 전에 권한 체크를 한다음 권한이 있으면 지정된 컴포넌트(페이지)를 호출 하고 권한이 없다면 권한없음을 안내하는 페이지로 redirect 시킵니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;parentprops의-설명&quot;&gt;parentProps의 설명&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;부모 컴포넌트로 부터 넘겨 받은 props&lt;/code&gt;에서 Component를 제외한 나머지 props를 parentProps에 모두 담습니다.&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// parentProps로 받아온 나머지 props를 스프레드 문법으로 풀어주면
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Route&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{...&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  // 사실상 아래 처럼 되는 것과 같습니다.
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Route&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/users&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;....&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;parentProps는 exact path=”/users” 같은 react-router의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Route 컴포넌트&lt;/code&gt;를 사용할때 제공하는 설정 값들을 넘겨받아서 {…parentProps} 와 같이 스프레드 문법으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;그대로 설정해주기 위함&lt;/code&gt;입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;권한을-체크하는-커스텀-private-router를-사용&quot;&gt;권한을 체크하는 커스텀 Private Router를 사용&lt;/h2&gt;
-&lt;div class=&quot;language-react highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./PrivateRoute'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Routers&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        // Route 컴포넌트의 사용방식과 동일하게 사용하면 된다.
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/rider-management&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;component=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RiderManagement&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/common-management&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;component=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CommonManagement&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Routers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;권한 체크 기능이 추가된 react-router Route 컴포넌트를 래핑한 PrivateRouter를 사용하도록 하여 router를 구성한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-&lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;
-        </description>
-        <pubDate>Wed, 24 Jun 2020 18:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</guid>
-        
-        <category>programming</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
         <title>[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법</title>
         <description>
         &lt;img src="https://kimchanjung.github.io/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
@@ -1853,9 +1768,94 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
 &lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요&lt;/p&gt;
         </description>
-        <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/24/spring-gradle-build-with-front-end/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/spring-gradle-build-with-front-end/</guid>
+        <pubDate>Thu, 25 Jun 2020 14:00:00 +0900</pubDate>
+        <link>https://kimchanjung.github.io//programming/2020/06/25/spring-gradle-build-with-front-end/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/25/spring-gradle-build-with-front-end/</guid>
+        
+        <category>programming</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)</title>
+        <description>
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
+
+&lt;h1 id=&quot;react-router-에서-private-router-구현하기권한별-routing&quot;&gt;react-router 에서 Private Router 구현하기(권한별 routing)&lt;/h1&gt;
+&lt;p&gt;실무에서 페이지를 개발할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;인증 및 부여된 권한 등급에 따라서 메뉴의 노출 및 접근이 제한&lt;/code&gt; 되도록 구성하는것이 일반적입니다. 
+react-router 라이브러리는 routing을 구현하는 라이브러리인데 뭔가 &lt;code class=&quot;highlighter-rouge&quot;&gt;라이브러리 차원에서 권한별 라우팅을 쌈박한 방법&lt;/code&gt;으로 지원해 줄 것이라는 기대와 달리 뭔가 복잡하게 구현하는 예제만 제공되고 있었습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;본 포스팅에서 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;권한을-체크하는-router-component-생성&quot;&gt;권한을 체크하는 Router Component 생성&lt;/h2&gt;
+&lt;div class=&quot;language-react highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Redirect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react-router'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Route&lt;/span&gt;
+      &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;render=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;checkAuth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parentMenu=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Redirect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/403&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Route 컴포넌트가 호출되기 전에 권한 체크를 한다음 권한이 있으면 지정된 컴포넌트(페이지)를 호출 하고 권한이 없다면 권한없음을 안내하는 페이지로 redirect 시킵니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;parentprops의-설명&quot;&gt;parentProps의 설명&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;부모 컴포넌트로 부터 넘겨 받은 props&lt;/code&gt;에서 Component를 제외한 나머지 props를 parentProps에 모두 담습니다.&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// parentProps로 받아온 나머지 props를 스프레드 문법으로 풀어주면
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;Route&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{...&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parentProps&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  // 사실상 아래 처럼 되는 것과 같습니다.
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;Route&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/users&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;....&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;parentProps는 exact path=”/users” 같은 react-router의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Route 컴포넌트&lt;/code&gt;를 사용할때 제공하는 설정 값들을 넘겨받아서 {…parentProps} 와 같이 스프레드 문법으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;그대로 설정해주기 위함&lt;/code&gt;입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;권한을-체크하는-커스텀-private-router를-사용&quot;&gt;권한을 체크하는 커스텀 Private Router를 사용&lt;/h2&gt;
+&lt;div class=&quot;language-react highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./PrivateRoute'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Routers&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        // Route 컴포넌트의 사용방식과 동일하게 사용하면 된다.
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/rider-management&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;component=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RiderManagement&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PrivateRoute&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;exact&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/common-management&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;component=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CommonManagement&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Routers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;권한 체크 기능이 추가된 react-router Route 컴포넌트를 래핑한 PrivateRouter를 사용하도록 하여 router를 구성한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+&lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;
+        </description>
+        <pubDate>Wed, 24 Jun 2020 18:00:00 +0900</pubDate>
+        <link>https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</guid>
         
         <category>programming</category>
         
