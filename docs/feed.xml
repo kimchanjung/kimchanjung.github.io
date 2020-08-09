@@ -5,8 +5,8 @@
     <description>Java Back-End Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/</link>
     <atom:link href="https://kimchanjung.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 18:39:13 +0900</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 18:39:13 +0900</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 18:55:32 +0900</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 18:55:32 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -98,7 +98,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
       </item>
     
       <item>
-        <title>프로그래머스 - 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
+        <title>[프로그래머스] 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
         <description>
         &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
