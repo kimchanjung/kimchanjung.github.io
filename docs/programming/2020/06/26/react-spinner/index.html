@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko_KR">
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Developer KimChanJung's Blog" />
+    <link rel="alternate" hreflang="ko-kr" href="https://kimchanjung.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://kimchanjung.github.io/" />
+    <link rel="shortcut icon" href="https://kimchanjung.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://kimchanjung.github.io/programming/2020/06/26/react-spinner/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="kimchanjung.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법" />
+    <meta property="og:description" content="NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다 API호출시 보통 로딩을 처리하는 동안 Spinner를 표시해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. NPM에서 React용 Spinner를 찾아보면 수많은 종류의 로딩처리 Spinner 모듈들이 존재합니다. 기능이나 디자인도 수없이 다양합니다. NPM 대부분의" />
+    <meta property="og:url" content="https://kimchanjung.github.io/programming/2020/06/26/react-spinner/" />
+    <meta property="og:image" content="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/kimchanjung.dev" />
+    <meta property="article:author" content="https://www.facebook.com/kimchanjung.dev" />
+    <meta property="article:published_time" content="2020-06-26T14:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-06-26T14:00:00+09:00" />
+    <meta property="article:tag" content="Programming" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법" />
+    <meta name="twitter:description" content="NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다 API호출시 보통 로딩을 처리하는 동안 Spinner를 표시해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. NPM에서 React용 Spinner를 찾아보면 수많은 종류의 로딩처리 Spinner 모듈들이 존재합니다. 기능이나 디자인도 수없이 다양합니다. NPM 대부분의" />
+    <meta name="twitter:url" content="https://kimchanjung.github.io/" />
+    <meta name="twitter:image" content="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="kimchanjung.dev" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Programming" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "kimchanjung.dev",
+        "logo": "https://kimchanjung.github.io/assets/images/kimchanjung-logo.png"
+    },
+    "url": "https://kimchanjung.github.io/programming/2020/06/26/react-spinner/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kimchanjung.github.io/programming/2020/06/26/react-spinner/"
+    },
+    "description": "NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다 API호출시 보통 로딩을 처리하는 동안 Spinner를 표시해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. NPM에서 React용 Spinner를 찾아보면 수많은 종류의 로딩처리 Spinner 모듈들이 존재합니다. 기능이나 디자인도 수없이 다양합니다. NPM 대부분의"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법" href="/feed.xml" />
+    <meta name="naver-site-verification" content="f1cd735caec0d9f78c0108426288fb40e725f65f" />
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/kimchanjung-logo.png" alt="kimchanjung.dev" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-resume" role="menuitem"><a href="/resume/">Resume</a></li>
+    <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
+    <li class="nav-tech" role="menuitem"><a href="/tag/tech/">Tech</a></li>
+    <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
+    <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
+    <li class="nav-algorithm" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">Etc</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-tw" href="mailto:kimchanjung.dev@gmail.com" target="_blank" rel="noopener">
+<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></a>
+            
+            
+                <a class="social-link social-link-tw" href="https://github.com/kimchanjung" target="_blank" rel="noopener"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg></a>
+            
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/kimchanjung.dev" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+            <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/https://kimchanjung.github.io/feed.xml" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+            
+            <!-- <a class="subscribe-button" href="#subscribe">search</a> -->
+            <a class="social-link social-link-fb" href="#subscribe" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a>
+            
+        </div>
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-programming post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="26 June 2020">26 June 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/programming/'>PROGRAMMING</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/post-default-react-cover.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다</p>
+
+<p><strong>API호출</strong>시 보통 <strong>로딩을 처리하는 동안 Spinner를 표시</strong>해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. 
+<strong>NPM에서 React용 Spinner</strong>를 찾아보면 <strong>수많은 종류</strong>의 로딩처리 Spinner 모듈들이 존재합니다. <strong>기능이나 디자인도 수없이 다양</strong>합니다. NPM <strong>대부분의 Spinner 모듈이 다양한 방식</strong>으로 사용하고자 할때 <strong>몇가지 문제점</strong>이 있었습니다.
+이번 포스팅은 <strong>Spinner 모듈을 가져와 사용할 때 발생하는 문제점을 해결</strong>하고 <strong>깔끔한 방식으로 사용</strong>할 수 있는 방법을 알아봅니다.</p>
+
+<h2 id="사용-모듈-버전정보">사용 모듈 버전정보</h2>
+<ul>
+  <li><strong>react-loader v2.4.5</strong></li>
+  <li><strong>react-portal v4.1.5</strong></li>
+</ul>
+
+<h2 id="modal이나-dialog-사용시-spinner의-위치-설정문제">Modal이나 Dialog 사용시 Spinner의 위치 설정문제</h2>
+<p>대부분의 NPM에서 React용 모듈을 사용하는 방법은 모듈을 import하고 컴포넌트를 삽입하는 방법입니다.</p>
+
+<h2 id="react-컴포넌트의-부모자식-구조">React 컴포넌트의 부모자식 구조</h2>
+<p><strong>컴포넌트를 삽입</strong>하면 실제 렌더링된 <strong>DOM의 형태도 마찬가지로 해당 부모자식 DOM 엘리먼트 구조</strong>로 렌더링 됩니다.
+<strong>NPM React용 Spinner모듈들이 대부분 컴포넌트를 삽입하는 방식</strong>입니다(제가 찾은 모듈은 대부분) 결국은 <strong>Spinner 모듈도 id=”app”인 div 하위 어딘가에 포홤</strong>된다는 이야기가 됩니다. 하지만 <strong>Modal의 경우</strong>는 보통 <strong>전체화면</strong>의 메인이 되는 <strong>영역밖에 생성</strong>되는 것이 보통합니다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"app"</span><span class="o">&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">Loader</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Search</span>  <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">UserPages</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+
+<span class="kd">class</span> <span class="nx">Search</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"address"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"address"</span> <span class="p">....</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"phone"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"phone"</span> <span class="p">....</span> <span class="o">/&gt;</span>
+        <span class="p">...</span>
+      <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+
+<span class="kd">class</span> <span class="nx">UserPages</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">UserList</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Pager</span><span class="o">/&gt;</span>
+        <span class="p">...</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="react-컴포넌트가-랜더링된-결과">React 컴포넌트가 랜더링된 결과</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"spinner"</span><span class="nt">&gt;</span>
+    로딩 스피너 관련 엘리먼트들이 위치하는 곳
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"address"</span> <span class="na">name=</span><span class="s">"address"</span> <span class="err">....</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="err">....</span> <span class="nt">/&gt;</span>
+    ...
+  <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;div&gt;</span>  
+    <span class="nt">&lt;table&gt;</span>
+     ~~~~
+    <span class="nt">&lt;/table&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;span&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span&gt;</span>next<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="react에서-modal의-사용과-렌더링된-결과">React에서 Modal의 사용과 렌더링된 결과</h2>
+<p><strong>Modal 컴포넌트</strong>를 분명 <strong>UserPage 컴포넌트에 삽입</strong>하여 사용했는데도 불구하고 실제 <strong>렌더링은 root 엘리먼트 밖</strong>에 생성이 되는 결과를 가져왔습니다. <strong>포지션이나 스크롤 기타 여러 style설정</strong>과 관련하여 전체 <strong>화면밖에 생성</strong>되는 것이 일반적입니다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">UserPage</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">UserList</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Pager</span><span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Modal</span> <span class="o">/&gt;</span> 
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"app"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"spinner"</span><span class="o">&gt;</span>
+    <span class="err">로딩</span> <span class="err">스피너</span> <span class="err">관련</span> <span class="err">엘리먼트들이</span> <span class="err">위치하는</span> <span class="err">곳</span>
+  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"address"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"address"</span> <span class="p">....</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"phone"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"phone"</span> <span class="p">....</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>  
+    <span class="o">&lt;</span><span class="nx">table</span><span class="o">&gt;</span>
+      <span class="err">사용자리스트</span>
+    <span class="o">&lt;</span><span class="sr">/table</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="nx">next</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="c1">// 이자리에 modal이 렌더링되어야할 위치 같지만 실제는 밖에 생성됩니다.</span>
+  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="c1">// 대부분 modal의 경우 포지션이나 설정이나 기타 그런 것 들 때문에 </span>
+<span class="c1">// 전체 페이지 영역밖에 생성되는 경우가 일반적입니다.</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"modal"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="err">모달이</span> <span class="err">생성되는</span> <span class="err">곳</span>
+  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span></code></pre></div></div>
+<blockquote>
+  <p>modal에서 spinner사용할때 <strong>spinner가 modal 내부에 포함어 있지않아</strong>서 <strong>position 관련 style을 제대로 조작하기 어렵게</strong> 됩니다.<br />
+<strong>modal 중앙에 표시</strong>되어야 하는데 전<strong>체 화면 중심에 표시</strong>된다거나 <strong>스크롤이 되더라도 spinner는 고정</strong>되어야 하는데 같이 <strong>스크롤된다거나</strong> 하는 설정이 제대로 동작하지 못하게 되는 것이 가장 큰 문제점입니다.</p>
+</blockquote>
+
+<h2 id="react용-spinner-모듈을-사용하는-간단한-예">React용 Spinner 모듈을 사용하는 간단한 예</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Loader</span> <span class="k">from</span> <span class="s1">'react-loader'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">UserPage</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">Loader</span> <span class="nx">loaded</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">loaded</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">UserPageTemplate</span> <span class="nx">model</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">profile</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>            
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>렌더링하는 컴포넌트에 Loader 컴포넌트를 가져와서 사용하는 방식입니다.</li>
+    <li>이런 경우 일일히 모든 페이지에 Loader 가져와서 사용해야합니다.</li>
+  </ul>
+</blockquote>
+
+<h2 id="그러나-한곳에만-loader를-포함시켜놓고-코드-중복없이-사용하고-싶습니다">그러나 한곳에만 Loader를 포함시켜놓고 코드 중복없이 사용하고 싶습니다.</h2>
+<h4 id="app-컴포넌트">App 컴포넌트</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Loader 컴포넌트를 포함시킨다.</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="s1">'store'</span><span class="p">)</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Loader</span> <span class="nx">loaded</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">isLoadingSpinner</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">UserPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">OrderPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">AccountPage</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>  
+</code></pre></div></div>
+<h4 id="user-페이지-컴포넌트">User 페이지 컴포넌트</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 개별페이지들은 Store의 값을 컨트롤하여 Spinner를 조작한다.</span>
+<span class="c1">// 개별페이지들은 일일히 Spinner 모듈을 가져와 사용할 필요 없어져서 중복이 제거 되었다.</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="s1">'store'</span><span class="p">)</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">UserPage</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">UserPageTemplate</span> <span class="nx">model</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">profile</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h4 id="store를-통한-spinner-사용">Store를 통한 Spinner 사용</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 스토어는 Mobx를 예로 들었습니다.</span>
+<span class="kd">class</span> <span class="nx">Store</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">observable</span>  
+  <span class="nx">isLoadingSpinner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="p">@</span><span class="nd">action</span>
+  <span class="nx">visibleSpinner</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isLoadingSpinner</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+<blockquote>
+  <p>일일이 개별페이지에서 가져다 사용하는 것이 아니라 상단 컴포넌트에 한 곳에만 Loader를 지정해두고 각각의 페이지는 state관리 라이브러리를 사용하여 store에 선언된 state를 조작하여 Spinner 모듈을 컨트롤하여 사용하도록 합니다.</p>
+</blockquote>
+
+<h2 id="modal이나-dialog는-최상의-엘리먼트-밖에-생성됩니다">Modal이나 Dialog는 최상의 엘리먼트 밖에 생성됩니다</h2>
+<h4 id="app-컴포넌트-1">App 컴포넌트</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// App.js</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="s1">'store'</span><span class="p">)</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Loader</span> <span class="nx">loaded</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">isLoadingSpinner</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">UserPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">OrderPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">AccountPage</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>  
+
+<span class="c1">// index.js</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">));</span>
+</code></pre></div></div>
+<h4 id="모달이-생성되는-위치">모달이 생성되는 위치</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;</span>
+    // 실제 페이지를 구성하는 html등이 위치한다.
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"spinner"</span> <span class="na">style=</span><span class="s">"......"</span><span class="nt">&gt;</span>
+        // 로딩 스피너는 여기에 포함된다.
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+    // 모달을 구성하는 html등이 위치한다.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li><strong>React App</strong>은 id=”root” 엘리먼트 하위에 생성됩니다.</li>
+    <li><strong>Modal은 App</strong>밖에 생성됩니다.</li>
+    <li>이런경우 <strong>공통으로 사용하기 위한 Spinner</strong>는 <strong>모달에서 사용할 때</strong> 모달엘리먼트 <strong>상위나 하위에 포함된 것이 아니라서</strong> 위치나 포지션 설정시 <strong>원하는 위치에 설정하기 불가능한 상황이 발생합</strong>니다.</li>
+  </ul>
+</blockquote>
+
+<h2 id="react-portal을-이용하여-spinner-모듈-컴포넌트를-app밖에-생성">React Portal을 이용하여 Spinner 모듈 컴포넌트를 App밖에 생성</h2>
+<h3 id="portal을-이용하여-특정-엘리먼트에-spinner를-동적으로-위치시키는-컴포넌트">Portal을 이용하여 특정 엘리먼트에 Spinner를 동적으로 위치시키는 컴포넌트</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SpinJsLoader.js</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Portal</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-portal'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">SpinnerLoader</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// containerName은 Spinner를 추가하고 싶은 특정 엘리먼트의 클래스네임입니다.</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">containerName</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Portal</span> <span class="nx">node</span><span class="o">=</span><span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="nx">containerName</span><span class="p">)[</span><span class="mi">0</span><span class="p">]}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Loader</span>
+        <span class="nx">className</span><span class="o">=</span><span class="s2">"spinner"</span>
+        <span class="nx">loaded</span><span class="o">=</span><span class="p">{</span><span class="o">!</span><span class="nx">isLoading</span><span class="p">}</span>
+      <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Portal</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>여기서는 R<strong>eact Portal</strong>을 간단하게 사용하게 해주는 <strong>NPM모듈을 사용</strong>하였습니다.</li>
+    <li><strong>Spinner(Loader) 모듈</strong>은 이제 <strong>특정 클래스명을 가진 엘리먼트에 동적으로 추가</strong>되록 구성되었습니다.</li>
+    <li>결국은 <strong>$(‘.app-root’).append(‘&lt;div id='spinner' style='....'&gt;…&lt;/div&gt;’);</strong> 와 같은 기능입니다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="app-컴포넌트에-추가">App 컴포넌트에 추가</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">SpinJsLoader</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'SpinJsLoader'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>
+        <span class="o">&lt;</span><span class="nx">SpinnerLoader</span> 
+          <span class="nx">isLoading</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">isLoading</span><span class="p">}</span>
+          <span class="nx">container</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">containerName</span><span class="p">}</span>
+        <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">UserPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">OrderPage</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Modal</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h4 id="store를-통한-spinner-사용-1">Store를 통한 Spinner 사용</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 스토어는 Mobx를 예로 들었습니다.</span>
+<span class="kd">class</span> <span class="nx">Store</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">observable</span>  
+  <span class="nx">isLoading</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="p">@</span><span class="nd">observable</span>
+  <span class="nx">containerName</span><span class="p">;</span>
+  
+  <span class="c1">// spinner를 사용할 때는 표시여부와 spinner가 위치할 엘리먼트의 클래스명을 지정합니다.</span>
+  <span class="p">@</span><span class="nd">action</span>
+  <span class="nx">visibleSpinner</span><span class="p">(</span><span class="nx">isLoading</span><span class="p">,</span> <span class="nx">containerName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isLoading</span> <span class="o">=</span> <span class="nx">isLoading</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">containerName</span> <span class="o">=</span> <span class="nx">containerName</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h4 id="개별-컴포넌트들은-상황에-맞게-spinner를-조작">개별 컴포넌트들은 상황에 맞게 Spinner를 조작</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 사용자 페이지 컴포넌트</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="s1">'store'</span><span class="p">)</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">UserPage</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s1">'app-root'</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">UserPageTemplate</span> <span class="nx">model</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">profile</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 검색용 모달 컴포넌트</span>
+<span class="p">@</span><span class="nd">inject</span><span class="p">(</span><span class="s1">'store'</span><span class="p">)</span>
+<span class="p">@</span><span class="nd">observer</span>
+<span class="kd">class</span> <span class="nx">Modal</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s1">'search-modal'</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;&gt;</span>  
+        <span class="o">&lt;</span><span class="nx">ModalTemplate</span> <span class="nx">model</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">profile</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>각각의 컴포넌트나 모달은 Spinner를 사용할 때 <strong>Spinner를 위치시킬 엘리먼트의 class명을 함께 지정</strong>합니다.</li>
+    <li><strong>Spinner</strong>는 생성될때 <strong>지정된 class 하위에 생성</strong>됩니다.</li>
+    <li><strong>App밖에 생성되는 Modal하위에도 Spinner</strong>는 생성됩니다.</li>
+    <li><strong>Spinner</strong>의 <strong>position</strong> 즉 <strong>absolute, fixed</strong> 설정이 <strong>Modal을 기준으로 위치</strong>할 수 있게 됩니다.</li>
+    <li>애초에 <strong>App 내부</strong>에 포함하여 사용하는 방식이면 <strong>Modal에서 position 설정의 기준이 다르기</strong> 때문에 <strong>맞지않게 되는 문제</strong>가 발생하지만 <strong>Portal을 이용하여 동적으로 Spinner를 위치</strong> 시키므로써 가능해 졌습니다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="api호출시에-자동으로-spinner가-로딩-되도록-하는-팁">API호출시에 자동으로 Spinner가 로딩 되도록 하는 팁</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">axios</span> <span class="k">from</span> <span class="s1">'axios'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">store</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'stores'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">AxiosConfig</span> <span class="p">{</span>
+  <span class="nx">initInterceptor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">contentRootStore</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">rootStore</span><span class="p">;</span>
+    <span class="nx">axios</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+      <span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// API 호출시 Spinner 표시 </span>
+        <span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nx">error</span> <span class="o">=&gt;</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">),</span>
+    <span class="p">);</span>
+    <span class="nx">axios</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+      <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+         <span class="c1">// API 완료시 Spinner 제거  </span>
+        <span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">response</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nx">error</span> <span class="o">=&gt;</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+         <span class="c1">// API 오류시 Spinner 제거  </span>
+        <span class="nx">store</span><span class="p">.</span><span class="nx">visibleSpinner</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">response</span><span class="p">;</span>
+      <span class="p">}),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>axios(http 호출 모듈)를 사용한다면 API 호출시 Spinner를 표시하고 완료시 제거하는 store의 메소드를 호출하는 코드를 넣어두면 개별 페이지에서 Spinner 호출 코드를 제거하여 중복을 줄일 수 있다.</p>
+</blockquote>
+
+<h3 id="마무리">마무리</h3>
+<p><strong>Spinner모듈을 Modal</strong>과 일반 페이지 둘다 <strong>position 설정이 가능하도록 Portal</strong>을 이용하여 <strong>구현하는 방법</strong>을 알아 보았습니다.</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 포스트 하위 영역에 표시되는 부분이라서 제거함 검색 버튼 틀릭 했을 때 레이어에 셍기는 검색이랑 다른 부분임 -->
+            
+                <!-- <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Search kimchanjung.dev</h3>
+                    <p class="subscribe-overlay-description">Post를 검색 하세요.</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search?query=" + url;
+            }
+        }
+    </script>
+</span>
+
+                </section> -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="kimchanjung" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/kimchanjung">김찬정</a></h4>
+                                
+                                    <p>좀 더 넓은 TEST 커버리지! 좀 더 나은 Architecture! 좀 더 나은 Code Pattern! 보다 더 간결하고 깔끔한 코드!를 항상 갈망 합니다.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/kimchanjung">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            
+                <section class="post-full-comments">
+<script src="https://utteranc.es/client.js"
+        repo="kimchanjung/utterance-comments"
+        issue-term="[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>                           
+
+            
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/new-blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; kimchanjung.dev &mdash;</small>
+                            
+                                <h3 class="read-next-card-header"><a href="/tag/programming/">Programming</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/05/typescipt-import-js-module-error/">[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/03/spring-security-03/">[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/02/spring-security-02/">[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/programming/">
+                                
+                                    See all 14 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-default-spring-cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Programming</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/programming/2020/06/25/react-scroll-top/">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-default-react-cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/programming/2020/06/25/react-scroll-top/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Programming</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://kimchanjung.github.io/">
+            
+                <img src="/assets/images/favicon.png" alt="kimchanjung.dev icon" />
+            
+            <span>kimchanjung.dev</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%5BReact%5D+%EB%A1%9C%EB%94%A9%EC%B2%98%EB%A6%AC%EC%9A%A9+spinner%EB%A5%BC+%EC%82%AC%EC%9A%A9%EC%8B%9C+position+%EC%98%B5%EC%85%98+%EB%AC%B8%EC%A0%9C%EB%A5%BC+Portal%EC%9D%84+%EC%82%AC%EC%9A%A9%ED%95%B4+%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94+%EB%B0%A9%EB%B2%95&amp;url=https://kimchanjung.github.ioprogramming/2020/06/26/react-spinner/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kimchanjung.github.ioprogramming/2020/06/26/react-spinner/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <i class="fab fa-facebook-square"></i>
+                <section class="copyright"><a href="https://kimchanjung.github.io/">kimchanjung.dev</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/kimchanjung.dev" target="_blank" rel="noopener">Facebook</a>
+                    
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/kimchanjung-logo.png" alt="kimchanjung.dev" />
+                
+                <h1 class="subscribe-overlay-title">Search kimchanjung.dev</h1>
+                <p class="subscribe-overlay-description">Post를 검색 하세요.</p>
+                <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search?query=" + url;
+            }
+        }
+    </script>
+</span>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script> -->
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!--script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script-->
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+    
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+    if (window.location.hostname != "localhost") {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-165866221-1', 'auto');
+        ga('send', 'pageview');
+    }
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

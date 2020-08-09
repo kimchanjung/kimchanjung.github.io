@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko_KR">
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Developer KimChanJung's Blog" />
+    <link rel="alternate" hreflang="ko-kr" href="https://kimchanjung.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://kimchanjung.github.io/" />
+    <link rel="shortcut icon" href="https://kimchanjung.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="kimchanjung.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]" />
+    <meta property="og:description" content="코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다. 코틀린 기본 문법 kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다. 변수 변수 선언 val name:String = "김찬정" // 읽기만 가능 var age:String = 20 // 읽기/쓰기 가능" />
+    <meta property="og:url" content="https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/" />
+    <meta property="og:image" content="https://kimchanjung.github.io/assets/images/post-default-kotlin-cover.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/kimchanjung.dev" />
+    <meta property="article:author" content="https://www.facebook.com/kimchanjung.dev" />
+    <meta property="article:published_time" content="2020-05-06T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-05-06T00:00:00+09:00" />
+    <meta property="article:tag" content="Programming" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]" />
+    <meta name="twitter:description" content="코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다. 코틀린 기본 문법 kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다. 변수 변수 선언 val name:String = "김찬정" // 읽기만 가능 var age:String = 20 // 읽기/쓰기 가능" />
+    <meta name="twitter:url" content="https://kimchanjung.github.io/" />
+    <meta name="twitter:image" content="https://kimchanjung.github.io/assets/images/post-default-kotlin-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="kimchanjung.dev" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Programming" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "kimchanjung.dev",
+        "logo": "https://kimchanjung.github.io/assets/images/kimchanjung-logo.png"
+    },
+    "url": "https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://kimchanjung.github.io/assets/images/post-default-kotlin-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/"
+    },
+    "description": "코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다. 코틀린 기본 문법 kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다. 변수 변수 선언 val name:String = "김찬정" // 읽기만 가능 var age:String = 20 // 읽기/쓰기 가능"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]" href="/feed.xml" />
+    <meta name="naver-site-verification" content="f1cd735caec0d9f78c0108426288fb40e725f65f" />
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/kimchanjung-logo.png" alt="kimchanjung.dev" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-resume" role="menuitem"><a href="/resume/">Resume</a></li>
+    <li class="nav-projects" role="menuitem"><a href="/tag/projects/">Projects</a></li>
+    <li class="nav-tech" role="menuitem"><a href="/tag/tech/">Tech</a></li>
+    <li class="nav-programming" role="menuitem"><a href="/tag/programming/">Programming</a></li>
+    <li class="nav-design-pattern" role="menuitem"><a href="/tag/design-pattern/">Design Pattern</a></li>
+    <li class="nav-algorithm" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">Etc</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-tw" href="mailto:kimchanjung.dev@gmail.com" target="_blank" rel="noopener">
+<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></a>
+            
+            
+                <a class="social-link social-link-tw" href="https://github.com/kimchanjung" target="_blank" rel="noopener"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg></a>
+            
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/kimchanjung.dev" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+            <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/https://kimchanjung.github.io/feed.xml" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+            
+            <!-- <a class="subscribe-button" href="#subscribe">search</a> -->
+            <a class="social-link social-link-fb" href="#subscribe" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a>
+            
+        </div>
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-programming post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 6 May 2020"> 6 May 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/programming/'>PROGRAMMING</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/post-default-kotlin-cover.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다.</p>
+
+<h1 id="코틀린-기본-문법">코틀린 기본 문법</h1>
+
+<p>kotlin 기본 문법을 간략하게 파악 해보기 위한 요약 정리 입니다. kotlin 문법의 모든 내용을 다루지는 않지만 간략하게 훝어 보는 용도로 포스팅합니다.</p>
+
+<h2 id="변수">변수</h2>
+
+<h3 id="변수-선언">변수 선언</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">name</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">"김찬정"</span> <span class="c1">// 읽기만 가능
+</span><span class="kd">var</span> <span class="py">age</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="m">20</span> <span class="c1">// 읽기/쓰기 가능
+</span><span class="kd">var</span> <span class="py">address</span> <span class="p">=</span> <span class="s">"서울"</span> <span class="c1">// 타입생략이 가능
+</span>
+<span class="n">name</span> <span class="p">=</span> <span class="s">"홍길동"</span> <span class="c1">// 컴파일 오류
+</span><span class="n">age</span> <span class="p">=</span> <span class="m">20</span> <span class="c1">// 가능
+</span></code></pre></div></div>
+
+<h3 id="null-허용-변수와-null을-허용하지-않는-변수-선언">Null 허용 변수와 Null을 허용하지 않는 변수 선언</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// null 값 허용 변수 선언
+</span><span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+
+<span class="c1">// null 값을 허용하지 않는 변수에 null을 선언 할 수 없다.
+</span><span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="k">null</span>
+</code></pre></div></div>
+
+<h3 id="null-체크">Null 체크</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+
+<span class="c1">// name 이 null이 아니면 length 를 반환
+// java 에서  Integer nameLength = name != null? name.length() : null; 같음
+</span><span class="kd">val</span> <span class="py">nameLength</span> <span class="p">=</span> <span class="n">name</span><span class="o">?.</span><span class="n">length</span>
+
+<span class="c1">// name 이 null 이면 NullPointerException 발생 시킨다.
+</span><span class="kd">val</span> <span class="py">nameLength</span> <span class="p">=</span> <span class="n">name</span><span class="o">!!</span><span class="p">.</span><span class="n">length</span>
+
+<span class="c1">// 타입케스팅이 불가능한 경우 예외를 발생시키지 않고 null 반환한다.
+</span><span class="kd">val</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">?</span> <span class="p">=</span> <span class="n">name</span> <span class="k">as</span><span class="p">?</span> <span class="n">Int</span><span class="p">?</span>
+</code></pre></div></div>
+
+<h2 id="흐름제어">흐름제어</h2>
+<h3 id="if-표현식">IF 표현식</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// String msg = msgType == 1 ? "안녕" : "잘가"; 와 같다
+</span><span class="kd">val</span> <span class="py">msg</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">msgType</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span> <span class="s">"안녕"</span> <span class="k">else</span> <span class="s">"잘가"</span>
+
+<span class="c1">// 함수 선언 시 if를 아래와 같이 사용가능 하다 
+</span><span class="k">fun</span> <span class="nf">getMsg</span><span class="p">(</span><span class="n">msgType</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">msgType</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span> <span class="s">"안녕"</span> <span class="k">else</span> <span class="s">"잘가"</span>
+</code></pre></div></div>
+
+<h3 id="when-표현식">WHEN 표현식</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">inputType</span> <span class="p">=</span> <span class="m">2</span>
+<span class="kd">val</span> <span class="py">msgType</span> <span class="p">=</span> <span class="s">"2"</span>
+<span class="k">fun</span> <span class="nf">checkType</span><span class="p">(</span><span class="n">type</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span> <span class="m">1</span> <span class="k">else</span> <span class="p">-</span><span class="m">1</span>
+
+<span class="k">when</span> <span class="p">(</span><span class="n">inputType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"1"</span><span class="p">)</span>
+    <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"2 or 3"</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"not"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 조건에 함수를 적용할 수도 있다.
+</span><span class="k">when</span> <span class="p">(</span><span class="n">inputType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">checkType</span><span class="p">(</span><span class="n">inputType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"OK"</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"NOT OK"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 조건에 범위 연산자 사용도 가능하다.
+// 1~100 에 포함된다면 
+</span><span class="kd">val</span> <span class="py">result</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">inputType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">in</span> <span class="m">1</span><span class="o">..</span><span class="m">100</span> <span class="p">-&gt;</span> <span class="s">"1..100 OK"</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="s">"NOT OK"</span>
+<span class="p">}</span>
+
+<span class="c1">// 분기처리할 때 확인 대상이 되는 변수를 다르게 줄 수도 있다.
+</span><span class="k">when</span> <span class="p">{</span>
+    <span class="n">inputString</span> <span class="p">==</span> <span class="s">"4"</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"4 OK"</span><span class="p">)</span>
+    <span class="n">msgType</span> <span class="p">==</span> <span class="s">"2"</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"msgType = 2"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="for-반복문">FOR 반복문</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">item</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">list</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">index</span> <span class="k">in</span> <span class="n">item</span><span class="p">.</span><span class="n">indices</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">index</span> <span class="k">in</span> <span class="n">list</span><span class="p">.</span><span class="n">indices</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 1부터 100 까지 반복
+</span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">1</span><span class="o">..</span><span class="m">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"$i "</span><span class="p">)</span>
+<span class="p">}</span> 
+
+<span class="c1">// 1부터 99까지 반복
+</span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">1</span> <span class="n">until</span> <span class="m">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"$i "</span><span class="p">)</span>
+<span class="p">}</span> 
+
+<span class="c1">// 2 부터 10 까지 반복,  2씩 증가
+</span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">2</span><span class="o">..</span><span class="m">10</span> <span class="n">step</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"$i "</span><span class="p">)</span>
+<span class="p">}</span> 
+
+<span class="c1">// 10 부터 1 까지 감소
+</span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">10</span> <span class="n">downTo</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"$i "</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h3 id="while-반복문">WHILE 반복문</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">item</span> <span class="p">=</span> <span class="n">Array</span><span class="p">(</span><span class="m">5</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="py">index</span> <span class="p">=</span> <span class="m">0</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">index</span> <span class="p">&lt;</span> <span class="n">item</span><span class="p">.</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    <span class="n">index</span><span class="p">++</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="함수">함수</h2>
+
+<h3 id="함수-선언">함수 선언</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 기본적인 함수 선언 방식
+// fun basicFunc(name: String): Int &lt;= Int는 리턴 타입이다
+</span><span class="k">fun</span> <span class="nf">basicFunc</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">name</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1">// 한줄에 선언 하는 방식
+// 한줄 선언 식에서는 리턴타입 생략 가능하다.
+</span><span class="k">fun</span> <span class="nf">simpleFunc</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">=</span> <span class="n">name</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="기본-매개변수">기본 매개변수</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// name: String = "김찬정" &lt;= 매개변수에 기본 값을 선언, 함수 호출시 
+// 매개변수를 주지 않으면 name은 디폴트 값인 "김찬정"으로 선언된다.
+</span><span class="k">fun</span> <span class="nf">simpleFunc</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"김찬정"</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">name</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h3 id="명명된-매개변수---named-parameters">명명된 매개변수 - Named Parameters</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">simpleFunc</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">10</span><span class="p">)</span> <span class="p">=</span> <span class="n">name</span>
+
+<span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="n">simpleFunc</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+<span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="n">simpleFunc</span><span class="p">(</span><span class="n">name</span> <span class="p">=</span> <span class="s">"김잔정"</span><span class="p">,</span> <span class="n">age</span> <span class="p">=</span> <span class="m">10</span><span class="p">)</span>
+<span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="n">simpleFunc</span><span class="p">(</span><span class="n">age</span> <span class="p">=</span> <span class="m">10</span><span class="p">)</span>
+<span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="n">simpleFunc</span><span class="p">(</span><span class="n">age</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">"김찬정"</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>함수의 파라메터를 선언된 순서가 아닌 호출시 지정해서 줄 수 있다.</p>
+</blockquote>
+
+<h3 id="함수-호출-시-가변인자">함수 호출 시 가변인자</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// newList(vararg ts: T) =&gt; java에서 newList(String... name)와 같다
+</span><span class="k">fun</span> <span class="err">&lt;</span><span class="nf">T</span><span class="p">&gt;</span> <span class="n">newList</span><span class="p">(</span><span class="k">vararg</span> <span class="n">ts</span><span class="p">:</span> <span class="n">T</span><span class="p">):</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">result</span> <span class="p">=</span> <span class="n">ArrayList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;()</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">t</span> <span class="k">in</span> <span class="n">ts</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="kd">val</span> <span class="py">newList</span> <span class="p">=</span> <span class="n">newList</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+
+<span class="c1">// '*' 스프레드 연산자이며  item배열의 요소를 풀어서 넘긴다.
+</span><span class="kd">val</span> <span class="py">item</span> <span class="p">=</span> <span class="n">Array</span><span class="p">(</span><span class="m">5</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+<span class="kd">val</span> <span class="py">newList2</span> <span class="p">=</span> <span class="n">newList</span><span class="p">(*</span><span class="n">item</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<h3 id="확장함수">확장함수</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">arrayOf</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+
+<span class="c1">// Array 클래스의 length 메소드를 override 한다.
+</span><span class="k">fun</span> <span class="err">&lt;</span><span class="nf">T</span><span class="p">&gt;</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;.</span><span class="n">length</span><span class="p">():</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="m">1</span>
+<span class="p">}</span>
+
+<span class="c1">// Array 크래스에 새로운 메소드를 추가한다.
+</span><span class="k">fun</span> <span class="err">&lt;</span><span class="nf">T</span><span class="p">&gt;</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;.</span><span class="n">addMethod</span><span class="p">(</span><span class="n">index1</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">index2</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="m">1</span>
+<span class="p">}</span>
+
+
+<span class="kd">val</span> <span class="py">addMethod</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">.</span><span class="n">addMethod</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="c1">// 1이 리턴된다.
+</span><span class="kd">val</span> <span class="py">length</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="c1">// 1이 리턴된다.
+</span></code></pre></div></div>
+<blockquote>
+  <p>확장함수는 특정클래스로 부터 상속받지 않고 해당클래스의 기능을 확장 한다.</p>
+</blockquote>
+
+<h3 id="중위함수infix">중위함수(infix)</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 중의 함수 선언은 infix 키워드를 붙여 선언한다.
+</span><span class="k">infix</span> <span class="k">fun</span> <span class="nf">Int</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span> <span class="p">*</span> <span class="n">value</span>
+<span class="p">}</span>
+
+<span class="n">println</span><span class="p">(</span><span class="m">9</span> <span class="n">multiply</span> <span class="m">1</span><span class="p">)</span> <span class="c1">// 9 출력
+</span><span class="n">println</span><span class="p">(</span><span class="m">9</span><span class="p">.</span><span class="n">multiply</span><span class="p">(</span><span class="m">1</span><span class="p">))</span> <span class="c1">// 9 출력
+</span><span class="n">println</span><span class="p">(</span><span class="m">3</span> <span class="p">+</span> <span class="m">2</span> <span class="n">multiply</span> <span class="m">2</span><span class="p">)</span> <span class="c1">// 10 출력, + 연산자 우선순위가 더 높다 
+</span></code></pre></div></div>
+<blockquote>
+  <p>중위함수 선언 조건</p>
+  <ul>
+    <li>클래스의 멤버 함수이거 나 확장 함수이어야 한다.</li>
+    <li>매개변수가 한 개여야 한다.</li>
+    <li>infix 키워드로 함수가 정의되어야 한다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="클래스">클래스</h3>
+
+<h4 id="클래스-선언---kotlin">클래스 선언 - Kotlin</h4>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 멤버 프로퍼티(변수)와 생성자를 동시에 선언
+</span><span class="kd">class</span> <span class="nc">SimpleClass</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">41</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>kotlin 클래스의 기본생성자는 클래스명 바로 옆 “()” 구문이다. 기본 생성자의 매개변수 선언을 val name: String 하면 멤버 프로퍼티(변수)선언과 기본생성자 매개변수 선언을 동시에 한 것이다.</p>
+</blockquote>
+
+<h4 id="클래스-선언---java">클래스 선언 - Java</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SimpleClass</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">address</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span>
+
+    <span class="kd">public</span> <span class="nf">SimpleClass</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="n">Integer</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAddress</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">address</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="n">Integer</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Kotlin 클래스 선언이 위 Java 코드와 동일하다.</p>
+</blockquote>
+
+<h3 id="클래스-멤버-프로퍼티와-생성자-파라메터-동시-선언">클래스 멤버 프로퍼티와 생성자 파라메터 동시 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// var name: String &lt;= var/val 를 붙이면 
+// 생성자 매개변수 선언과 동시에 멤버 프로퍼티(변수)를 선언한 것과 같다
+</span><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// var name:String &lt;= 한 것 과 같다
+</span>    <span class="o">..</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="클래스-멤버-프로퍼티와-생성자-파라메터-각각-선언">클래스 멤버 프로퍼티와 생성자 파라메터 각각 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// name: String &lt;= var/val 를 붙이지 않으면 생성자 매개변수만 선언 한 것 이다.
+// 그래서 멤버 프로퍼티(변수)를 꼭 선언 해야한다.
+</span><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span><span class="n">String</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span><span class="n">String</span>
+
+    <span class="o">..</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>위 경우에는 반드시 기본생성자의 초기화 init블럭이 있어야 한다.</p>
+</blockquote>
+
+<h3 id="클래스-기본생성자의-초기화-init-블럭">클래스 기본생성자의 초기화 init 블럭</h3>
+<p>class BasicClass(var name: String, var address: String) 처럼 프로퍼티 선언과 생성자 매개변수 동시 선언 하지 않으면 아래 예제 처럼 멤버 프로퍼티 선언과 함께 init블럭을 통하여 멤버프로퍼티의 초기화도 해주어야 한다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 프로퍼티선언과 동시에 생성자 파라메터로 값 설정이 가능하며 초기화 구문 까지 포함 된 것이다.
+</span>    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">name</span> 
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>name 프로퍼티는 var name: String = name  선언과 동시에 초기화 구문 까지 함께 기술 하였기 때문에 init 블럭에서 초기화 구분이 제외 되었다.</p>
+</blockquote>
+
+<h3 id="코틀린-init을--java로-표현">코틀린 init을  Java로 표현</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BasicClass</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">address</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span>
+
+    <span class="kd">public</span> <span class="nf">BasicClass</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="n">Intger</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>클래스 기본생성자의 초기화 init 블럭을 Java 코드로 표현하면 위와 같다.</p>
+</blockquote>
+
+<h3 id="클래스와-접근제한자">클래스와 접근제한자</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>접근 제한자</th>
+      <th>클래스 멤버일 때</th>
+      <th>최상위 수준으로 선언되었을 때</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>public(기본값)</td>
+      <td>어디서든 사용 가능</td>
+      <td>어디서든 사용 가능</td>
+    </tr>
+    <tr>
+      <td>internal</td>
+      <td>같은 모듈에서만 사용 가능</td>
+      <td>같은 모듈에서만 사용 가능</td>
+    </tr>
+    <tr>
+      <td>protected</td>
+      <td>서브 클래스에서만 사용 가능</td>
+      <td>해당 없음</td>
+    </tr>
+    <tr>
+      <td>private</td>
+      <td>클래스 내부에서만 사용 가능</td>
+      <td>코틀린 파일 내부에서만 사용 가능</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="코들린의-프로퍼티란">코들린의 프로퍼티란?</h3>
+<p>코틀린에서 프로퍼티란 클래스의 멤버 변수를 말하는데 코틀린에서 멤버 변수는 단순히 <strong>var name:String</strong> 으로 선언 되어 <strong>변수만 선언된 것 같지만</strong> setter/getter를 따로 선언 하지 않아도 <strong>기본적으로 생성</strong>되며 <strong>변수 + setter + getter 프로퍼티</strong>라고 부른다.<br />
+하지만 person.name 처럼 사용하면 person.getName() 처럼 getter를 사용하지 않는 것 처럼 보이지만 사실은 person.name 값을 가져오면 내부적으로 getter를 사용 한 것이다.</p>
+
+<h3 id="클래스의-프로퍼티와-override-gettersetter">클래스의 프로퍼티와 override getter/setter</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> 
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+        <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="s">"$field 특별시"</span>
+        <span class="k">set</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">field</span> <span class="p">=</span> <span class="s">"$address 특별시"</span>
+        <span class="p">}</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span> 
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">val</span> <span class="py">basicClass</span> <span class="p">=</span> <span class="n">BasicClass</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">,</span> <span class="s">"서울"</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">basicClass</span><span class="p">.</span><span class="n">address</span><span class="p">)</span> <span class="c1">// 서울 특별시 로 출력 됨
+</span><span class="n">basicClass</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="s">"서울"</span> <span class="c1">// 서울 특별시 로 변경됨
+</span></code></pre></div></div>
+<blockquote>
+  <p>기본적으로 getter/setter가 제공되지만 예제 처럼 override 한 것이다. <br />
+basicClass.getAddress(), basicClass.setAddress(“서울”) 처럼 사용해야 될 것 같지만 변수를 바로 다루는 듯 사용하며 실제로 getter/setter가 동작 한다.</p>
+</blockquote>
+
+<h4 id="코들린의-public-프로퍼티의-변수는-public인가">코들린의 public 프로퍼티의 변수는 public인가?</h4>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 아래 처럼 선언하면 
+</span><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span><span class="n">String</span> <span class="c1">// public 생략됨
+</span>    <span class="k">private</span> <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="c1">// 프로퍼티를 private로 선언하면
+</span><span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>코틀린의 접근제한자는 기본적으로 멤버 프로퍼티(변수+getter+setter)에 대한접근 제한 자이다. public var name:String 은 name라는 변수는 private로 직접 접근이 불가능하며 기본으로 제공되는 getter/setter에 의해서 접근이 되는 것이고 getter/setter가 제공됨으로써 name프로퍼티는 public인 것 이다. 아래 예제를 보자 JAVA 코드로 변환 하면 실제로는 아래와 같다</p>
+</blockquote>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="kd">class</span> <span class="nc">BasicClass</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>private var age: Int 프로퍼티를 private로 선언했기 때문에 Java 코드로 본다면  getter/setter가 제공 되지 않아 외부에서 접근 자체가 불가한 것이다.</p>
+</blockquote>
+
+<h3 id="생성자-오버로딩여러개의-생성자">생성자 오버로딩(여러개의 생성자)</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OverLoadingConstructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// init 블럭 그리고 constructor에 초기화 구문이 둘다 들어가 있으므로 초기화 필요 없다.
+</span>    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+    <span class="c1">// primitive type 프로퍼티는 사용 불가능 하기 때문에 0값으로 라도 초기화 해야한다.
+</span>    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+
+    <span class="k">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 다음과 같이 생성자가 제공된다.
+</span><span class="kd">val</span> <span class="py">overLoadingConstructor</span> <span class="p">=</span> <span class="n">OverLoadingConstructor</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">overLoadingConstructor2</span> <span class="p">=</span> <span class="n">OverLoadingConstructor</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">,</span> <span class="s">"서울"</span><span class="p">,</span> <span class="m">20</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p><strong>lazyinit 이란</strong> 멤버프로퍼티의 값 초기화를 지연하는 키워드이며 다음과 같은 특징이 있다.</p>
+  <ul>
+    <li>var(mutable) 프로퍼티만 사용 가능</li>
+    <li>non-null 프로퍼티만 사용 가능</li>
+    <li>커스텀 getter/setter가 없는 프로퍼티만 사용 가능</li>
+    <li>primitive type 프로퍼티는 사용 불가능</li>
+    <li>클래스 생성자에서 사용 불가능</li>
+    <li>로컬 변수로 사용 불가능</li>
+  </ul>
+</blockquote>
+
+<h3 id="init-블럭-없는-생성자-오버로딩">Init 블럭 없는 생성자 오버로딩</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OverLoadingConstructorWithoutInit</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+
+    <span class="k">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// 다음과 같이 생성자가 제공된다.
+</span><span class="kd">val</span> <span class="py">overLoadingConstructor</span> <span class="p">=</span> <span class="n">OverLoadingConstructor</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">overLoadingConstructor2</span> <span class="p">=</span> <span class="n">OverLoadingConstructor</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">,</span> <span class="s">"서울"</span><span class="p">,</span> <span class="m">20</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>클래스 선언시 클래스명 옆에 기본생성자를 선언하지 않고 constructor를 선언한다. 그렇게 되면 init 블럭도 필요없어진다.</p>
+</blockquote>
+
+<h3 id="정적-팩토리-메소드">정적 팩토리 메소드</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PrivateDefaultConstructor</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="c1">// object 키워드로 인하여 of 메소드는 static 으로 생성된다.
+</span>    <span class="k">companion</span> <span class="k">object</span> <span class="p">{</span>
+        <span class="c1">// 선언된 프로퍼티도 static으로 선언된다
+</span>        <span class="kd">var</span> <span class="py">address</span> <span class="p">=</span> <span class="s">"서울"</span>
+        <span class="k">fun</span> <span class="nf">of</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">PrivateDefaultConstructor</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">instance</span> <span class="p">=</span> <span class="n">PrivateDefaultConstructor</span><span class="p">()</span>
+            <span class="n">instance</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+            <span class="k">return</span> <span class="n">instance</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 정적팩토리 메소드로 객체 생성이 가능하다.  
+</span><span class="kd">val</span> <span class="py">of</span> <span class="p">=</span> <span class="n">PrivateDefaultConstructor</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>기본생성자를 private로 접근제한하여 외부에 제공하지 않는다.</li>
+    <li>companion object 사용하여 static 메소드를 생성하여 객체를 생성하는 정적 팩토리를 제공한다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="java-코드로-보자면-아래와-같다">JAVA 코드로 보자면 아래와 같다</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrivateDefaultConstructor</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="nf">PrivateDefaultConstructor</span><span class="o">()</span>
+
+    <span class="kd">public</span> <span class="n">PrivateDefaultConstructor</span> <span class="nf">of</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">PrivateDefaultConstructor</span> <span class="n">instance</span> <span class="o">=</span>  <span class="k">new</span> <span class="n">PrivateDefaultConstructor</span><span class="o">();</span>
+      <span class="n">instance</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span>
+      <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// 아래와 같이 정적팩토리 메소드로 객체 생성이 가능하다.</span>
+<span class="n">val</span> <span class="n">of</span> <span class="o">=</span> <span class="n">PrivateDefaultConstructor</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"김찬정"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="java-코드에서-호출을-위한-정적-팩토리-메소드-선언-방식">JAVA 코드에서 호출을 위한 정적 팩토리 메소드 선언 방식</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// static field에는 const 또는 @JvmField 붙인다
+// static method에는 @JvmStatic 붙인다 
+</span><span class="kd">class</span> <span class="nc">PrivateDefaultConstructorForJava</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="k">companion</span> <span class="k">object</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="kd">val</span> <span class="py">address</span> <span class="p">=</span> <span class="s">"서울"</span>
+
+        <span class="n">@JvmField</span>
+        <span class="kd">val</span> <span class="py">age</span> <span class="p">=</span> <span class="m">20</span>
+
+        <span class="n">@JvmStatic</span>
+        <span class="k">fun</span> <span class="nf">of</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">PrivateDefaultConstructorForJava</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">instance</span> <span class="p">=</span> <span class="n">PrivateDefaultConstructorForJava</span><span class="p">()</span>
+            <span class="n">instance</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+            <span class="k">return</span> <span class="n">instance</span>
+        <span class="p">}</span>
+
+        <span class="n">@JvmStatic</span>
+        <span class="k">fun</span> <span class="nf">ofNew</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">=</span> <span class="n">of</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p><strong>자바에서 코틀린 객체의 스태틱멤버를 호출 할때 PrivateDefaultConstructor.companion.address</strong> 로 접근 해야 하기 때문에 위 예제 처럼 선언 해야 Java 코드에서 <strong>PrivateDefaultConstructorForJava.address</strong> 로 접근 가능하다.</p>
+</blockquote>
+
+<h3 id="멤버-프로퍼티의-캡슐화">멤버 프로퍼티의 캡슐화</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BasicClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> 
+        <span class="k">private</span> <span class="k">set</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>코틀린 프로퍼티는 기본이 public(변수자체는 private이다)이므로 값은 외부에서 참조 가능 하지만, 변경은 불가하도록 하려면 기본 setter를 private로 지정 하면 된다. (private val name:String 으로 선언하면 외부에 아예 사용 차제가 안되게 때문에)</p>
+</blockquote>
+
+<h3 id="클래스의-상속">클래스의 상속</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">isAdultParentMethod</span><span class="p">()</span> <span class="p">=</span> <span class="n">age</span> <span class="p">&gt;</span> <span class="m">20</span>
+    <span class="k">open</span> <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"kim"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Parent</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"child kim"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Java 와는 다르게 open 키워드가 붙은 클래스만 상속 할 수 있다.</p>
+</blockquote>
+
+<h3 id="클래스-상속---기본생성자를-사용하지-않는-경우">클래스 상속 - 기본생성자를 사용하지 않는 경우</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Child2</span> <span class="p">:</span> <span class="n">Parent</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="k">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="k">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">address</span> <span class="p">=</span> <span class="n">address</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>super 키워드를 통하여 부모클래스를 초기화 해야한다.</p>
+</blockquote>
+
+<h3 id="인터페이스-선언">인터페이스 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">ImplementInterface</span> <span class="p">{</span>
+    <span class="kd">interface</span> <span class="nc">ImplementInterface</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">number</span><span class="p">:</span> <span class="n">Int</span>
+    <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span>
+    <span class="k">fun</span> <span class="nf">isAdult</span><span class="p">():</span> <span class="n">Boolean</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h3 id="인터페이스-구현">인터페이스 구현</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ImplementInterfaceImpl</span><span class="p">(</span><span class="k">private</span> <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">ImplementInterface</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">val</span> <span class="py">number</span><span class="p">:</span> <span class="n">Int</span>
+        <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="m">1</span>
+    <span class="k">override</span> <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"김찬정"</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"kim"</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">isAdult</span><span class="p">()</span> <span class="p">=</span> <span class="n">age</span> <span class="p">&gt;</span> <span class="m">19</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="추상클래스-선언과-구현">추상클래스 선언과 구현</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"자동차"</span> 
+    <span class="k">abstract</span> <span class="k">fun</span> <span class="nf">start</span><span class="p">()</span>
+    <span class="k">fun</span> <span class="nf">stop</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Sonata</span><span class="p">()</span> <span class="p">:</span> <span class="n">Car</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">start</span><span class="p">()</span> <span class="p">{}</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="추상클래스-선언---심화">추상클래스 선언 - 심화</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="kd">class</span> <span class="nc">AbstractClass</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">open</span> <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">field</span> <span class="p">=</span> <span class="n">value</span>
+        <span class="p">}</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">+</span> <span class="s">"이다"</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">isAdult</span><span class="p">()</span> <span class="p">=</span> <span class="n">age</span> <span class="p">&gt;</span> <span class="m">19</span>
+    <span class="k">abstract</span> <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>open 키워드를 붙인 프로퍼티는 구현클래스에서 override 가능</li>
+    <li>추상클래스자체로 객체를 생성할 수 없지만 구현 클래스 객체 생성시 init 블럭이 수행 된다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="추상클래스-구현---심화">추상클래스 구현 - 심화</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">AbstractClassImpl</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">address</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">AbstractClass</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="kd">var</span> <span class="py">address</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">address</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">ag</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">getNameInEnglish</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"kimchanjung"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>구현 클래스에서 추상클래스의 멤버를 직접 오버라이딩 하거나 아니면 그대로 상속 받거나, init 블럭의 초기화 순서 등등은 실제로 수행 해보면서 순서를 살펴 보아야 파악이 가능하다.</p>
+</blockquote>
+
+<h3 id="object-키워드">OBJECT 키워드</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">object</span> <span class="nc">StaticClass</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">name</span> <span class="p">=</span> <span class="s">"김찬정"</span>
+    <span class="kd">var</span> <span class="py">age</span> <span class="p">=</span> <span class="m">20</span>
+
+    <span class="k">fun</span> <span class="nf">getNameWithEnglishName</span><span class="p">()</span> <span class="p">=</span> <span class="s">"$name (kimchanjung)"</span>
+    <span class="k">fun</span> <span class="nf">isAdult</span><span class="p">()</span> <span class="p">=</span> <span class="n">age</span> <span class="p">&gt;</span> <span class="m">19</span>
+<span class="p">}</span>
+<span class="n">println</span><span class="p">(</span><span class="n">StaticClass</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">StaticClass</span><span class="p">.</span><span class="n">isAdult</span><span class="p">())</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Java 에서 static 멤버 변수와 메소드가 있는 클래스로 보면 된다. 객체를 런타임시 새로 생성하는 것이 아니기 때문에 또한 싱글톤이다.</p>
+</blockquote>
+
+<h3 id="중첩클래스와-내부클래스">중첩클래스와 내부클래스</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OuterClass</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">outerName</span> <span class="p">=</span> <span class="s">"아우터네임"</span>
+
+    <span class="k">companion</span> <span class="k">object</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">staticOuterName</span> <span class="p">=</span> <span class="s">"정적아우터네임"</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**
+     * static 키워드가 붇지 않았지만 static 멤버 클래스다
+     * OuterClass.StaticNestedClass() 로 객체 생성한다.
+     * Outerclass의 멤버에 접근을 할 수 없다.
+     * static 멤버에는 접근이 가능함
+     *
+     */</span>
+    <span class="kd">class</span> <span class="nc">StaticNestedClass</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">nestedName</span> <span class="p">=</span> <span class="s">"내부네임"</span>
+        <span class="k">fun</span> <span class="nf">getOuterName</span><span class="p">()</span> <span class="p">=</span> <span class="n">println</span><span class="p">(</span><span class="s">"StaticNestedClass - $nestedName $staticOuterName"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**
+     * non static 멤버 클래스
+     * OuterClass().InnerClass()로 객체 생성
+     * OuterClass의 non-static 멤버도 접근 가능함
+     * 사실 이건 접근제어라기 보다 클래스가 static/non-static 차이에서 발생하는 자연스런 접근 제한
+     */</span>
+    <span class="k">inner</span> <span class="kd">class</span> <span class="nc">InnerClass</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">nestedName</span> <span class="p">=</span> <span class="s">"내부네임 "</span>
+        <span class="k">fun</span> <span class="nf">getOuterName</span><span class="p">()</span> <span class="p">=</span> <span class="n">println</span><span class="p">(</span><span class="s">"InnerClass - $outerName $staticOuterName"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 중첩클래스의 객체 생성
+</span><span class="kd">val</span> <span class="py">staticNestedClass</span> <span class="p">=</span> <span class="n">OuterClass</span><span class="p">.</span><span class="n">StaticNestedClass</span><span class="p">()</span>
+<span class="c1">// 내부클래스의 객체 생성
+</span><span class="kd">val</span> <span class="py">innerClass</span> <span class="p">=</span> <span class="n">OuterClass</span><span class="p">().</span><span class="n">InnerClass</span><span class="p">()</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>중첩클래스는 외부클래스의 static 멤버로 존재하기 때문에 외부클래스.중첩클래스() 로 생성한다 (JAVA와 같다.)</li>
+    <li>내부클래스는 static 멤버로 존재하는 것이 아니기 때문에 외부클래스의 인스턴스를 생성후 내부클래스 인스턴스 생성이 가능하다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="데이터-클래스">데이터 클래스</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">Entity</span><span class="p">(</span><span class="kd">val</span> <span class="py">id</span><span class="p">:</span> <span class="n">Long</span><span class="p">,</span> <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>data 클래스는 아래 메소드를 기본제공</p>
+  <ul>
+    <li>equals()</li>
+    <li>hashCode()</li>
+    <li>copy()</li>
+    <li>toString()</li>
+    <li>componentsN()</li>
+  </ul>
+</blockquote>
+
+<h3 id="클래스-위임">클래스 위임</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * by 키워드를 이용한 위임은 interface의 구현체만 위임 활 수 있다.
+ * 일반 클래스를 위임하는 것은 안된다.
+ */</span>
+<span class="kd">interface</span> <span class="nc">UserService</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">findByName</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">String</span>
+    <span class="k">fun</span> <span class="nf">findAll</span><span class="p">():</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">UserServiceImpl</span><span class="p">(</span><span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">UserService</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">findByName</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">findAll</span><span class="p">()</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">"kimchanjung"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * 실제적으로는 UserService를 구현하는 것이 아니라 UserServiceImpl를 상속 없이 상속 하는
+ * 이라고 보면된다 open 키워드가 없어 상속 할 수 없는 UserServiceImpl 위임하여
+ * 상속의 효과를 누린다.
+ * 또 하나의 장점은 모든 메소드를 구현 할 필요가 없고 필요한 메소드만 오버라이드 하면된다
+ */</span>
+<span class="kd">class</span> <span class="nc">ImplByUserService</span><span class="p">(</span><span class="k">private</span> <span class="kd">val</span> <span class="py">us</span> <span class="p">:</span> <span class="n">UserService</span><span class="p">)</span> <span class="p">:</span> <span class="n">UserService</span> <span class="k">by</span> <span class="n">us</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">findAll</span><span class="p">()</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">"kimchanjung"</span><span class="p">,</span> <span class="s">"mogomezwai"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>클래스위임은 상속 불가능한 클래스를 상속과 같은 효과를 누리는 동시에 필요한 메소드만 오버라이드 가능한 장점이 있다.</p>
+</blockquote>
+
+<h3 id="클래스-위임-장점의-예---인터페이스-구현">클래스 위임 장점의 예 - 인터페이스 구현</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NewList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="k">override</span> <span class="kd">val</span> <span class="py">size</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">init</span><span class="p">:</span> <span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="p">:</span> <span class="n">MutableList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">list</span> <span class="p">=</span> <span class="n">ArrayList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">size</span><span class="p">)</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="n">repeat</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="n">index</span> <span class="p">-&gt;</span> <span class="n">list</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">init</span><span class="p">(</span><span class="n">index</span><span class="p">))</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">contains</span><span class="p">(</span><span class="n">element</span><span class="p">:</span> <span class="n">T</span><span class="p">):</span> <span class="n">Boolean</span> <span class="p">{</span>
+        <span class="n">TODO</span><span class="p">(</span><span class="s">"Not yet implemented"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">containsAll</span><span class="p">(</span><span class="n">elements</span><span class="p">:</span> <span class="n">Collection</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;):</span> <span class="n">Boolean</span> <span class="p">{</span>
+        <span class="n">TODO</span><span class="p">(</span><span class="s">"Not yet implemented"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">get</span><span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">T</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">list</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="o">........</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>일반적인 방식의 인터페이스구현은  MutableList interface 구현체 모든 메소드를 구현해야한다.</p>
+</blockquote>
+
+<h3 id="클래스-위임-장점의-예---클래스-위임을-사용">클래스 위임 장점의 예 - 클래스 위임을 사용</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NewList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="k">override</span> <span class="kd">val</span> <span class="py">size</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">private</span> <span class="kd">val</span> <span class="py">ml</span><span class="p">:</span> <span class="n">MutableList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">(),</span> <span class="n">init</span><span class="p">:</span> <span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="p">:</span> <span class="n">MutableList</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="k">by</span> <span class="n">ml</span> <span class="p">{</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+        <span class="n">repeat</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="n">index</span> <span class="p">-&gt;</span> <span class="n">ml</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">init</span><span class="p">(</span><span class="n">index</span><span class="p">))</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">add</span><span class="p">(</span><span class="n">element</span><span class="p">:</span> <span class="n">T</span><span class="p">):</span> <span class="n">Boolean</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ml</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>위임을 사용한 경우는 모든 메소드를 오버라이드 할 필요 없다.</p>
+</blockquote>
+
+<h3 id="enum-클래스-선언">ENUM 클래스 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="kd">class</span> <span class="nc">EnumClass</span><span class="p">(</span><span class="kd">var</span> <span class="py">number</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">desc</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">WAIT</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"대기"</span><span class="p">),</span>
+    <span class="n">CONSIGN</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="s">"배차완료중"</span><span class="p">),</span>
+    <span class="n">COMPLETE_PICKUP</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="s">"픽업완료"</span><span class="p">),</span>
+    <span class="n">COMPLETE_DELIVERY</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="s">"전달완료"</span><span class="p">);</span>
+
+    <span class="k">fun</span> <span class="nf">getStatus</span><span class="p">()</span> <span class="p">=</span> <span class="s">"$desc($number)"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>기본생성자에 반드시 var number: Int var, val 를 붙여 멤버선언/매개변수 동시에 선언해야한다.</p>
+</blockquote>
+
+<h3 id="enum-클래스를-when-에서-활용">ENUM 클래스를 WHEN 에서 활용</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">selectStatus</span><span class="p">(</span><span class="n">status</span><span class="p">:</span> <span class="n">EnumClass</span><span class="p">)</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">EnumClass</span><span class="p">.</span><span class="n">COMPLETE_DELIVERY</span> <span class="p">-&gt;</span> <span class="s">"COMPLETE_DELIVERY"</span>
+    <span class="n">EnumClass</span><span class="p">.</span><span class="n">CONSIGN</span><span class="p">,</span> <span class="n">EnumClass</span><span class="p">.</span><span class="n">COMPLETE_PICKUP</span> <span class="p">-&gt;</span> <span class="s">"CONSIGN or COMPLETE_PICKUP"</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="s">"NOT"</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">selectStatus</span><span class="p">(</span><span class="n">status1</span><span class="p">:</span> <span class="n">EnumClass</span><span class="p">,</span> <span class="n">status2</span><span class="p">:</span> <span class="n">EnumClass</span><span class="p">)</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">setOf</span><span class="p">(</span><span class="n">status1</span><span class="p">,</span> <span class="n">status2</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">setOf</span><span class="p">(</span><span class="n">EnumClass</span><span class="p">.</span><span class="n">COMPLETE_DELIVERY</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="s">"COMPLETE_DELIVERY"</span>
+    <span class="n">setOf</span><span class="p">(</span><span class="n">EnumClass</span><span class="p">.</span><span class="n">CONSIGN</span><span class="p">,</span> <span class="n">EnumClass</span><span class="p">.</span><span class="n">COMPLETE_PICKUP</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="s">"CONSIGN or COMPLETE_PICKUP"</span>
+    <span class="k">else</span> <span class="p">-&gt;</span> <span class="s">"NOT"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="sealed-클래스">Sealed 클래스</h3>
+<ul>
+  <li>Sealed 클래스는 Enum 클래스의 확장입니다.</li>
+  <li>Enum클래스를 사용할 때 불리한 점을 보완 할 수 있습니다.</li>
+</ul>
+
+<p>Sealed 클래스의 장점을 설명 하기 위하여 어떤 값을 상수나 오브젝트 형태로 사용하는 경우, Enum 클래스를 사용하는 경우 그리고 Sealed 클래스를 사용하는 경우를 예로 들어 설명합니다.</p>
+
+<h4 id="일반-값-형태로-사용-하는-경우">일반 값 형태로 사용 하는 경우</h4>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">object</span> <span class="nc">DeliveryStatus</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">WAIT</span> <span class="p">=</span> <span class="m">1</span>
+    <span class="kd">val</span> <span class="py">CONSIGN</span> <span class="p">=</span> <span class="m">2</span>
+    <span class="kd">val</span> <span class="py">PICKUP</span> <span class="p">=</span> <span class="m">3</span>
+    <span class="kd">val</span> <span class="py">COMPLETE</span> <span class="p">=</span> <span class="m">4</span> <span class="c1">// 추후에 추가한 상태값
+</span><span class="p">}</span>
+
+
+<span class="k">fun</span> <span class="nf">selectDeliveryStatus</span><span class="p">(</span><span class="n">deliveryStatus</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">deliveryStatus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">WAIT</span> <span class="p">-&gt;</span> <span class="s">"대기($deliveryStatus)"</span>
+        <span class="n">CONSIGN</span> <span class="p">-&gt;</span> <span class="s">"배차($deliveryStatus)"</span>
+        <span class="n">PICKUP</span> <span class="p">-&gt;</span> <span class="s">"픽업($deliveryStatus)"</span>
+        <span class="cm">/**
+         *  DeliveryStatus 에 COMPLETE를 추가 했으면 이 라인도 당연히 추가 했어야 하지만
+         *  추가 하지 않아도 컴파일 에러는 없기 때문에 개발자가 빼먹어 런타임에 의도치 않은 결과를 초래할 수 있다.
+         */</span>
+        <span class="c1">// COMPLETE -&gt; deliveryStatus
+</span>        <span class="k">else</span> <span class="p">-&gt;</span> <span class="s">"오류(0)"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>보통 특정 상태 값을 선언할 때는 Enum 클래스를 사용하는 것이 보통이나 일반적인 형태로 선언 하고 이것을 사용 하는 코드에서 발생 할 수 있는 문제점은 다음과 같다</p>
+  <ul>
+    <li>DeliveryStatus를 사용하는 비즈니스 로직 selectDeliveryStatus에서 새로 추가한 상태값 COMPLETE에 대한 처리를 해주지 않아도 컴파일이 된다.</li>
+    <li>이런경우 런타임 시 COMPLETE는 else 로 처리 되게 됨으로 개발자가 상태 값만 추가하고 비즈니스 로직처리를 빼먹는 사태가 발 생 할 수 있다.</li>
+    <li>DeliveryStatus 상태가 추가 될 때 마다 비즈니스로직에 관련 처리를 계속적으로 추가 해주어야한다.</li>
+    <li>when 구문에서도 else 구문 추가가 필수 적이다, 그 이유는 selectDeliveryStatus(DeliveryStatus.PICKUP) 로 메소드를 호출 하는 경우 when구문 입장에서는 int 값에 어떤 값이 들어올지 미리 알 수 없기 때문에 else 구문을 추가 하지 않으면 컴파일 오류가 발생한다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="enum-클래스를-사용-하는-경우">ENUM 클래스를 사용 하는 경우</h4>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="kd">class</span> <span class="nc">EnumDeliveryStatus</span><span class="p">(</span><span class="kd">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">val</span> <span class="py">codeName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">WAIT</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"대기"</span><span class="p">),</span>
+    <span class="n">CONSIGN</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="s">"배차"</span><span class="p">),</span>
+    <span class="n">PICKUP</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="s">"픽업"</span><span class="p">),</span>
+
+    <span class="cm">/**
+     * COMPLETE를 나중에 추가 했을 경우에 selectEnumDeliveryStatus에
+     * EnumDeliveryStatus.COMPLETE -&gt; deliveryStatus.code 이 구문을 추가 해주지 않으면
+     * 컴파일 오류 발생한다.
+     */</span>
+    <span class="n">COMPLETE</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="s">"완료"</span><span class="p">);</span>
+
+    <span class="k">fun</span> <span class="nf">getCodeWithName</span><span class="p">()</span> <span class="p">=</span> <span class="s">"$codeName($code)"</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * EnumDeliveryStatus 선언 당시 값이 명확히 정해 지므로 when 에서 else 처리도 불필요 해진다.
+ */</span>
+<span class="k">fun</span> <span class="nf">selectEnumDeliveryStatus</span><span class="p">(</span><span class="n">deliveryStatus</span><span class="p">:</span> <span class="n">EnumDeliveryStatus</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">deliveryStatus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">EnumDeliveryStatus</span><span class="p">.</span><span class="n">WAIT</span> <span class="p">-&gt;</span> <span class="s">"${deliveryStatus.codeName.toString()}(${deliveryStatus.code.toString()})"</span>
+        <span class="n">EnumDeliveryStatus</span><span class="p">.</span><span class="n">CONSIGN</span> <span class="p">-&gt;</span> <span class="s">"${deliveryStatus.codeName.toString()}(${deliveryStatus.code.toString()})"</span>
+        <span class="n">EnumDeliveryStatus</span><span class="p">.</span><span class="n">PICKUP</span> <span class="p">-&gt;</span> <span class="s">"${deliveryStatus.codeName.toString()}(${deliveryStatus.code.toString()})"</span>
+        <span class="n">EnumDeliveryStatus</span><span class="p">.</span><span class="n">COMPLETE</span> <span class="p">-&gt;</span> <span class="s">"${deliveryStatus.codeName.toString()}(${deliveryStatus.code.toString()})"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>일반적으로 Enum 클래스를 사용 했을 경우을 살펴 보자</p>
+  <ul>
+    <li>COMPLETE 상태가 추후에 추가되었을 경우 EnumDeliveryStatus 클래스를 사용하는 비즈니스로직에서
+COMPLETE 상태 처리에 대한 구문이 추가 되지 않으면 컴파일 오류가 발생하므로 개발자가 실수로 빠트리는 일은 없다.</li>
+    <li>Enum 클래스의 값은 선언 당시에 완전히 정해 지므로 런타임시 어떤 값이 들어올지 모르는 상황이 아니므로
+when 처리시 else 구문이 필요없게 된다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="sealed-클래스를-사용-하는-경우">Sealed 클래스를 사용 하는 경우</h4>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * sealed class는 enum 클래스의 확장형이라고 설명하고 있는데
+ * Enum 클래스는 아래와 같이 멤퍼 프로퍼티나, 메소드를 다르게 줄 수 없지만 sealed 클래스는 가능하기 때문이다.
+ */</span>
+<span class="k">sealed</span> <span class="kd">class</span> <span class="nc">SealedDeliveryStatus</span> <span class="p">{</span>
+    <span class="kd">class</span> <span class="nc">WAIT</span><span class="p">(</span><span class="kd">var</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">codeName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">SealedDeliveryStatus</span><span class="p">()</span>
+    <span class="kd">class</span> <span class="nc">CONSIGN</span><span class="p">(</span><span class="kd">var</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">codeName</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">riderName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">SealedDeliveryStatus</span><span class="p">()</span>
+    <span class="kd">class</span> <span class="nc">PICKUP</span><span class="p">(</span><span class="kd">var</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">codeName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">SealedDeliveryStatus</span><span class="p">()</span>
+    <span class="kd">class</span> <span class="nc">COMPLETE</span><span class="p">(</span><span class="kd">var</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">codeName</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">var</span> <span class="py">completeTime</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">SealedDeliveryStatus</span><span class="p">(){</span>
+        <span class="k">fun</span> <span class="nf">getCodeWithCompleteTime</span><span class="p">()</span> <span class="p">=</span> <span class="s">"$code $completeTime"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * 각 상태에 맞는 멤버프로퍼티/메소드를 다르게 리턴 하도록 처리 가능하다.
+ */</span>
+<span class="k">fun</span> <span class="nf">selectSealedDeliveryStatus</span><span class="p">(</span><span class="n">deliveryStatus</span><span class="p">:</span> <span class="n">SealedDeliveryStatus</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">when</span> <span class="p">(</span><span class="n">deliveryStatus</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">is</span> <span class="n">WAIT</span> <span class="p">-&gt;</span> <span class="n">deliveryStatus</span><span class="p">.</span><span class="n">codeName</span>
+        <span class="k">is</span> <span class="n">CONSIGN</span> <span class="p">-&gt;</span> <span class="n">deliveryStatus</span><span class="p">.</span><span class="n">riderName</span>
+        <span class="k">is</span> <span class="n">PICKUP</span> <span class="p">-&gt;</span> <span class="n">deliveryStatus</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
+        <span class="k">is</span> <span class="n">COMPLETE</span> <span class="p">-&gt;</span> <span class="n">deliveryStatus</span><span class="p">.</span><span class="n">getCodeWithCompleteTime</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="collections">Collections</h2>
+<h3 id="배열">배열</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">arr</span> <span class="p">=</span> <span class="n">arrayOfNulls</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="m">10</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">initArr</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">initDiffTypeArr</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="m">3L</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">initIntArr</span> <span class="p">=</span> <span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">initConstructorArr</span> <span class="p">=</span> <span class="n">Array</span><span class="p">(</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span> <span class="m">1</span> <span class="p">}</span>
+<span class="kd">val</span> <span class="py">initLambdaArr</span> <span class="p">=</span> <span class="n">Array</span><span class="p">(</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+<span class="kd">val</span> <span class="py">initWithIncrement</span> <span class="p">=</span> <span class="p">(</span><span class="m">1</span><span class="o">..</span><span class="m">10</span><span class="p">).</span><span class="n">toList</span><span class="p">().</span><span class="n">toTypedArray</span><span class="p">()</span>
+<span class="kd">val</span> <span class="py">initWithIncrementByStep</span> <span class="p">=</span> <span class="p">(</span><span class="m">1</span><span class="o">..</span><span class="m">10</span><span class="p">).</span><span class="n">step</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">toList</span><span class="p">().</span><span class="n">toTypedArray</span><span class="p">()</span>
+<span class="kd">val</span> <span class="py">initWithIncrementByStep2</span> <span class="p">=</span> <span class="n">IntRange</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">10</span><span class="p">).</span><span class="n">step</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">toList</span><span class="p">().</span><span class="n">toTypedArray</span><span class="p">()</span>     
+</code></pre></div></div>
+
+<h3 id="list">List</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 불변 List 초기화 이후 수정 삭제 불가
+</span><span class="kd">val</span> <span class="py">listOf</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">list</span> <span class="p">=</span> <span class="n">List</span><span class="p">(</span><span class="m">3</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+
+<span class="c1">// 수정 삭제 추가 가능
+</span><span class="kd">val</span> <span class="py">emptyMutableList</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;()</span>
+<span class="kd">val</span> <span class="py">mutableListOf</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">mutableList</span> <span class="p">=</span> <span class="n">MutableList</span><span class="p">(</span><span class="m">2</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+
+<span class="n">listOf</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+<span class="n">listOf</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
+<span class="n">mutableListOf</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
+<span class="n">mutableListOf</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="c1">// even [2], odd [1,3] 각각 리스트를 구분 해서 반환함
+</span><span class="kd">val</span> <span class="err">(</span><span class="py">even</span><span class="p">,</span> <span class="n">odd</span><span class="p">)</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">.</span><span class="n">partition</span> <span class="p">{</span> <span class="n">it</span> <span class="p">%</span> <span class="m">2</span> <span class="p">==</span> <span class="m">0</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="map">Map</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 불변
+</span><span class="kd">val</span> <span class="py">mapOf</span> <span class="p">=</span> <span class="n">mapOf</span><span class="p">(</span><span class="s">"a"</span> <span class="n">to</span> <span class="m">1</span><span class="p">,</span> <span class="s">"b"</span> <span class="n">to</span> <span class="m">2</span><span class="p">)</span>
+<span class="c1">// 변경 가능
+</span><span class="kd">val</span> <span class="py">emptyMutableMap</span> <span class="p">=</span> <span class="n">mutableMapOf</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Int</span><span class="p">&gt;()</span>
+
+<span class="n">mapOf</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span>
+<span class="n">mapOf</span><span class="p">[</span><span class="s">"a"</span><span class="p">]</span>
+<span class="n">emptyMutableMap</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">"c"</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="람다식">람다식</h2>
+<h3 id="람다식-선언">람다식 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 기본 함수 선언 방식
+</span><span class="k">fun</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+<span class="p">}</span>
+
+<span class="c1">// 기본 함수 선언 방식을 람다식으로 표현
+</span><span class="kd">val</span> <span class="py">sumLambda</span><span class="p">:</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Int</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">-&gt;</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span> <span class="p">}</span>
+
+<span class="c1">// 코틀린 함수 선언 방식
+</span><span class="k">fun</span> <span class="nf">sum2</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span>
+
+<span class="c1">// 코틀린 함수 선언 방식을 람다식으로 표현
+</span><span class="kd">val</span> <span class="py">sum2Lambda</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span> <span class="p">-&gt;</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="콜렉션-람다식">콜렉션 람다식</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">listOf</span> <span class="p">=</span> <span class="n">List</span><span class="p">(</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="p">-&gt;</span> <span class="n">v</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+
+<span class="kd">val</span> <span class="py">newList</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span> <span class="p">&gt;</span> <span class="m">2</span> <span class="p">}</span>
+                <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span> <span class="p">+</span> <span class="m">10</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="etc">ETC</h2>
+
+<h3 id="연산자-오버로딩">연산자 오버로딩</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">operator</span> <span class="k">fun</span> <span class="nf">Int</span><span class="p">.</span><span class="n">plus</span><span class="p">(</span><span class="n">b</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">=</span> <span class="s">"$this$b"</span>
+<span class="n">println</span><span class="p">(</span><span class="m">10</span> <span class="p">+</span> <span class="s">"2"</span><span class="p">)</span> <span class="c1">// 102 출력
+</span></code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>연산자를 overloading 할 수 있다, overriding 아닌 overloading 이다!!</li>
+  </ul>
+</blockquote>
+
+<h3 id="연산자-확장">연산자 확장</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Position</span><span class="p">(</span><span class="kd">var</span> <span class="py">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">plus</span><span class="p">(</span><span class="n">position</span><span class="p">:</span> <span class="n">Position</span><span class="p">):</span> <span class="n">Position</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Position</span><span class="p">(</span><span class="n">a</span> <span class="p">+</span> <span class="n">position</span><span class="p">.</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">+</span> <span class="n">position</span><span class="p">.</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">val</span> <span class="py">position</span> <span class="p">=</span> <span class="n">Position</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span> <span class="p">+</span> <span class="n">Position</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">position</span><span class="p">.</span><span class="n">a</span><span class="p">)</span> <span class="c1">// 4 출력
+</span></code></pre></div></div>
+<blockquote>
+  <p>클레스에 연산자를 확장하여 사용 할 수 있다.</p>
+</blockquote>
+
+<h3 id="collection-getset-확장">Collection get/set 확장</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Position</span><span class="p">(</span><span class="kd">var</span> <span class="py">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">set</span><span class="p">(</span><span class="n">position</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">when</span> <span class="p">(</span><span class="n">position</span><span class="p">)</span> <span class="p">{</span>
+            <span class="m">0</span> <span class="p">-&gt;</span> <span class="n">a</span> <span class="p">=</span> <span class="n">value</span>
+            <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">b</span> <span class="p">=</span> <span class="n">value</span>
+            <span class="k">else</span> <span class="p">-&gt;</span> <span class="k">throw</span> <span class="n">IndexOutOfBoundsException</span><span class="p">(</span><span class="s">"error"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">get</span><span class="p">(</span><span class="n">position</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">position</span><span class="p">)</span> <span class="p">{</span>
+        <span class="m">0</span> <span class="p">-&gt;</span> <span class="n">a</span>
+        <span class="m">1</span> <span class="p">-&gt;</span> <span class="n">b</span>
+        <span class="k">else</span> <span class="p">-&gt;</span> <span class="k">throw</span> <span class="n">IndexOutOfBoundsException</span><span class="p">(</span><span class="s">"error"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">val</span> <span class="py">position</span> <span class="p">=</span> <span class="n">Position</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+<span class="n">position</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">10</span>
+<span class="n">println</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="c1">// 10 출력
+</span></code></pre></div></div>
+<blockquote>
+  <p>클래스에 콜렉션의 get/set을 확장 할 수 있다.</p>
+</blockquote>
+
+<h3 id="observable">Observable</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 
+</span><span class="kd">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="k">by</span> <span class="n">observable</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">)</span> <span class="p">{</span> <span class="n">property</span><span class="p">,</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">newValue</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">"newValue"</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">name</span> <span class="p">=</span> <span class="s">"김찬정님"</span>
+</code></pre></div></div>
+<blockquote>
+  <p>name 값이 변할 때 println 호출 된다.</p>
+</blockquote>
+
+<h3 id="vetoable">Vetoable</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span> <span class="k">by</span> <span class="n">vetoable</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">property</span><span class="p">,</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">newValue</span> <span class="p">-&gt;</span> <span class="n">newValue</span> <span class="p">&gt;</span> <span class="n">oldValue</span> <span class="p">}</span>
+
+<span class="n">age</span> <span class="p">=</span> <span class="m">10</span>
+<span class="n">assertEquals</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="n">age</span> <span class="p">=</span> <span class="m">5</span>
+<span class="n">assertEquals</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="n">age</span> <span class="p">=</span> <span class="m">20</span>
+<span class="n">assertEquals</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>age가 변경 될 때 마다 수행 되는데 true 일 때만 값이 변경 된다.</p>
+</blockquote>
+
+<h3 id="higher-order-function">Higher Order Function</h3>
+<p>Higher Order Function은 매개변수로 다른 함수나 람다식을 인자로 받는 함수를 말한다</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">calculator</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">exec</span><span class="p">:</span> <span class="p">(</span><span class="n">value1</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">value2</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">exec</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 간략 하게 선언 가능
+</span><span class="k">fun</span> <span class="nf">calculator2</span><span class="p">(</span><span class="n">exec</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">exec</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="higher-order-function의-inlinenoline">Higher Order Function의 inline/noline</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">inline</span> <span class="k">fun</span> <span class="nf">calculator3</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">exec</span><span class="p">:</span> <span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Int</span><span class="p">,</span> <span class="k">noinline</span> <span class="n">exec2</span><span class="p">:</span> <span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">exec</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">+</span> <span class="n">exec2</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>Higher Order 함수는 사용시(호출)에 파라메터로 전달되는 함수가
+사실상 new 해서 새로운 객체가 매번 생기는 방식으로 동작한다 비효울 적이다</li>
+    <li>이런 경우 inline 키워드를 사용하면 파라메터로 전달되는 모든 함수가 매번 new 생성 Higher Order 함수 내부에 있게 된다. 결론 적으로 매번 새로운 객체가 생성되는 것이 아니게 된다.</li>
+    <li>inline선언해서 모든 파라메터 함수가  매번 new 하지 않게 되었지만
+파라메터로 전달되는 함수 앞에 noinline을 선언하면  new 해서 생성되게 된다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="예외">예외</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// try catch 블럭이 아니라 마치 if 처럼 동작한다
+</span><span class="k">fun</span> <span class="nf">simpleFunction</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">Int</span><span class="p">?</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">result</span><span class="p">:</span> <span class="n">Int</span><span class="p">?</span> <span class="p">=</span> <span class="k">try</span> <span class="p">{</span>
+        <span class="n">parseInt</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">NumberFormatException</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">null</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="c1">// 변수에 할당 하지 않고 바로 반환
+</span><span class="k">fun</span> <span class="nf">simpleFunction</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">Int</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">try</span> <span class="p">{</span>
+        <span class="n">parseInt</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">NumberFormatException</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">null</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// name이 null 이면 예외 발생 시킨다.
+</span><span class="k">fun</span> <span class="nf">simpleFunction</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">?):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">name</span> <span class="o">?:</span> <span class="k">throw</span> <span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">"이름을 입력 하세요"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>코틀린 예외는 cheked와 unchecked 구문없다. 모든 예외는 unchecked다</li>
+    <li>예외 처리 블럭이 if, when 처 표현식 처럼 동작한다. value가 숫자형이 아니면 null이 result 할당된다</li>
+  </ul>
+</blockquote>
+
+<h3 id="destructuring-을-위한-일반-class-선언">Destructuring 을 위한 일반 class 선언</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 일반 클래스는 componentN 메소드를 구현 해야 한다.
+</span><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">component1</span><span class="p">():</span> <span class="n">String</span> <span class="p">=</span> <span class="n">name</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">component2</span><span class="p">():</span> <span class="n">Int</span> <span class="p">=</span> <span class="n">age</span>
+<span class="p">}</span>
+
+<span class="kd">val</span> <span class="py">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Adam"</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+<span class="kd">val</span> <span class="err">(</span><span class="py">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="p">=</span> <span class="n">person</span>
+
+<span class="n">assertEquals</span><span class="p">(</span><span class="s">"김찬정"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="n">assertEquals</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="destructuring-을-위한-data-class-선언">Destructuring 을 위한 data class 선언</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 데이터 클래스는 기본으로 componentN 제공한다.
+</span><span class="kd">data class</span> <span class="nc">NewPerson</span><span class="p">(</span><span class="kd">val</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> 
+
+<span class="kd">val</span> <span class="py">newPerson</span> <span class="p">=</span> <span class="n">NewPerson</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="s">"김찬정"</span><span class="p">)</span>
+<span class="c1">// 프로퍼티 이름이 다른경우 선언 순서대로 리턴한다
+</span><span class="kd">val</span> <span class="err">(</span><span class="py">newName</span><span class="p">,</span> <span class="n">newAge</span><span class="p">)</span> <span class="p">=</span> <span class="n">newPerson</span>
+
+<span class="n">assertEquals</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="n">newName</span><span class="p">)</span> <span class="c1">// age가 먼저 선언 되었으므로 사실상 age값이 된다.
+</span><span class="n">assertEquals</span><span class="p">(</span><span class="s">"김찬"</span><span class="p">,</span> <span class="n">newAge</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="destructuring-배열">Destructuring 배열</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 배열
+</span><span class="kd">val</span> <span class="py">coordinates</span> <span class="p">=</span> <span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kd">val</span> <span class="err">(</span><span class="py">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="p">=</span> <span class="n">coordinates</span>
+</code></pre></div></div>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 포스트 하위 영역에 표시되는 부분이라서 제거함 검색 버튼 틀릭 했을 때 레이어에 셍기는 검색이랑 다른 부분임 -->
+            
+                <!-- <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Search kimchanjung.dev</h3>
+                    <p class="subscribe-overlay-description">Post를 검색 하세요.</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search?query=" + url;
+            }
+        }
+    </script>
+</span>
+
+                </section> -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="kimchanjung" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/kimchanjung">김찬정</a></h4>
+                                
+                                    <p>좀 더 넓은 TEST 커버리지! 좀 더 나은 Architecture! 좀 더 나은 Code Pattern! 보다 더 간결하고 깔끔한 코드!를 항상 갈망 합니다.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/kimchanjung">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            
+                <section class="post-full-comments">
+<script src="https://utteranc.es/client.js"
+        repo="kimchanjung/utterance-comments"
+        issue-term="코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>                           
+
+            
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/new-blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; kimchanjung.dev &mdash;</small>
+                            
+                                <h3 class="read-next-card-header"><a href="/tag/programming/">Programming</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/05/typescipt-import-js-module-error/">[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/03/spring-security-03/">[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/programming/2020/07/02/spring-security-02/">[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/programming/">
+                                
+                                    See all 14 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/tech/2020/05/06/spring-microservice-summary/">
+                <div class="post-card-image" style="background-image: url(/assets/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/tech/2020/05/06/spring-microservice-summary/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Tech</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/etc/2020/01/15/java-collection/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Etc</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">JAVA - 자료구조, Collection 별 특징 정리</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/author-kimchanjung-image-icon.png" alt="김찬정" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/kimchanjung/">김찬정</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://kimchanjung.github.io/">
+            
+                <img src="/assets/images/favicon.png" alt="kimchanjung.dev icon" />
+            
+            <span>kimchanjung.dev</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%BD%94%ED%8B%80%EB%A6%B0+%EA%B8%B0%EB%B3%B8+%EB%AC%B8%EB%B2%95+%EC%9A%94%EC%95%BD+%EC%A0%95%EB%A6%AC+%EA%B0%95%EC%A2%8C+-+%5Bkotlin%2Fcheat+sheet%5D&amp;url=https://kimchanjung.github.ioprogramming/2020/05/06/kotlin-basic-syntax-summary/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kimchanjung.github.ioprogramming/2020/05/06/kotlin-basic-syntax-summary/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <i class="fab fa-facebook-square"></i>
+                <section class="copyright"><a href="https://kimchanjung.github.io/">kimchanjung.dev</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/kimchanjung.dev" target="_blank" rel="noopener">Facebook</a>
+                    
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/kimchanjung-logo.png" alt="kimchanjung.dev" />
+                
+                <h1 class="subscribe-overlay-title">Search kimchanjung.dev</h1>
+                <p class="subscribe-overlay-description">Post를 검색 하세요.</p>
+                <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search?query=" + url;
+            }
+        }
+    </script>
+</span>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script> -->
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!--script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script-->
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+    
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+    if (window.location.hostname != "localhost") {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-165866221-1', 'auto');
+        ga('send', 'pageview');
+    }
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
