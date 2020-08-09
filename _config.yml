@@ -11,10 +11,10 @@ url: https://kimchanjung.github.io
 baseurl: /
 
 # Website info
-title: mogomezwai
+title: kimchanjung
 description: Developer KimChanJung's Blog
 cover: assets/images/new-blog-cover.jpg
-logo: assets/images/mogomezwai-logo.png
+logo: assets/images/kimchanjung-logo.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 CNAME: #add cname for website to be created
@@ -25,7 +25,7 @@ navigation: True # show the navbar links
 subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: mogomezwai # replace by your username
+twitter:  # replace by your username
 facebook: kimchanjung.dev # replace by your username
 email: kimchanjung.dev@gmail.com
 github: kimchanjung
