@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kimchanjung.dev</title>
-    <description>Developer KimChanJung's Blog</description>
+    <description>Java Back-End Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/</link>
     <atom:link href="https://kimchanjung.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 18:36:02 +0900</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 18:36:02 +0900</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 18:39:13 +0900</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 18:39:13 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
