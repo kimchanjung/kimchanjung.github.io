@@ -26,8 +26,8 @@ subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
 twitter: mogomezwai # replace by your username
-facebook: mogomezwai # replace by your username
-email: mogomezwai@gmail.com
+facebook: kimchanjung.dev # replace by your username
+email: kimchanjung.dev@gmail.com
 github: kimchanjung
 
 # Disqus
