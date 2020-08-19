@@ -5,8 +5,8 @@
     <description>Java Back-End Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/</link>
     <atom:link href="https://kimchanjung.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Aug 2020 15:52:52 +0900</pubDate>
-    <lastBuildDate>Wed, 19 Aug 2020 15:52:52 +0900</lastBuildDate>
+    <pubDate>Wed, 19 Aug 2020 16:06:16 +0900</pubDate>
+    <lastBuildDate>Wed, 19 Aug 2020 16:06:16 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -87,8 +87,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Wed, 29 Jul 2020 16:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/07/29/zip/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/07/29/zip/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/07/29/zip/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/07/29/zip/</guid>
         
         <category>algorithm</category>
         
@@ -243,8 +243,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Mon, 13 Jul 2020 16:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/07/13/bracket/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/07/13/bracket/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/07/13/bracket/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/07/13/bracket/</guid>
         
         <category>algorithm</category>
         
@@ -313,8 +313,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;p&gt;typescript사용시 npm 모듈이 import되지 않는 문제 해결방법을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Sun, 05 Jul 2020 21:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/07/05/typescipt-import-js-module-error/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/05/typescipt-import-js-module-error/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/</guid>
         
         <category>programming</category>
         
@@ -552,8 +552,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;a href=&quot;/programming/2020/07/02/spring-security-02/&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Fri, 03 Jul 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/07/03/spring-security-03/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/03/spring-security-03/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/</guid>
         
         <category>programming</category>
         
@@ -853,8 +853,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Thu, 02 Jul 2020 12:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/07/02/spring-security-02/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/02/spring-security-02/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/</guid>
         
         <category>programming</category>
         
@@ -945,8 +945,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Wed, 01 Jul 2020 01:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/07/01/spring-security-01/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/07/01/spring-security-01/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/</guid>
         
         <category>programming</category>
         
@@ -1136,8 +1136,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 하지만 &lt;strong&gt;ApplicationEventPublisher&lt;/strong&gt;를 사용하여 스프링 &lt;strong&gt;이벤트 발생/구독 모델로 분리&lt;/strong&gt;하고 정상적으로 &lt;strong&gt;사용자가 생성한 스프링빈을 사용할 수 있는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Sun, 28 Jun 2020 20:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</guid>
         
         <category>programming</category>
         
@@ -1538,8 +1538,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;p&gt;&lt;strong&gt;Spinner모듈을 Modal&lt;/strong&gt;과 일반 페이지 둘다 &lt;strong&gt;position 설정이 가능하도록 Portal&lt;/strong&gt;을 이용하여 &lt;strong&gt;구현하는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Fri, 26 Jun 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/26/react-spinner/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/26/react-spinner/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/26/react-spinner/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/26/react-spinner/</guid>
         
         <category>programming</category>
         
@@ -1625,8 +1625,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;p&gt;실제 &lt;strong&gt;동작페이지 컴포넌트&lt;/strong&gt;와 &lt;strong&gt;라우팅설정컴포넌트&lt;/strong&gt; 사이에 &lt;strong&gt;스크롤상단처리컴포넌트&lt;/strong&gt;를 추가하여 &lt;strong&gt;페이지 이동시&lt;/strong&gt; 스크롤을 상단으로 &lt;strong&gt;초기화 하는 방법&lt;/strong&gt;을 알아보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Thu, 25 Jun 2020 16:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/25/react-scroll-top/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/25/react-scroll-top/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/</guid>
         
         <category>programming</category>
         
@@ -1769,8 +1769,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;p&gt;Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요&lt;/p&gt;
         </description>
         <pubDate>Thu, 25 Jun 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/25/spring-gradle-build-with-front-end/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/25/spring-gradle-build-with-front-end/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/25/spring-gradle-build-with-front-end/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/25/spring-gradle-build-with-front-end/</guid>
         
         <category>programming</category>
         
@@ -1854,8 +1854,8 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
 &lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 18:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-router-private-router/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/</guid>
         
         <category>programming</category>
         
@@ -2081,8 +2081,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 데코레이터와 generator 또는 async/await 비동기처리 키워드의 조합을 통하여 직관적이고 깔끔한 방법으로 비동기처리하는 방법을 알아보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/24/react-mobx-async-action/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-mobx-async-action/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/</guid>
         
         <category>programming</category>
         
@@ -2200,8 +2200,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 해결하는 방법을 알아 보았습니다. 더 좋은 방법을 알고 계신분은 코멘트 남겨주세요&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/24/react-material-ui-combine-with-style/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/24/react-material-ui-combine-with-style/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-material-ui-combine-with-style/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-material-ui-combine-with-style/</guid>
         
         <category>programming</category>
         
@@ -2334,8 +2334,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;p&gt;깔끔한 방법을 아시는 분은 코멘트 남겨 주시면 감사하겠습니다.&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/22/react-router-history-with-mobx-problem/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-router-history-with-mobx-problem/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/</guid>
         
         <category>programming</category>
         
@@ -2422,8 +2422,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;p&gt;혹시 최신버전에서 해결이되었거나 다른 깔끔한 방법을 알고 계시면 댓글을 남겨 주세요&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/22/react-material-ui-datepicker-binding/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-material-ui-datepicker-binding/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-material-ui-datepicker-binding/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-material-ui-datepicker-binding/</guid>
         
         <category>programming</category>
         
@@ -2559,8 +2559,8 @@ order - list
 조금더 깔끔한 방법을 아시는 분은 댓글 부탁드립니다.&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/06/22/react-router-overlab-routing/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/06/22/react-router-overlab-routing/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-router-overlab-routing/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-router-overlab-routing/</guid>
         
         <category>programming</category>
         
@@ -2712,8 +2712,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 29 May 2020 18:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/29/visitor-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/29/visitor-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/29/visitor-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/29/visitor-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -2834,8 +2834,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 28 May 2020 16:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/28/template-method-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/28/template-method-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/28/template-method-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/28/template-method-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -2977,8 +2977,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 28 May 2020 04:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/28/strategy-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/28/strategy-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/28/strategy-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/28/strategy-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3128,8 +3128,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Tue, 26 May 2020 18:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/26/state-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/26/state-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/26/state-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/26/state-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3194,8 +3194,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Mon, 25 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/25/singleton-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/25/singleton-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/25/singleton-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/25/singleton-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3294,8 +3294,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sun, 24 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/24/proxy-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/24/proxy-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/24/proxy-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/24/proxy-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3400,8 +3400,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sat, 23 May 2020 18:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/23/observer-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/23/observer-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/23/observer-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/23/observer-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3518,8 +3518,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 22 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/22/flyweight-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/22/flyweight-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/22/flyweight-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/22/flyweight-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3638,8 +3638,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 21 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/21/factory-method-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/21/factory-method-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/21/factory-method-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/21/factory-method-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3781,8 +3781,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Wed, 20 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/20/facade-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/20/facade-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/20/facade-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/20/facade-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3925,8 +3925,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Tue, 19 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/19/decorator-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/19/decorator-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/19/decorator-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/19/decorator-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4048,8 +4048,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Mon, 18 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/18/composite-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/18/composite-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/18/composite-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/18/composite-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4173,8 +4173,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sun, 17 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/17/command-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/17/command-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/17/command-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/17/command-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4260,8 +4260,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Sat, 16 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/16/chain-of-reponsibility-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/16/chain-of-reponsibility-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4409,8 +4409,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 15 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/15/adapter-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/15/adapter-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/15/adapter-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/15/adapter-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4590,8 +4590,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 14 May 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//design-pattern/2020/05/14/abstract-factory-pattern/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//design-pattern/2020/05/14/abstract-factory-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/14/abstract-factory-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/14/abstract-factory-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -6088,8 +6088,8 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.&lt;/p&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//tech/2020/05/08/react-mobx/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/08/react-mobx/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/08/react-mobx/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/08/react-mobx/</guid>
         
         <category>tech</category>
         
@@ -6622,8 +6622,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;p&gt;BROS 1.0을 개발 하면서 처음 마주하는 framework와 기술들을 사용하면서 어려움도 있었지만 &lt;strong&gt;무척 흥분된 상태로 일했었다.&lt;/strong&gt; 퇴근 하면 거의 매일 코딩했고 주말에도 거의 대부분 코딩했다.  회사를 다니면서 실무를 하면 &lt;strong&gt;현실적으로 이런 경험을 하기는 쉽지 않지만 몇가지 상황이 충족이 되었기 때문이였던 것 같다.&lt;/strong&gt;  일단 오프라인(라이더센터와 사업적인)이슈들에 더 집중 되면서 다음 개발 이슈들에 대한 &lt;strong&gt;기간적인 여유&lt;/strong&gt;가 약간 있었고, &lt;strong&gt;처음 접해보는 신기술?(그때 당시에는)&lt;/strong&gt;로 개발 하면서 흥미가 높았다. 또한 &lt;strong&gt;개발에 집중 할 수 있도록 챙김이님의 배려&lt;/strong&gt;의 가 있었기 때문이 였다. (늦게 나마 다시한번 회사와 동료들에게 감사 드립닷~~)&lt;/p&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//tech/2020/05/08/real-time-service/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/08/real-time-service/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/08/real-time-service/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/08/real-time-service/</guid>
         
         <category>tech</category>
         
@@ -6715,8 +6715,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/stock-prices-42584/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/stock-prices-42584/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/</guid>
         
         <category>algorithm</category>
         
@@ -6785,8 +6785,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/way-to-school-42898/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/way-to-school-42898/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/</guid>
         
         <category>algorithm</category>
         
@@ -6850,8 +6850,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/integer-triangle-43105/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/integer-triangle-43105/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/</guid>
         
         <category>algorithm</category>
         
@@ -6924,8 +6924,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/tile-deco-43104/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/tile-deco-43104/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/</guid>
         
         <category>algorithm</category>
         
@@ -7011,8 +7011,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/network-43162/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/network-43162/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/</guid>
         
         <category>algorithm</category>
         
@@ -7121,8 +7121,8 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/Coin-Change/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/Coin-Change/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/</guid>
         
         <category>algorithm</category>
         
@@ -7194,8 +7194,8 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</guid>
         
         <category>algorithm</category>
         
@@ -7354,8 +7354,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//algorithm/2020/05/08/sherlock-and-anagrams/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//algorithm/2020/05/08/sherlock-and-anagrams/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/</guid>
         
         <category>algorithm</category>
         
@@ -7693,8 +7693,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
 &lt;p&gt;스프링 마이크로서비스의 책 내용중 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점&lt;/code&gt; 등의 내용만 정리해 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//tech/2020/05/06/spring-microservice-summary/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//tech/2020/05/06/spring-microservice-summary/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/</guid>
         
         <category>tech</category>
         
@@ -8917,8 +8917,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//programming/2020/05/06/kotlin-basic-syntax-summary/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//programming/2020/05/06/kotlin-basic-syntax-summary/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/</guid>
         
         <category>programming</category>
         
@@ -9186,8 +9186,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/table&gt;
         </description>
         <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//etc/2020/01/15/java-collection/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//etc/2020/01/15/java-collection/</guid>
+        <link>https://kimchanjung.github.io/etc/2020/01/15/java-collection/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/etc/2020/01/15/java-collection/</guid>
         
         <category>etc</category>
         
@@ -9289,8 +9289,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Sat, 04 Jan 2020 09:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//projects/2020/01/04/brms/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/04/brms/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/04/brms/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/04/brms/</guid>
         
         <category>projects</category>
         
@@ -9385,8 +9385,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Fri, 03 Jan 2020 08:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//projects/2020/01/03/bros-v2/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/03/bros-v2/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/03/bros-v2/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/03/bros-v2/</guid>
         
         <category>projects</category>
         
@@ -9478,8 +9478,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Thu, 02 Jan 2020 11:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//projects/2020/01/02/socket-io-server/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/02/socket-io-server/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/02/socket-io-server/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/02/socket-io-server/</guid>
         
         <category>projects</category>
         
@@ -9583,8 +9583,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Wed, 01 Jan 2020 10:00:00 +0900</pubDate>
-        <link>https://kimchanjung.github.io//projects/2020/01/01/bros-v1/</link>
-        <guid isPermaLink="true">https://kimchanjung.github.io//projects/2020/01/01/bros-v1/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/01/bros-v1/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/01/bros-v1/</guid>
         
         <category>projects</category>
         
