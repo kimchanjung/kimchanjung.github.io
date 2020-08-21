@@ -8,33 +8,34 @@ on:
 
 jobs:
   build:
-    name: blog-auto-publish
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with: 
-          ref: work
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+
+    - name: Setup Ruby for use with actions
+      uses: actions/setup-ruby@v1.0.0
       
-      - name: Setup Ruby for use with actions
-        uses: actions/setup-ruby@v1.0.0
+    - name: Setup Jekyll for Gem
+      run: gem install bundler 
       
-      - name: Setup Jekyll for Gem
-        run: gem install bundler 
+    - uses: actions/cache@v1
+      with:
+        path: ~/vendor/bundle
+        key: ${{ runner.os }}-gems-01-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems
       
-      - uses: actions/cache@v1
-        with:
-          path: ~/vendor/bundle
-          key: ${{ runner.os }}-gems-01-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems
+    - name: Bundle install
+      run: |
+        bundle config path ~/vendor/bundle
+        bundle install --jobs 4 --retry 3
       
-      - name: Bundle install
-        run: |
-          bundle config path ~/vendor/bundle
-          bundle install --jobs 4 --retry 3
-      
-      - name: jekyll build
-        run: bundle exec jekyll build
-      
-  
+    - name: jekyll build
+      run: bundle exec jekyll build
