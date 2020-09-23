@@ -5,8 +5,8 @@
     <description>Java Back-End Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/author//feed.xml</link>
     <atom:link href="https://kimchanjung.github.io/author//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Aug 2020 14:59:09 +0900</pubDate>
-    <lastBuildDate>Thu, 20 Aug 2020 14:59:09 +0900</lastBuildDate>
+    <pubDate>Wed, 23 Sep 2020 13:47:57 +0900</pubDate>
+    <lastBuildDate>Wed, 23 Sep 2020 13:47:57 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -7208,7 +7208,7 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
         <title>Sherlock and anagrams - hackerank [코테/알고리즘]</title>
         <description>
         &lt;img src="https://kimchanjung.github.io/assets/images/post-default-hackerrank-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
-        &lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다.&lt;/p&gt;
+        &lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다….&lt;/p&gt;
 
 &lt;h2 id=&quot;특정-문자열의-개별-문자를-쌍으로-구성하는-경우-가능한-케이스의-개수를-찾는-문제&quot;&gt;특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제&lt;/h2&gt;
 
@@ -9214,7 +9214,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;h2 id=&quot;관련-기술블로그&quot;&gt;관련 기술블로그&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://woowabros.github.io/experience/2019/01/02/kimcj-react-mobx.html&quot;&gt;React에서 Mobx 경험기 (Redux와 비교기)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/tech/2020/05/06/spring-microservice-summary.html&quot;&gt;[마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice, msa)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/tech/2020/05/06/spring-microservice-summary/&quot;&gt;[마이크로서비스] 스프링 마이크로서비스 정리 (spring microservice, msa)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;프로젝트-기간&quot;&gt;프로젝트 기간&lt;/h2&gt;
