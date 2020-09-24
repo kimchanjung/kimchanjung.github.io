@@ -5,8 +5,8 @@
     <description>Java Back-End Developer KimChanJung's Blog</description>
     <link>https://kimchanjung.github.io/author/kimchanjung/feed.xml</link>
     <atom:link href="https://kimchanjung.github.io/author/kimchanjung/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Sep 2020 13:47:57 +0900</pubDate>
-    <lastBuildDate>Wed, 23 Sep 2020 13:47:57 +0900</lastBuildDate>
+    <pubDate>Thu, 24 Sep 2020 17:22:53 +0900</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2020 17:22:53 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -2214,7 +2214,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
         <title>[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 미동작 않는 경우 해결방법</title>
         <description>
         &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
-        &lt;p&gt;Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 미동작 문제점을 해결합니다.&lt;/p&gt;
+        &lt;p&gt;Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제점을 해결합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx-와-react-router-사용시-history를-이용한-url-이동이-동작하지-않는-경우-해결방법&quot;&gt;Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법&lt;/h1&gt;
 
@@ -2223,7 +2223,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// &amp;lt;a href=&quot;/about&quot;&amp;gt;About&amp;lt;/a&amp;gt; 와 같습니다&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;React에서 react-router와 같이 사용하는 경우 링크설정시 아래와 같이 사용합니다.&lt;/p&gt;
+  &lt;p&gt;React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼  a tag 대신  Link 컴포넌트를 사용합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;javascript에서-history를-이용하여-동적으로-url-이동하는-경우&quot;&gt;javascript에서 history를 이용하여 동적으로 URL 이동하는 경우&lt;/h2&gt;

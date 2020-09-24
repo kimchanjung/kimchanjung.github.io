@@ -13,7 +13,7 @@ author: kimchanjung
 published: true
 ---
 
-Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동이 미동작 문제점을 해결합니다.
+Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다.
 
 
 # Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법
@@ -23,7 +23,7 @@ Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페
 <Link to="/about">About</Link>
 // <a href="/about">About</a> 와 같습니다
 ```
-> React에서 react-router와 같이 사용하는 경우 링크설정시 아래와 같이 사용합니다.
+> React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼  a tag 대신  Link 컴포넌트를 사용합니다.
 
 ## javascript에서 history를 이용하여 동적으로 URL 이동하는 경우
 ```javascript
