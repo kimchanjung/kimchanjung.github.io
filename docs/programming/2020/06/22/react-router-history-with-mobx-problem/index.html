@@ -51,7 +51,7 @@
     <meta property="og:site_name" content="kimchanjung.dev" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 미동작 않는 경우 해결방법" />
-    <meta property="og:description" content="Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제점을 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신" />
+    <meta property="og:description" content="Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신" />
     <meta property="og:url" content="https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/" />
     <meta property="og:image" content="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/kimchanjung.dev" />
@@ -61,7 +61,7 @@
     <meta property="article:tag" content="Programming" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 미동작 않는 경우 해결방법" />
-    <meta name="twitter:description" content="Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제점을 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신" />
+    <meta name="twitter:description" content="Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신" />
     <meta name="twitter:url" content="https://kimchanjung.github.io/" />
     <meta name="twitter:image" content="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -93,7 +93,7 @@
         "@type": "WebPage",
         "@id": "https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/"
     },
-    "description": "Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제점을 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신"
+    "description": "Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다. Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법 일반적으로 React에서 react-router 사용시 링크를 설정하는 경우 &lt;Link to="/about"&gt;About&lt;/Link&gt; // &lt;a href="/about"&gt;About&lt;/a&gt; 와 같습니다 React에서 react-router와 같이 사용하는 경우 링크설정시 위 처럼 a tag 대신"
 }
     </script>
 
@@ -199,7 +199,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제점을 해결합니다.</p>
+                    <p>Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다.</p>
 
 <h1 id="mobx-와-react-router-사용시-history를-이용한-url-이동이-동작하지-않는-경우-해결방법">Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법</h1>
 
