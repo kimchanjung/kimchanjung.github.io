@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: assets/post-img/spring-security/spring-security-flow-diagram.png
 navigation: True
-title: "[Spring Security] 스프링시큐리티 동작구조의 이해(1)"
+title: "[Spring Security] 스프링시큐리티 기본개념과 동작구조의 이해(1)"
 date: 2020-07-01 01:00:00 +0900
 tags: programming
 categories: programming
@@ -14,9 +14,9 @@ top: true
 published: true
 ---
 
-스프링시큐리티의 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다"
+스프링시큐리티의 기본개념과 동작구조  및 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다"
 
-# Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 동작구조의 이해(1)
+# Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 기본개념과 동작구조의 이해(1)
 > 본 포스팅은 스프링시큐리티의 전반적인 사용방법을 설명하는 포스팅은 아닙니다. 기본적인 동작구조와 별도의 인증을 도입할 때 필요한 커스텀인증필터를 작성하고 적용하는 방법을 알아봅니다.
 
 ### 버전정보
