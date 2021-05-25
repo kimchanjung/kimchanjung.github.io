@@ -3,16 +3,16 @@
   <channel>
     <title>kimchanjung.dev</title>
     <description>Java Back-End Developer KimChanJung's Blog</description>
-    <link>http://localhost:4000/author/kimchanjung/feed.xml</link>
-    <atom:link href="http://localhost:4000/author/kimchanjung/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Apr 2021 14:36:17 +0900</pubDate>
-    <lastBuildDate>Thu, 01 Apr 2021 14:36:17 +0900</lastBuildDate>
+    <link>https://kimchanjung.github.io/author/kimchanjung/feed.xml</link>
+    <atom:link href="https://kimchanjung.github.io/author/kimchanjung/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 May 2021 14:24:13 +0900</pubDate>
+    <lastBuildDate>Tue, 25 May 2021 14:24:13 +0900</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>프로그래머스 - 문자열 압축 [2020 KAKAO BLIND RECRUITMENT]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;카카오 블라인드 2020 문자열 압축 문제를 설명과 함께 풀이 합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;프로그래머스---문자열-압축&quot;&gt;프로그래머스 - 문자열 압축&lt;/h1&gt;
@@ -87,8 +87,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Wed, 29 Jul 2020 16:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/07/29/zip/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/07/29/zip/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/07/29/zip/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/07/29/zip/</guid>
         
         <category>algorithm</category>
         
@@ -100,7 +100,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
       <item>
         <title>[프로그래머스] 괄호변환 [2020 KAKAO BLIND RECRUITMENT]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;깔끔한 코드와 재귀로 프로그래머스 괄호변환 문제를 해석하고 풀이합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;프로그래머스---괄호변환&quot;&gt;프로그래머스 - 괄호변환&lt;/h1&gt;
@@ -243,8 +243,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Mon, 13 Jul 2020 16:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/07/13/bracket/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/07/13/bracket/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/07/13/bracket/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/07/13/bracket/</guid>
         
         <category>algorithm</category>
         
@@ -256,7 +256,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
       <item>
         <title>[typescript] npm 모듈 import시 오류를 해결하는 방법(d.ts 파일 생성법)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-ts-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-ts-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;typescript npm 모듈 import시 오류의 원인과 해결하는 방법을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;typescript에서-js-npm-모듈-import시-오류를-해결하는-방법&quot;&gt;Typescript에서 js npm 모듈 import시 오류를 해결하는 방법&lt;/h1&gt;
@@ -313,8 +313,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;p&gt;typescript사용시 npm 모듈이 import되지 않는 문제 해결방법을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Sun, 05 Jul 2020 21:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/07/05/typescipt-import-js-module-error/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/07/05/typescipt-import-js-module-error/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/05/typescipt-import-js-module-error/</guid>
         
         <category>programming</category>
         
@@ -326,7 +326,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
       <item>
         <title>[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;스프링시큐리티의 커스텀 필터를 생성하고 적용하는 방법을 예제코드와 함께 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---커스텀-필터의-구현3&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 커스텀 필터의 구현(3)&lt;/h1&gt;
@@ -552,8 +552,8 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
 &lt;a href=&quot;/programming/2020/07/02/spring-security-02/&quot;&gt;[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Fri, 03 Jul 2020 14:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/07/03/spring-security-03/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/07/03/spring-security-03/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/03/spring-security-03/</guid>
         
         <category>programming</category>
         
@@ -565,7 +565,7 @@ aabbaccc케이스는 문자 1개씩만 비교하니 통과하는 로직이지만
       <item>
         <title>[Spring Security] 스프링시큐리티 설정값들의 역할과 설정방법(2)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;스프링시큐리티의 여러가지 설정값들의 역할과 설정방법을 상세히 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-설정2&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 설정(2)&lt;/h1&gt;
@@ -853,8 +853,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Thu, 02 Jul 2020 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/07/02/spring-security-02/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/07/02/spring-security-02/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/</guid>
         
         <category>programming</category>
         
@@ -866,7 +866,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       <item>
         <title>[Spring Security] 스프링시큐리티 기본개념과 동작구조의 이해(1)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/spring-security/spring-security-flow-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/spring-security/spring-security-flow-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;스프링시큐리티의 기본개념과 동작구조  및 별도의 인증을 도입할 때 필요한 커스텀 필터를 작성하고 적용하는 방법을 알아봅니다”&lt;/p&gt;
 
 &lt;h1 id=&quot;spring-security-커스텀-필터를-이용한-인증-구현---스프링시큐리티-기본개념과-동작구조의-이해1&quot;&gt;Spring Security 커스텀 필터를 이용한 인증 구현 - 스프링시큐리티 기본개념과 동작구조의 이해(1)&lt;/h1&gt;
@@ -945,8 +945,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;a href=&quot;/programming/2020/07/03/spring-security-03/&quot;&gt;[Spring Security] 스프링시큐리티 커스텀 필터의 구현(3)&lt;/a&gt;&lt;/p&gt;
         </description>
         <pubDate>Wed, 01 Jul 2020 01:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/07/01/spring-security-01/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/07/01/spring-security-01/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/07/01/spring-security-01/</guid>
         
         <category>programming</category>
         
@@ -958,7 +958,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       <item>
         <title>[Spring] JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;@EntityListeners로 지정한 클래스에 의존성이 필요한 경우 @autowired를 통한 의존성 주입이 동작하지 않는 문제가 있습니다 설명과 예제를 통하여 원인과 해결방법을 알아보도록 하겠습니다&lt;/p&gt;
 
 &lt;h1 id=&quot;jpa-entitylisteners에서-autowired를-통한-의존성-주입이-미동작하는-문제-해결&quot;&gt;JPA EntityListeners에서 @Autowired를 통한 의존성 주입이 미동작하는 문제 해결&lt;/h1&gt;
@@ -1136,8 +1136,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 하지만 &lt;strong&gt;ApplicationEventPublisher&lt;/strong&gt;를 사용하여 스프링 &lt;strong&gt;이벤트 발생/구독 모델로 분리&lt;/strong&gt;하고 정상적으로 &lt;strong&gt;사용자가 생성한 스프링빈을 사용할 수 있는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Sun, 28 Jun 2020 20:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/28/spring-jpa-antity-listner-autowired-not-working/</guid>
         
         <category>programming</category>
         
@@ -1149,7 +1149,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       <item>
         <title>[React] 로딩처리용 spinner를 사용시 position 옵션 문제를 Portal을 사용해 해결하는 방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;NPM react용 Spinner 모듈을 가져와 사용할 때 발생하는 position 옵션 문제를 Portal을 이용해 해결하고 깔끔한 방식으로 사용할 수 있는 방법을 알아봅니다&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;API호출&lt;/strong&gt;시 보통 &lt;strong&gt;로딩을 처리하는 동안 Spinner를 표시&lt;/strong&gt;해서 로딩처리를 사용자에게 알리는 용도로 많이 사용됩니다. 
@@ -1538,8 +1538,8 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
 &lt;p&gt;&lt;strong&gt;Spinner모듈을 Modal&lt;/strong&gt;과 일반 페이지 둘다 &lt;strong&gt;position 설정이 가능하도록 Portal&lt;/strong&gt;을 이용하여 &lt;strong&gt;구현하는 방법&lt;/strong&gt;을 알아 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Fri, 26 Jun 2020 14:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/26/react-spinner/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/26/react-spinner/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/26/react-spinner/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/26/react-spinner/</guid>
         
         <category>programming</category>
         
@@ -1551,7 +1551,7 @@ WebSecurity 때문에 햇갈림이 발생할 수 있는 부분이기도 합니�
       <item>
         <title>[React] 페이지 이동시 스크롤을 상단으로 초기화 하는 방법(scroll top)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;React의 기본 메카니즘은 상태를 변경하지 않으면 기본적으로 상태를 유지하고 있습니다.(예전 스타일의 웹페이지에서 페이지의 상태를 유지하기 위하여
 query string에 상태를 담아서 유지하는 처리) 이런 특징 때문에 페이지 이동을 하였는데도 불구하고 이전의 스크롤 위치에서 새로운 페이지가 나타나는
 문제를 가지고 있습니다.&lt;/p&gt;
@@ -1624,8 +1624,8 @@ query string에 상태를 담아서 유지하는 처리) 이런 특징 때문에
 &lt;p&gt;실제 &lt;strong&gt;동작페이지 컴포넌트&lt;/strong&gt;와 &lt;strong&gt;라우팅설정컴포넌트&lt;/strong&gt; 사이에 &lt;strong&gt;스크롤상단처리컴포넌트&lt;/strong&gt;를 추가하여 &lt;strong&gt;페이지 이동시&lt;/strong&gt; 스크롤을 상단으로 &lt;strong&gt;초기화 하는 방법&lt;/strong&gt;을 알아보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Thu, 25 Jun 2020 16:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/25/react-scroll-top/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/25/react-scroll-top/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/25/react-scroll-top/</guid>
         
         <category>programming</category>
         
@@ -1637,7 +1637,7 @@ query string에 상태를 담아서 유지하는 처리) 이런 특징 때문에
       <item>
         <title>[Gradle] node yarn 빌드 react 프로젝트를 gradle에 통합 포함하여 빌드하는 방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-spring-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;스프링 프로젝트를 빌드할 때 백엔드 API + 프론트엔드 구성의 프로젝트 빌드시 node yarn을 사용하여 빌드하는 프론트엔드 빌드를 Gradle 빌드에 포함하여 빌드하는 방법을 알아 봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;yarn-빌드-react-프로젝트를-spring-프로젝트-gradle-빌드에-통합하여-빌드하는-방법&quot;&gt;Yarn 빌드 React 프로젝트를 Spring 프로젝트 Gradle 빌드에 통합하여 빌드하는 방법&lt;/h1&gt;
@@ -1768,8 +1768,8 @@ query string에 상태를 담아서 유지하는 처리) 이런 특징 때문에
 &lt;p&gt;Spring 프로젝트 Gradle 빌드에 프론트엔드 빌드를 통합하여 빌드하는 방법을 알아 보았습니다. 더 좋은 방법이 있으면 코멘트 남겨주세요&lt;/p&gt;
         </description>
         <pubDate>Thu, 25 Jun 2020 14:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/25/spring-gradle-build-with-front-end/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/25/spring-gradle-build-with-front-end/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/25/spring-gradle-build-with-front-end/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/25/spring-gradle-build-with-front-end/</guid>
         
         <category>programming</category>
         
@@ -1781,7 +1781,7 @@ query string에 상태를 담아서 유지하는 처리) 이런 특징 때문에
       <item>
         <title>[React] react-router에서 인증 및 권한 Router(Private) 구현하기(권한별 routing)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;react-router의 url 권한을 체크하여 routing 이 가능하도록 하고 권한이 없으면 권한이 없다는 페이지로 redirect하는 방법을 알아보고자 합니다&lt;/p&gt;
 
 &lt;h1 id=&quot;react-router-에서-private-router-구현하기권한별-routing&quot;&gt;react-router 에서 Private Router 구현하기(권한별 routing)&lt;/h1&gt;
@@ -1853,8 +1853,8 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
 &lt;p&gt;권한 체크기능이 추가된 Private Router는 react-router의 Router에 컴포넌트를 호출할 때 간단한 분기처리가 추가된 방법으로 간단하게 구현해 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/24/react-router-private-router/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/24/react-router-private-router/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-router-private-router/</guid>
         
         <category>programming</category>
         
@@ -1866,7 +1866,7 @@ react-router 라이브러리는 routing을 구현하는 라이브러리인데 �
       <item>
         <title>[React] Mobx의 async action(비동기 액션) 처리를 mobx-utils를 이용하여 가장 깔끔하게 구현하는 방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;Mobx 공식 문서에 제공하는 async action(비동기 액션) 처리를 mobx-utils를 이용하여 더 깔끔한 처리방법을 살펴봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx의-async-action비동기-액션-처리를-가장-깔끔하게-구현하는-방법&quot;&gt;Mobx의 async action(비동기 액션) 처리를 가장 깔끔하게 구현하는 방법&lt;/h1&gt;
@@ -2080,8 +2080,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 데코레이터와 generator 또는 async/await 비동기처리 키워드의 조합을 통하여 직관적이고 깔끔한 방법으로 비동기처리하는 방법을 알아보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/24/react-mobx-async-action/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/24/react-mobx-async-action/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-mobx-async-action/</guid>
         
         <category>programming</category>
         
@@ -2093,7 +2093,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
       <item>
         <title>[React] Material-UI에서 withStyle 사용시 1개 이상 여러개 style을 함께 사용하는 방법(multiple)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;Material-UI에서 withStyle 함수로 JSS 스타일을 적용할때 1개 이상 여러개(multiple) 스타일을 같이 사용하는 방법을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react-material-ui에서-withstyle-사용시-1개-이상-style을-함께-사용하는-방법&quot;&gt;React Material-UI에서 withStyle 사용시 1개 이상 style을 함께 사용하는 방법&lt;/h1&gt;
@@ -2199,8 +2199,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 해결하는 방법을 알아 보았습니다. 더 좋은 방법을 알고 계신분은 코멘트 남겨주세요&lt;/p&gt;
         </description>
         <pubDate>Wed, 24 Jun 2020 14:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/24/react-material-ui-combine-with-style/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/24/react-material-ui-combine-with-style/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/24/react-material-ui-combine-with-style/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/24/react-material-ui-combine-with-style/</guid>
         
         <category>programming</category>
         
@@ -2212,7 +2212,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
       <item>
         <title>[React] Mobx 와 react-router 사용시 history를 이용한 url 이동이 미동작 않는 경우 해결방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;Ract에서 mobx와 react-router를 함께 사용할 시 history를 이용한 페이지 이동 미동작 문제를 해결합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx-와-react-router-사용시-history를-이용한-url-이동이-동작하지-않는-경우-해결방법&quot;&gt;Mobx 와 react-router 사용시 history를 이용한 url 이동이 동작하지 않는 경우 해결방법&lt;/h1&gt;
@@ -2333,8 +2333,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;p&gt;깔끔한 방법을 아시는 분은 코멘트 남겨 주시면 감사하겠습니다.&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/22/react-router-history-with-mobx-problem/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/22/react-router-history-with-mobx-problem/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-router-history-with-mobx-problem/</guid>
         
         <category>programming</category>
         
@@ -2346,7 +2346,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
       <item>
         <title>[React] mobx-react-form 사용시 material-ui datepicker의 date format이 미동작 해결 방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/react/material-ui-datepicker.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/react/material-ui-datepicker.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;Mobx사용시 form validation 라이브러리로 mobx-react-form을 사용했을 때 material-ui datepicker의 날짜를 변경한 후 화면에 표시되는 날짜는 설정한 date format 대로 표시가 되지만 실제 값은 적용되어 있지 않은 미동작 문제를 해결하는 방법을 알아봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;mobx-react-form-사용시-material-ui-datepicker의-date-format이-제대로-동작하지-않는-문제-해결&quot;&gt;mobx-react-form 사용시 material-ui datepicker의 date format이 제대로 동작하지 않는 문제 해결&lt;/h1&gt;
@@ -2421,8 +2421,8 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
 &lt;p&gt;혹시 최신버전에서 해결이되었거나 다른 깔끔한 방법을 알고 계시면 댓글을 남겨 주세요&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/22/react-material-ui-datepicker-binding/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/22/react-material-ui-datepicker-binding/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-material-ui-datepicker-binding/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-material-ui-datepicker-binding/</guid>
         
         <category>programming</category>
         
@@ -2434,7 +2434,7 @@ Mobx공식 문서에서 제공하는 방법들이 모두다 깔끔하지가 않�
       <item>
         <title>[React] react-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-react-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;react-router를 이용해서 아래와 같은 부모자식 트리구조 URL 구조가 있을 때 구현 하는 방법을 알아 봅니다&lt;/p&gt;
 
 &lt;h1 id=&quot;react-router-에서-트리구조의-부모자식-url-페이지를-구성하는-방법&quot;&gt;React-router 에서 트리구조의 부모자식 URL 페이지를 구성하는 방법&lt;/h1&gt;
@@ -2558,8 +2558,8 @@ order - list
 조금더 깔끔한 방법을 아시는 분은 댓글 부탁드립니다.&lt;/p&gt;
         </description>
         <pubDate>Mon, 22 Jun 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/06/22/react-router-overlab-routing/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/06/22/react-router-overlab-routing/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/06/22/react-router-overlab-routing/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/06/22/react-router-overlab-routing/</guid>
         
         <category>programming</category>
         
@@ -2571,7 +2571,7 @@ order - list
       <item>
         <title>방문자 패턴 - Visitor Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;방문자 패턴은 정의가 가장 어려운 패턴 중에 하나인 듯 하다 수많은 블로그의 방문자 패턴을 정의하는 문구를 아무리 봐도 이해가 가장 어려웠다&lt;/p&gt;
 
 &lt;h1 id=&quot;방문자-패턴---visitor-pattern&quot;&gt;방문자 패턴 - Visitor Pattern&lt;/h1&gt;
@@ -2711,8 +2711,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 29 May 2020 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/29/visitor-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/29/visitor-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/29/visitor-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/29/visitor-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -2724,7 +2724,7 @@ order - list
       <item>
         <title>템플릿 메소드 패턴 - Template Method Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;템플릿 메소드 패턴 전체적으로는 동일하지만 부분적으로 다른 경우 중복을 최소화 하는 패턴 동일한 기능을 상위 클래스에 정의하고 부분적으로 다른부분은 서브클래스에 정의하여 사용한다&lt;/p&gt;
 
 &lt;h1 id=&quot;템플릿-메소드-패턴---template-method-pattern&quot;&gt;템플릿 메소드 패턴 - Template Method Pattern&lt;/h1&gt;
@@ -2833,8 +2833,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 28 May 2020 16:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/28/template-method-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/28/template-method-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/28/template-method-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/28/template-method-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -2846,7 +2846,7 @@ order - list
       <item>
         <title>전략 패턴 - Strategy Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;전략 패턴은 알고리즘 및 로직을 따로 정의하여 필요에 의해 사용 또는 교체 할 수 있는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;전략-패턴---strategy-pattern&quot;&gt;전략 패턴 - Strategy Pattern&lt;/h1&gt;
@@ -2976,8 +2976,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 28 May 2020 04:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/28/strategy-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/28/strategy-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/28/strategy-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/28/strategy-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -2989,7 +2989,7 @@ order - list
       <item>
         <title>상태 패턴 - State Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;상태 패턴은 객체가 상태에 따른 행위를 직접 구현하지 않고 상태와 행위를 구현한 별개의 상태객체에게 위임하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;상태-패턴---state-pattern&quot;&gt;상태 패턴 - State Pattern&lt;/h1&gt;
@@ -3127,8 +3127,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Tue, 26 May 2020 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/26/state-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/26/state-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/26/state-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/26/state-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3140,7 +3140,7 @@ order - list
       <item>
         <title>싱글톤 패턴 - Singleton Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/tag-design-pattern-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/tag-design-pattern-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;싱글톤 패턴은 매번 새로운 객체를 생성하지 않고 오직 하나의 객체만 생성하어 사용하려고 할때 사용한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;싱글톤-패턴---singleton-pattern&quot;&gt;싱글톤 패턴 - Singleton Pattern&lt;/h1&gt;
@@ -3193,8 +3193,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Mon, 25 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/25/singleton-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/25/singleton-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/25/singleton-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/25/singleton-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3206,7 +3206,7 @@ order - list
       <item>
         <title>프록시 패턴 - Proxy Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/proxy-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/proxy-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프록시 패턴은 실제객체를 대신하는 객체가 로직의 흐름을 제어하여 실제 객체를 조작하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;프록시-패턴---proxy-pattern&quot;&gt;프록시 패턴 - Proxy Pattern&lt;/h1&gt;
@@ -3293,8 +3293,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sun, 24 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/24/proxy-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/24/proxy-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/24/proxy-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/24/proxy-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3306,7 +3306,7 @@ order - list
       <item>
         <title>옵저버 패턴 - Observer Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/observer-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/observer-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;옵저버 패턴은 그야 말로 발행/구독 모델 이라고 생각하면 쉽다. spring 의 ApplicationEvent 이용한 이벤트 발행/구독이나 javascript onClick 같은 이벤트 리스너를 사용한다거나 크게는 aws sns/sqs 같은 것들도 발생/구독 모델이다.&lt;/p&gt;
 
 &lt;h1 id=&quot;옵저버-패턴---observer-pattern&quot;&gt;옵저버 패턴 - Observer Pattern&lt;/h1&gt;
@@ -3399,8 +3399,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sat, 23 May 2020 18:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/23/observer-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/23/observer-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/23/observer-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/23/observer-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3412,7 +3412,7 @@ order - list
       <item>
         <title>플라이웨이트 패턴 - Flyweight Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/flyweight-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/flyweight-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;플라이웨이트 패턴은 공통으로 사용하는 클래스를 생성하는 팩토리클래스를 만들고 필요한 클래스의 인스턴스가 없는 경우 인스턴스를 새로 생성하고 이미 있는 경우는 생성해둔 인스턴스를 리턴해서 1개만 생성하여 공유해서 사용할 수 있도록 제공하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;플라이웨이트-패턴---flyweight-pattern&quot;&gt;플라이웨이트 패턴 - Flyweight Pattern&lt;/h1&gt;
@@ -3517,8 +3517,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 22 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/22/flyweight-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/22/flyweight-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/22/flyweight-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/22/flyweight-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3530,7 +3530,7 @@ order - list
       <item>
         <title>팩토리 메소드 패턴 - Factory Method Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/factory-method-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/factory-method-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;팩토리 메소드 패턴 객체 생성을 직접 하지 않고 객체를 생성/제공하는 클래스를 사용하여 획득하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;팩토리-메소드-패턴---factory-method-pattern&quot;&gt;팩토리 메소드 패턴 - Factory Method Pattern&lt;/h1&gt;
@@ -3637,8 +3637,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 21 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/21/factory-method-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/21/factory-method-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/21/factory-method-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/21/factory-method-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3650,7 +3650,7 @@ order - list
       <item>
         <title>퍼사드 패턴 - Facade Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/facade-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/facade-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;퍼사드 패턴은 아마도 우리가 프로그래밍 하면서 자연스럽게 사용되어지는 패턴중에 가장 흔한 패턴이 아닌가 싶다.&lt;/p&gt;
 
 &lt;h1 id=&quot;퍼사드-패턴---facade-pattern&quot;&gt;퍼사드 패턴 - Facade Pattern&lt;/h1&gt;
@@ -3780,8 +3780,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Wed, 20 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/20/facade-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/20/facade-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/20/facade-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/20/facade-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3793,7 +3793,7 @@ order - list
       <item>
         <title>데코레이터 패턴 - Decorator Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/decorator-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/decorator-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;데코레이터 패턴은 특정 클래스의 기본기능에 추가기능을 기존 클래스를 수정하지 않고 패턴을 통하여 덧 붙이고 싶을 때 사용한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;데코레이터-패턴---decorator-pattern&quot;&gt;데코레이터 패턴 - Decorator Pattern&lt;/h1&gt;
@@ -3924,8 +3924,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Tue, 19 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/19/decorator-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/19/decorator-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/19/decorator-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/19/decorator-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -3937,7 +3937,7 @@ order - list
       <item>
         <title>컴포지트 패턴 - Composite Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/composite-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/composite-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;컴포지트 패턴은 하나 또는 하나이상의 객체이거나 상관없이 하나의 객체처럼 다룰 수 있게 해주는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;컴포지트-패턴---composite-pattern&quot;&gt;컴포지트 패턴 - Composite Pattern&lt;/h1&gt;
@@ -4047,8 +4047,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Mon, 18 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/18/composite-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/18/composite-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/18/composite-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/18/composite-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4060,7 +4060,7 @@ order - list
       <item>
         <title>커맨드 패턴 - Command Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/command-pattern-class-diagram.png""  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/command-pattern-class-diagram.png""  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;커맨드 패턴은 각각 형태가 다른 메소드를 추상화하여 클라이언트가 사용할 수 있도록 하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;커맨드-패턴---command-pattern&quot;&gt;커맨드 패턴 - Command Pattern&lt;/h1&gt;
@@ -4172,8 +4172,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Sun, 17 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/17/command-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/17/command-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/17/command-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/17/command-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4185,7 +4185,7 @@ order - list
       <item>
         <title>책임 연쇄 패턴 - Chain Of Reponsibility Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/chain-of-responsibility-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;요청을 처리를 하나이상의 체인형태로 구성된 객체에게 위임하고 요청을 처리할 수 있는 객체를 만날 때까지 다음 객체로 처리를 위임하는 패턴&lt;/p&gt;
 
 &lt;h1 id=&quot;책임-연쇄-패턴---chain-of-reponsibility-pattern&quot;&gt;책임 연쇄 패턴 - Chain Of Reponsibility Pattern&lt;/h1&gt;
@@ -4259,8 +4259,8 @@ order - list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Sat, 16 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/16/chain-of-reponsibility-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4272,7 +4272,7 @@ order - list
       <item>
         <title>어댑터 패턴 - Adapter Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/adapter-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;사용자는 어댑터 패턴의 인터페이스를 사용함으로써 각각 구현체의 세부로직과 변경에 관계없이 일관성있는 사용이 가능하다.&lt;/p&gt;
 
 &lt;h1 id=&quot;어댑터-패턴---adapter-pattern&quot;&gt;어댑터 패턴 - Adapter Pattern&lt;/h1&gt;
@@ -4408,8 +4408,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Fri, 15 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/15/adapter-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/15/adapter-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/15/adapter-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/15/adapter-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4421,7 +4421,7 @@ order - list
       <item>
         <title>추상팩토리 패턴 - Abstract Factory Pattern [디자인패턴/코틀린/kotlin]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/design-pattern/abstract-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/design-pattern/abstract-pattern-class-diagram.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;추상팩토리 패턴은 어떤 연관된 클래스들을 팩토리를 통하여 일관성 있게 객체생성이 가능하도록 그룹으로 묶어 제공하고 변경도 유연하도록 제공한다.&lt;/p&gt;
 
 &lt;h1 id=&quot;추상팩토리-패턴---abstract-factory-pattern&quot;&gt;추상팩토리 패턴 - Abstract Factory Pattern&lt;/h1&gt;
@@ -4589,8 +4589,8 @@ order - list
 &lt;/blockquote&gt;
         </description>
         <pubDate>Thu, 14 May 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/design-pattern/2020/05/14/abstract-factory-pattern/</link>
-        <guid isPermaLink="true">http://localhost:4000/design-pattern/2020/05/14/abstract-factory-pattern/</guid>
+        <link>https://kimchanjung.github.io/design-pattern/2020/05/14/abstract-factory-pattern/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/design-pattern/2020/05/14/abstract-factory-pattern/</guid>
         
         <category>design-pattern</category>
         
@@ -4602,7 +4602,7 @@ order - list
       <item>
         <title>[Mobx] React 에서 Mobx 사용기</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/react-mobx/brms-dashboard-dark.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/react-mobx/brms-dashboard-dark.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;react와 mobx그리고 material-ui를 이용한 개발기와 예제코드를 통한 mobx vs react 차이점 비교 및 atomic design을 통한 프로젝트구조 react 서드파티 라이브러리 리뷰정보등을 알아봅니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;react에서-mobx-경험기-redux와-비교기&quot;&gt;React에서 Mobx 경험기 (Redux와 비교기)&lt;/h1&gt;
@@ -6087,8 +6087,8 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;주관적 경험을 통해 느낀점이지만 Mobx는 Redux에 비해서 낮은 러닝 커브와 높은 가독성이 확실한 장점으로 다가 왔습니다. React State관리 라이브러리를 선택할 때 조금이나마 도움이 되었으면 하는 바램과 함께 글을 마칩니다.&lt;/p&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech/2020/05/08/react-mobx/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2020/05/08/react-mobx/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/08/react-mobx/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/08/react-mobx/</guid>
         
         <category>tech</category>
         
@@ -6100,7 +6100,7 @@ rest-api method - X&lt;/strong&gt;&lt;/p&gt;
       <item>
         <title>[Socket.io][websocket] 실시간 서비스 경험기(배달운영시스템 BROS1.0)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/real-time-service/order-delivery-activity.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/real-time-service/order-delivery-activity.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;배달의민족 배민라이더스의 배달처리시스템 개발기와 socket.io(websocket)를 이용한 실시간 시스템 구현 방법을 자세히 알아 봅니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;경험기&quot;&gt;경험기&lt;/h2&gt;
@@ -6621,8 +6621,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;p&gt;BROS 1.0을 개발 하면서 처음 마주하는 framework와 기술들을 사용하면서 어려움도 있었지만 &lt;strong&gt;무척 흥분된 상태로 일했었다.&lt;/strong&gt; 퇴근 하면 거의 매일 코딩했고 주말에도 거의 대부분 코딩했다.  회사를 다니면서 실무를 하면 &lt;strong&gt;현실적으로 이런 경험을 하기는 쉽지 않지만 몇가지 상황이 충족이 되었기 때문이였던 것 같다.&lt;/strong&gt;  일단 오프라인(라이더센터와 사업적인)이슈들에 더 집중 되면서 다음 개발 이슈들에 대한 &lt;strong&gt;기간적인 여유&lt;/strong&gt;가 약간 있었고, &lt;strong&gt;처음 접해보는 신기술?(그때 당시에는)&lt;/strong&gt;로 개발 하면서 흥미가 높았다. 또한 &lt;strong&gt;개발에 집중 할 수 있도록 챙김이님의 배려&lt;/strong&gt;의 가 있었기 때문이 였다. (늦게 나마 다시한번 회사와 동료들에게 감사 드립닷~~)&lt;/p&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech/2020/05/08/real-time-service/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2020/05/08/real-time-service/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/08/real-time-service/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/08/real-time-service/</guid>
         
         <category>tech</category>
         
@@ -6634,7 +6634,7 @@ io.on('connection', (socket) =&amp;gt; {
       <item>
         <title>주식가격 (42584) - 프로그래머스 [코테][알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프로그래머스 programers 주식가격 (42584)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--스택큐--주식가격-42584&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 스택/큐 &amp;gt; 주식가격 (42584)&lt;/h2&gt;
@@ -6714,8 +6714,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/stock-prices-42584/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/stock-prices-42584/</guid>
         
         <category>algorithm</category>
         
@@ -6727,7 +6727,7 @@ io.on('connection', (socket) =&amp;gt; {
       <item>
         <title>등굣길 (42898) - 프로그래머스 [코테][알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프로그래머스 programers 등굣길 (42898)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--등굣길-9305&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 등굣길 (9305)&lt;/h2&gt;
@@ -6784,8 +6784,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/way-to-school-42898/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/way-to-school-42898/</guid>
         
         <category>algorithm</category>
         
@@ -6797,7 +6797,7 @@ io.on('connection', (socket) =&amp;gt; {
       <item>
         <title>정수삼각형 (43105) - 프로그래머스 [코테][알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프로그래머스 programers 정수삼각형 (43105)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--정수-삼각형-43105&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 정수 삼각형 (43105)&lt;/h2&gt;
@@ -6849,8 +6849,8 @@ io.on('connection', (socket) =&amp;gt; {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/integer-triangle-43105/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/integer-triangle-43105/</guid>
         
         <category>algorithm</category>
         
@@ -6862,7 +6862,7 @@ io.on('connection', (socket) =&amp;gt; {
       <item>
         <title>타일장식물 (43104) - 프로그래머스 [코테][알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프로그래머스 programers 타일장식물 (43104)문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--동적계획법dynamic-programming--타일장식물-43104&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 동적계획법(Dynamic Programming) &amp;gt; 타일장식물 (43104)&lt;/h2&gt;
@@ -6923,8 +6923,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/tile-deco-43104/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/tile-deco-43104/</guid>
         
         <category>algorithm</category>
         
@@ -6936,7 +6936,7 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
       <item>
         <title>네트워크 (43162) - 프로그래머스 [코테][알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-programmers-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;프로그래머스 programers 네트워크 (43162) 문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;프로그래머스-코딩테스트-연습--깊이너비-우선-탐색dfsbfs--네트워크-43162&quot;&gt;[프로그래머스] 코딩테스트 연습 &amp;gt; 깊이/너비 우선 탐색(DFS/BFS) &amp;gt; 네트워크 (43162)&lt;/h2&gt;
@@ -7010,8 +7010,8 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/network-43162/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/network-43162/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/network-43162/</guid>
         
         <category>algorithm</category>
         
@@ -7023,7 +7023,7 @@ a3 = a2 + a1 (2+2+3+3 = 10)&lt;br /&gt;
       <item>
         <title>Coin Change  - LeetCode [코테/알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-leetcode-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-leetcode-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;리트코드 LeetCode Coin Change문제의 풀이와 해설을 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;leetcode-leetcode---coin-change&quot;&gt;[LeetCode] LeetCode - Coin Change&lt;/h2&gt;
@@ -7120,8 +7120,8 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/Coin-Change/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/Coin-Change/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/Coin-Change/</guid>
         
         <category>algorithm</category>
         
@@ -7133,7 +7133,7 @@ a(n) = a(n-1)+ a(n-2) 가 도출 된다.&lt;/p&gt;
       <item>
         <title>Longest Substring Without Repeating Characters - LeetCode [코테/알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-leetcode-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-leetcode-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;코테 코딩테스트 알고리즘 리트코드 LeetCode Longest Substring Without Repeating Characters 문제의 풀이와 해설을 합니다&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/779/&quot;&gt;문제바로가기&lt;/a&gt;&lt;/p&gt;
@@ -7193,8 +7193,8 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/Longest-Substring-Without-Repeating-Characters-copy/</guid>
         
         <category>algorithm</category>
         
@@ -7206,7 +7206,7 @@ cab &amp;lt;- c // c가 포함 되었다. 비교문자를 자르는 시작을 c 
       <item>
         <title>Sherlock and anagrams - hackerank [코테/알고리즘]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-hackerrank-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-hackerrank-cover.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;해커랭크 hackerank Sherlock and anagrams 문제의 풀이와 해설을 합니다….&lt;/p&gt;
 
 &lt;h2 id=&quot;특정-문자열의-개별-문자를-쌍으로-구성하는-경우-가능한-케이스의-개수를-찾는-문제&quot;&gt;특정 문자열의 개별 문자를 쌍으로 구성하는 경우 가능한 케이스의 개수를 찾는 문제&lt;/h2&gt;
@@ -7353,8 +7353,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Fri, 08 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/</link>
-        <guid isPermaLink="true">http://localhost:4000/algorithm/2020/05/08/sherlock-and-anagrams/</guid>
+        <link>https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/algorithm/2020/05/08/sherlock-and-anagrams/</guid>
         
         <category>algorithm</category>
         
@@ -7366,7 +7366,7 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
       <item>
         <title>[마이크로서비스] 스프링 마이크로서비스 요약 정리 (spring microservice, msa)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/spring-microservice/spring-microservice-diagrams-monolithic-to-microservice.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;스프링마이크로서비스의 책내용중 마이크로서비스를 개발함에 있어 가장 중요한 개념과 원칙들 설계방법 부분을 예제 와 함께 정리&lt;/p&gt;
 
 &lt;h1 id=&quot;마이크로서비스-스프링-마이크로서비스-정리&quot;&gt;[마이크로서비스] 스프링 마이크로서비스 정리&lt;/h1&gt;
@@ -7692,8 +7692,8 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
 &lt;p&gt;스프링 마이크로서비스의 책 내용중 &lt;code class=&quot;highlighter-rouge&quot;&gt;마이크로서비스를 설계 하기 위해서 가장 중요한 원칙과 설계방법 장단점&lt;/code&gt; 등의 내용만 정리해 보았습니다.&lt;/p&gt;
         </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech/2020/05/06/spring-microservice-summary/</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2020/05/06/spring-microservice-summary/</guid>
+        <link>https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/tech/2020/05/06/spring-microservice-summary/</guid>
         
         <category>tech</category>
         
@@ -7705,7 +7705,7 @@ aaa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1개라 공식적용 &lt;span
       <item>
         <title>코틀린 기본 문법 요약 정리 강좌 - [kotlin/cheat sheet]</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/images/post-default-kotlin-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/images/post-default-kotlin-cover.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;코틀린의 기본문법을 치트형식의 예제코드와 설명을 포함한 깔끔하게 요약정리한 문법정리입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;코틀린-기본-문법&quot;&gt;코틀린 기본 문법&lt;/h1&gt;
@@ -8916,8 +8916,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/programming/2020/05/06/kotlin-basic-syntax-summary/</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2020/05/06/kotlin-basic-syntax-summary/</guid>
+        <link>https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/programming/2020/05/06/kotlin-basic-syntax-summary/</guid>
         
         <category>programming</category>
         
@@ -9185,8 +9185,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/table&gt;
         </description>
         <pubDate>Wed, 15 Jan 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/etc/2020/01/15/java-collection/</link>
-        <guid isPermaLink="true">http://localhost:4000/etc/2020/01/15/java-collection/</guid>
+        <link>https://kimchanjung.github.io/etc/2020/01/15/java-collection/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/etc/2020/01/15/java-collection/</guid>
         
         <category>etc</category>
         
@@ -9198,7 +9198,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
       <item>
         <title>라이더운영시스템</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/projects/brms/rider-management-list.jpg","/assets/post-img/projects/brms/brms-architecture.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/projects/brms/rider-management-list.jpg","/assets/post-img/projects/brms/brms-architecture.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;배달의민족 배민라이더스의 라이더운영시스템 프로젝트의 소개&lt;/p&gt;
 
 &lt;h1 id=&quot;라이더운영시스템&quot;&gt;라이더운영시스템&lt;/h1&gt;
@@ -9288,8 +9288,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Sat, 04 Jan 2020 09:00:00 +0900</pubDate>
-        <link>http://localhost:4000/projects/2020/01/04/brms/</link>
-        <guid isPermaLink="true">http://localhost:4000/projects/2020/01/04/brms/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/04/brms/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/04/brms/</guid>
         
         <category>projects</category>
         
@@ -9301,7 +9301,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
       <item>
         <title>배민라이더스운영시스템(2.0)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/projects/bros2.0/brms-dashboard.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/projects/bros2.0/brms-dashboard.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;배달의민족 배민라이더스의 배민라이더스운영시스템(BROS 2.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템20&quot;&gt;배민라이더스운영시스템(2.0)&lt;/h1&gt;
@@ -9384,8 +9384,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Fri, 03 Jan 2020 08:00:00 +0900</pubDate>
-        <link>http://localhost:4000/projects/2020/01/03/bros-v2/</link>
-        <guid isPermaLink="true">http://localhost:4000/projects/2020/01/03/bros-v2/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/03/bros-v2/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/03/bros-v2/</guid>
         
         <category>projects</category>
         
@@ -9397,7 +9397,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
       <item>
         <title>실시간 메시징 서버(socket.io)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/projects/websocket-server/socket-server-monitor.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/projects/websocket-server/socket-server-monitor.png"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;배달의민족 배민라이더스의 실시간 배달처리 시스템을 위한 실시간 메시징 서버(socket.io)개발 프로젝트의 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;실시간-메시징-서버socketio&quot;&gt;실시간 메시징 서버(socket.io)&lt;/h1&gt;
@@ -9477,8 +9477,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Thu, 02 Jan 2020 11:00:00 +0900</pubDate>
-        <link>http://localhost:4000/projects/2020/01/02/socket-io-server/</link>
-        <guid isPermaLink="true">http://localhost:4000/projects/2020/01/02/socket-io-server/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/02/socket-io-server/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/02/socket-io-server/</guid>
         
         <category>projects</category>
         
@@ -9490,7 +9490,7 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
       <item>
         <title>배민라이더스운영시스템(1.0)</title>
         <description>
-        &lt;img src="http://localhost:4000/assets/post-img/projects/bros1.0/bros-chatting.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
+        &lt;img src="https://kimchanjung.github.io/assets/post-img/projects/bros1.0/bros-chatting.jpg"  style="max-width:100%" /&gt; &lt;br/&gt; 
         &lt;p&gt;배달의민족 배민라이더의 배민라이더스운영시스템(1.0) 프로젝트 소개입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;배민라이더스운영시스템10&quot;&gt;배민라이더스운영시스템(1.0)&lt;/h1&gt;
@@ -9582,8 +9582,8 @@ when 처리시 else 구문이 필요없게 된다.&lt;/li&gt;
 &lt;/ul&gt;
         </description>
         <pubDate>Wed, 01 Jan 2020 10:00:00 +0900</pubDate>
-        <link>http://localhost:4000/projects/2020/01/01/bros-v1/</link>
-        <guid isPermaLink="true">http://localhost:4000/projects/2020/01/01/bros-v1/</guid>
+        <link>https://kimchanjung.github.io/projects/2020/01/01/bros-v1/</link>
+        <guid isPermaLink="true">https://kimchanjung.github.io/projects/2020/01/01/bros-v1/</guid>
         
         <category>projects</category>
         
